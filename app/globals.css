@@ -31,3 +31,22 @@ body {
     text-wrap: balance;
   }
 }
+@layer base {
+  /* Apply Expletus Sans to headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  /* Apply Maven Pro to other text elements */
+  body, p, span, div, a, button, input, textarea, select {
+    @apply font-sans;
+  }
+}
+
+.card-hover-effect {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card-hover-effect:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
