@@ -1,14 +1,15 @@
-// components/Contact.tsx
 'use client'
 
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa'
+import AnimatedSection from "@/app/components/AnimatedSection";
 
 export default function Contact() {
     return (
         <section id="contact" className="py-20   text-white">
+            <AnimatedSection>
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl font-bold mb-12 text-center font-heading">Get in Touch</h2>
-                <div className="max-w-3xl mx-auto bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm shadow-xl">
+                <div className="max-w-3xl mx-auto bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 card-hover-effect">
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="space-y-6">
                             <div className="flex items-center">
@@ -41,6 +42,7 @@ export default function Contact() {
                                     <a href="https://www.linkedin.com/in/mykola-rudnev-1525a5145/" target="_blank" rel="noopener noreferrer" className="text-lg hover:text-secondary transition-colors">Connect with me</a>
                                 </div>
                             </div>
+
                             <div className="flex items-center">
                                 <FaGithub className="text-secondary mr-4 text-3xl" />
                                 <div>
@@ -57,6 +59,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
+            </AnimatedSection>
         </section>
     )
 }

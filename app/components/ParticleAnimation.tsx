@@ -1,7 +1,6 @@
-// components/ParticleAnimation.tsx
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, useMemo } from 'react';
 
 interface Particle {
     x: number;
@@ -20,6 +19,21 @@ const ParticleAnimation: React.FC<ParticleAnimationProps> = ({ width, height }) 
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const [particles, setParticles] = useState<Particle[]>([]);
 
+    const particleCount = 50; // Reduced from 80
+    const maxDistance = 100;
+
+    const newParticles = useMemo(() => Array.from({ length: particleCount }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        radius: Math.random() * 2 + 1
+    })), [width, height]);
+
+    useEffect(() => {
+        setParticles(newParticles);
+    }, [newParticles]);
+
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -30,23 +44,12 @@ const ParticleAnimation: React.FC<ParticleAnimationProps> = ({ width, height }) 
         canvas.width = width;
         canvas.height = height;
 
-        const particleCount = 80;
-        const maxDistance = 100;
+        let animationFrameId: number;
 
-        const newParticles: Particle[] = Array.from({ length: particleCount }, () => ({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 2,
-            vy: (Math.random() - 0.5) * 2,
-            radius: Math.random() * 2 + 1
-        }));
-
-        setParticles(newParticles);
-
-        const animationFrame = requestAnimationFrame(function animate() {
+        const render = () => {
             ctx.clearRect(0, 0, width, height);
 
-            newParticles.forEach((particle, i) => {
+            particles.forEach((particle, i) => {
                 particle.x += particle.vx;
                 particle.y += particle.vy;
 
@@ -58,28 +61,30 @@ const ParticleAnimation: React.FC<ParticleAnimationProps> = ({ width, height }) 
                 ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
                 ctx.fill();
 
-                for (let j = i + 1; j < newParticles.length; j++) {
-                    const dx = newParticles[j].x - particle.x;
-                    const dy = newParticles[j].y - particle.y;
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[j].x - particle.x;
+                    const dy = particles[j].y - particle.y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
 
                     if (distance < maxDistance) {
                         ctx.beginPath();
                         ctx.moveTo(particle.x, particle.y);
-                        ctx.lineTo(newParticles[j].x, newParticles[j].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
                         ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance / maxDistance})`;
                         ctx.stroke();
                     }
                 }
             });
 
-            requestAnimationFrame(animate);
-        });
+            animationFrameId = requestAnimationFrame(render);
+        };
+
+        render();
 
         return () => {
-            cancelAnimationFrame(animationFrame);
+            cancelAnimationFrame(animationFrameId);
         };
-    }, [width, height]);
+    }, [particles, width, height]);
 
     return <canvas ref={canvasRef} className="absolute inset-0" />;
 };

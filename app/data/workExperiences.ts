@@ -6,14 +6,14 @@ export const workExperiences = [
         logo: '/images/for-better-future-logo.jpeg',
         responsibilities: [
             'E-Commerce Development (Magento 2):',
-            'Spearheaded the development and maintenance of 16 e-commerce sites',
-            'Innovated new features and streamlined operations for online stores',
-            'Created several e-commerce platforms from scratch',
+            'Contributed to the development and ongoing maintenance of 16 high-traffic e-commerce sites, ensuring optimal performance and user experience.',
+            'Innovated new features and streamlined operations for online stores, enhancing user engagement and sales conversions.',
+            'Assisted in architecting and launching multiple e-commerce platforms from the ground up, tailoring solutions to client needs.',
             'Websites Development (React.js, Gatsby.js, Next.js):',
-            'Developed and migrated a recruitment website using React.js and Next.js',
-            'Created an IT company website using TypeScript and React.js',
-            'Developed a PVC company website using WordPress, TypeScript, and Gatsby.js',
-            'Built a job application website using TypeScript and Gatsby.js'
+            'Developed and migrated a comprehensive recruitment website using React.js and Next.js, improving both functionality and aesthetics.',
+            'Engineered an IT company website using TypeScript and React.js, focusing on scalability and responsive design.',
+            'Built a dynamic PVC company website using WordPress, TypeScript, and Gatsby.js, ensuring cross-platform compatibility.',
+            'Created a user-friendly job application website using TypeScript and Gatsby.js, optimizing it for performance and usability.'
         ]
     },
     {
@@ -22,8 +22,8 @@ export const workExperiences = [
         period: 'March 2024 - June 2024',
         logo: '/images/3mk-logo.jpeg',
         responsibilities: [
-            'Developed front-end features using Magento 2, JavaScript, XML, CSS, HTML5',
-            'Utilized JIRA for project management and Docker for containerization'
+            'Implemented advanced front-end features using Magento 2, JavaScript, XML, CSS, and HTML5, enhancing site functionality and user interaction.',
+            'Leveraged JIRA for efficient project management and Docker for seamless containerization, improving development workflow and deployment processes.'
         ]
     },
     {
@@ -32,8 +32,8 @@ export const workExperiences = [
         period: 'January 2020 - April 2020',
         logo: '/images/orba-logo.jpg',
         responsibilities: [
-            'Focused on developing an e-commerce website for the cosmetics industry using Magento 2',
-            'Improved site performance and user experience using Magento 2 capabilities'
+            'Specialized in developing an e-commerce website for the cosmetics industry using Magento 2, focusing on robust, scalable solutions.',
+            'Enhanced site performance and user experience by utilizing the advanced capabilities of Magento 2, resulting in increased user retention and sales.'
         ]
     }
 ]

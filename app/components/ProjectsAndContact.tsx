@@ -1,35 +1,36 @@
-// components/ProjectsAndContact.tsx
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
-import Projects from './Projects';
-import Contact from './Contact';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import dynamic from 'next/dynamic';
 import ParticleAnimation from './ParticleAnimation';
+import LoadingSpinner from "@/app/components/LoadingSpinner";
+
+const Projects = dynamic(() => import('./Projects'), {
+    loading: () => <LoadingSpinner message="Loading projects..." />
+});
+
+const Contact = dynamic(() => import('./Contact'), {
+    loading: () => <LoadingSpinner message="Loading contact..." />
+});
 
 export default function ProjectsAndContact() {
     const [containerDimensions, setContainerDimensions] = useState({ width: 0, height: 0 });
     const containerRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        if (!containerRef.current) return;
-
-        const resizeObserver = new ResizeObserver(entries => {
-            for (let entry of entries) {
-                setContainerDimensions({
-                    width: entry.contentRect.width,
-                    height: entry.contentRect.height
-                });
-            }
-        });
-
-        resizeObserver.observe(containerRef.current);
-
-        return () => {
-            if (containerRef.current) {
-                resizeObserver.unobserve(containerRef.current);
-            }
-        };
+    const updateDimensions = useCallback(() => {
+        if (containerRef.current) {
+            setContainerDimensions({
+                width: containerRef.current.offsetWidth,
+                height: containerRef.current.offsetHeight
+            });
+        }
     }, []);
+
+    useEffect(() => {
+        updateDimensions();
+        window.addEventListener('resize', updateDimensions);
+        return () => window.removeEventListener('resize', updateDimensions);
+    }, [updateDimensions]);
 
     return (
         <div className="py-20 relative bg-gradient-to-r from-primary to-secondary" ref={containerRef}>

@@ -1,9 +1,10 @@
 import { Inter } from 'next/font/google'
-import './globals.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import '@/app/globals.css'
+import Header from '@/app/components/Header'
+import Footer from '@/app/components/Footer'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
 import Head from "next/head";
 const inter = Inter({ subsets: ['latin'] })
 import { Maven_Pro, Expletus_Sans } from 'next/font/google'

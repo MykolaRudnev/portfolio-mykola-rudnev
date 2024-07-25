@@ -1,8 +1,4 @@
-// components/Header.tsx
-'use client' // Add this line to mark as a Client Component
-
-import Link from 'next/link'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+'use client'
 import { useScrollTo } from '../hooks/useScrollTo'
 import React from "react";
 

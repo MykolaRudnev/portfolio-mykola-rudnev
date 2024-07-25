@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { FaGlobe, FaMagento, FaJs, FaCode, FaJsSquare, FaDocker, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import dynamic from 'next/dynamic';
 import { projects, Project } from '../data/projectsData';
-import ParticleAnimation from './ParticleAnimation';
 import {SiStyledcomponents, SiTailwindcss, SiTypescript} from "react-icons/si";
 
 const Slider = dynamic(() => import('react-slick').then((mod) => mod.default), {
@@ -21,6 +20,7 @@ const ProjectCard: React.FC<Project> = ({ name, description, link, image, techno
                         src={image}
                         alt={name}
                         fill
+                        loading="lazy"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{ objectFit: 'none', objectPosition: 'top' }}
                     />

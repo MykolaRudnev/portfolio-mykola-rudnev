@@ -1,11 +1,13 @@
-
 import Image from 'next/image'
 import {workExperiences} from "@/app/data/workExperiences";
+import AnimatedSection from "@/app/components/AnimatedSection";
 
 export default function CV() {
     return (
         <section id="cv" className="py-20 bg-gray-50">
+
             <div className="container mx-auto px-6 max-w-3xl bg-opacity-10">
+                <AnimatedSection>
                 <h2 className="text-4xl font-bold mb-8 text-center font-heading text-primary">Work Experience</h2>
                 <div className="space-y-12">
                     {workExperiences.map((exp, index) => (
@@ -26,14 +28,17 @@ export default function CV() {
                         </div>
                     ))}
                 </div>
-
+            </AnimatedSection>
+                <AnimatedSection>
                 <h2 className="text-4xl font-bold my-8 text-center font-heading text-primary">Education</h2>
                 <div className="bg-white rounded-lg p-6 transition-all duration-300 ease-in-out transform hover:-translate-y-1  card-hover-effect">
                     <h3 className="text-xl font-semibold">Engineer of Computer Science</h3>
                     <p className="text-gray-600">University of Economics and Innovation in Lublin</p>
                     <p className="text-gray-500">October 2014 - March 2018</p>
                 </div>
+                </AnimatedSection>
             </div>
+
         </section>
     )
 }
