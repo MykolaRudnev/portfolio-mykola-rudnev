@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Head from "next/head";
 const inter = Inter({ subsets: ['latin'] })
 import { Maven_Pro, Expletus_Sans } from 'next/font/google'
+import Script from "next/script";
 
 export const metadata = {
     title: 'Mykola Rudnev - Front-End Developer',
@@ -39,14 +40,17 @@ export default function RootLayout({
                   rel="stylesheet"/>
             <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400;500;600;700&display=swap"
                   rel="stylesheet"/>
-            <script defer src="https://cloud.umami.is/script.js"
-                    data-website-id="13e968d5-9d24-42d1-bbb9-7985af0b33df"></script>
-
         </Head>
+
         <body className={inter.className}>
         <Header/>
         <main className="min-h-screen">{children}</main>
         <Footer/>
+        <Script
+            src="https://cloud.umami.is/script.js"
+            data-website-id="13e968d5-9d24-42d1-bbb9-7985af0b33df"
+            strategy="afterInteractive"
+        />
         </body>
         </html>
     )
