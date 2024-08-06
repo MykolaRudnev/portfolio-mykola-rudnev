@@ -33,7 +33,7 @@ export default function ProjectsAndContact() {
     }, [updateDimensions]);
 
     return (
-        <div className="py-20 relative bg-gradient-to-r from-primary to-secondary" ref={containerRef}>
+        <div className="relative bg-gradient-to-r from-primary to-secondary" ref={containerRef}>
             <ParticleAnimation
                 width={containerDimensions.width}
                 height={containerDimensions.height}

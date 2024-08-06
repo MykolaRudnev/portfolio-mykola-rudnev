@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Hero() {
     return (
-        <section id="hero" className="bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <section id="hero" className="bg-gradient-to-r from-primary to-secondary text-white pb-10 pt-20 md:py-20">
             <div className="container mx-auto px-6 flex flex-col items-center">
                 <div className="text-center mb-12">
                     <h1 className="text-5xl font-bold mb-4">Mykola Rudnev</h1>

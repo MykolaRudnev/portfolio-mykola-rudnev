@@ -21,16 +21,16 @@ export default function Header() {
                 </button>
 
                 <div className="flex items-center space-x-4">
-                    <button onClick={() => scrollTo('about')} className="hover:text-primary transition-colors">
+                    <button onClick={() => scrollTo('about')} className="text-gray-800 hover:text-primary ">
                         About
                     </button>
-                    <button onClick={() => scrollTo('skills')} className="hover:text-primary transition-colors">
+                    <button onClick={() => scrollTo('skills')} className="text-gray-800 hover:text-primary ">
                         Skills
                     </button>
-                    <button onClick={() => scrollTo('projects')} className="hover:text-primary transition-colors">
+                    <button onClick={() => scrollTo('projects')} className="text-gray-800 hover:text-primary ">
                         Projects
                     </button>
-                    <button onClick={() => scrollTo('contact')} className="hover:text-primary transition-colors">
+                    <button onClick={() => scrollTo('contact')} className="text-gray-800 hover:text-primary ">
                         Contact
                     </button>
                 </div>

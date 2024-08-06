@@ -4,7 +4,7 @@ import AnimatedSection from "@/app/components/AnimatedSection";
 
 export default function CV() {
     return (
-        <section id="cv" className="py-20 bg-gray-50">
+        <section id="cv" className="py-10 md:py-20 bg-gray-50">
 
             <div className="container mx-auto px-6 max-w-3xl bg-opacity-10">
                 <AnimatedSection>

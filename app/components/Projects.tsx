@@ -15,7 +15,7 @@ const ProjectCard: React.FC<Project> = ({ name, description, link, image, techno
     <div className="flex flex-col h-full bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="h-64 relative">
             <div className="absolute inset-0 overflow-y-auto">
-                <div className="relative h-full min-h-[100vh]">
+                <div className="relative h-full md:min-h-[100vh]">
                     <Image
                         src={image}
                         alt={name}
@@ -47,7 +47,7 @@ const ProjectCard: React.FC<Project> = ({ name, description, link, image, techno
                     return (
                         <div key={index} className="flex items-center bg-gray-100 px-2 py-1 rounded-full">
                             <Icon className="text-primary mr-1 text-sm" />
-                            <span className="text-xs">{tech}</span>
+                            <span className="text-xs text-gray-800">{tech}</span>
                         </div>
                     );
                 })}
@@ -107,7 +107,8 @@ export default function Projects() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    rows: 2,
+                    rows: 1,
+                    arrows: false,
                 }
             }
         ]
@@ -115,7 +116,7 @@ export default function Projects() {
 
     return (
         <section id="projects"
-                 className="py-20 relative overflow-hidden  min-h-screen flex items-center"
+                 className="py-10 relative overflow-hidden   flex items-center md:py-20"
                  ref={containerRef}>
 
             <div className="container mx-auto px-6 relative z-10 w-full">

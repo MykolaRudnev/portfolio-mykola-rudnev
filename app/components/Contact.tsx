@@ -5,7 +5,7 @@ import AnimatedSection from "@/app/components/AnimatedSection";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-20   text-white">
+        <section id="contact" className="py-10 md:py-20   text-white">
             <AnimatedSection>
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl font-bold mb-12 text-center font-heading">Get in Touch</h2>
