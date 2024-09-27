@@ -44,13 +44,6 @@ export const projects: Project[] = [
         technologies: ["Magento 2", "JavaScript", "XML", "jQuery", "Docker"]
     },
     {
-        name: "Discover Glo",
-        description: "Creating with team new redesign of a Magento 2 store with a custom theme and advanced features.",
-        link: "https://www.discoverglo.com/de/de/",
-        image: "/images/projects/discoverglo-project.png",
-        technologies: ["Magento 2", "JavaScript", "XML", "jQuery", "Docker"]
-    },
-    {
         name: "Solar",
         description: "Creating with team from scratch a Magento 2 store with a custom theme and advanced features. Worked on all pages and custom elements.",
         link: "https://www.solar.com.pl/",
