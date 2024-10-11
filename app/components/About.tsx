@@ -13,16 +13,7 @@ export default function About() {
                     <h2 className="text-4xl font-bold mb-8 text-center font-heading">About Me</h2>
                 <div className="max-w-3xl mx-auto bg-white bg-opacity-10 p-8 rounded-lg shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out transform hover:-translate-y-1 card-hover-effect">
                     <p className="mb-6 text-lg leading-relaxed">
-                        Hi, I'm Mykola. Nice to meet you.
-                    </p>
-                    <p className="mb-6 text-lg leading-relaxed">
-                        Since starting my journey as a front-end developer nearly five years ago, I've specialized in TypeScript, React.js, and Magento 2. I've built responsive websites and e-commerce platforms, always prioritizing user experience and leveraging modern web technologies like Gatsby.js and Next.js.
-                    </p>
-                    <p className="mb-6 text-lg leading-relaxed">
-                        I'm passionate about innovative web development projects and constantly strive to grow and excel, aiming to become a senior front-end developer.
-                    </p>
-                    <p className="mb-6 text-lg leading-relaxed">
-                        When I'm not coding, you'll find me diving into the world of cryptocurrency, enjoying a swim, or vibing to music genres like Dubstep, lo-fi hip hop, rock, and jazz. I'm also a huge fan of anime, especially fantasy, cyberpunk, and thriller genres.
+                        With nearly five years of front-end experience, I specialize in TypeScript, React.js, and Magento 2, focusing on building responsive websites that elevate user experience. I’m committed to learning, growing, and ready to tackle new challenges on my journey to becoming a senior developer. Outside of coding, I’m passionate about cryptocurrency, music, and anime.
                     </p>
                 </div>
             </div>
