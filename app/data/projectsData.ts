@@ -53,17 +53,11 @@ export const projects: Project[] = [
     {
         name: "Edycja",
         description: "Creating with team from scratch a Magento 2 store with a custom theme and advanced features. Worked on all pages and custom elements.",
-        link: "https://project8.example.com",
+        link: "https://edycja.pl/",
         image: "/images/projects/edycja-project.png",
         technologies: ["Magento 2", "JavaScript", "XML", "jQuery", "Docker"]
     },
-    {
-        name: "Doppler manufaktur",
-        description: "A high-traffic Magento 2 store with optimized performance.",
-        link: "https://project8.example.com",
-        image: "/images/projects/catering24-project.png",
-        technologies: ["Magento 2", "JavaScript", "XML", "jQuery", "Docker"]
-    },
+
     {
         name: "Doppler Manufaktur",
         description: "Supporting the development and fixing bugs on a Magento 2 store, implementing new features and custom elements.",
@@ -88,14 +82,14 @@ export const projects: Project[] = [
     {
         name: "Hrk",
         description: "Creating  with team from scratch a large recruitment website using TypeScript and Gatsby.js WordPress ACF. Worked on all pages and custom elements.",
-        link: "https://project8.example.com",
+        link: "https://www.hrk.pl/",
         image: "/images/projects/hrk-project.png",
         technologies: ["WordPress", "TypeScript", "Gatsby.js", "JavaScript", "StyledComponents" ]
     },
     {
         name: "Carneoo",
         description: "Helping to finish the development of next.js website for a car company. Worked on all pages and custom elements and fixing bugs.",
-        link: "https://project8.example.com",
+        link: "https://carneoo.de/",
         image: "/images/projects/carneoo-project.png",
         technologies: ["JavaScript", "TypeScript", "React.js", "Next.js", "Tailwindcss" ]
     },
