@@ -93,4 +93,32 @@ export const projects: Project[] = [
         image: "/images/projects/carneoo-project.png",
         technologies: ["JavaScript", "TypeScript", "React.js", "Next.js", "Tailwindcss" ]
     },
+    {
+        name: "Novum-klinika",
+        description: "Helping to finish the development of medical form help in treating infertility.",
+        link: "https://www.novum.com.pl/",
+        image: "/images/projects/novum-klinika.png",
+        technologies: ["JavaScript", "TypeScript", "React.js", "Next.js", "Tailwindcss", "storybook" ]
+    },
+    {
+        name: "Ponadczasowi",
+        description: "Built and optimized Next.js e-commerce website for watch retailer. Implemented checkout system, payment integrations, shipping methods, and performance optimizations including code splitting and lazy loading. Added mobile responsiveness, blog functionality, and various third-party integrations while fixing bugs and enhancing user experience.",
+        link: "https://ponadczasowi.pl/",
+        image: "/images/projects/ponadczasowi.jpg",
+        technologies: ["JavaScript", "React.js", "Next.js", "Scss"]
+    },
+    {
+        name: "Copernicspace",
+        description: "Built from scraatch   next.js project with sales NFT , pages kategory list , profile page , NFT builder page . Also modification of landing page ",
+        link: "https://www.copernicspace.com/",
+        image: "/images/projects/www.copernicspace.png",
+        technologies: ["JavaScript", "TypeScript", "React.js", "Next.js", "Tailwindcss"]
+    },
+    {
+        name: "Billennium",
+        description: "Built from scraatch  next.js project for IT company  ",
+        link: "https://billennium.com/",
+        image: "/images/projects/billennium.png",
+        technologies: ["JavaScript", "TypeScript", "React.js", "Next.js", "Tailwindcss","storybook" ]
+    },
 ];
