@@ -71,7 +71,11 @@ const Projects: React.FC = () => {
                                     <div className="relative h-48 overflow-hidden rounded-t-2xl bg-black/40">
                                         <img
                                             src={project.image}
-                                            alt={project.name}
+                                            alt={`${project.name} - ${project.description.substring(0, 100)}`}
+                                            width={800}
+                                            height={600}
+                                            loading="lazy"
+                                            decoding="async"
                                             // Fallback for missing local images
                                             onError={(e) => { e.currentTarget.src = `https://picsum.photos/seed/${project.name.replace(/\s/g, '')}/800/600` }}
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"

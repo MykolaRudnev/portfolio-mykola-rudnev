@@ -30,7 +30,11 @@ const Experience: React.FC = () => {
                                         <div className="w-20 h-20 mb-4 rounded-full overflow-hidden border-2 border-glass-border bg-white flex items-center justify-center">
                                             <img
                                                 src={job.logo}
-                                                alt={job.company}
+                                                alt={`${job.company} logo`}
+                                                width={80}
+                                                height={80}
+                                                loading="lazy"
+                                                decoding="async"
                                                 className="w-full h-full object-cover"
                                                 onError={(e) => { e.currentTarget.src = 'https://picsum.photos/seed/company/100/100' }}
                                             />

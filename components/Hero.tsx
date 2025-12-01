@@ -34,8 +34,13 @@ const Hero: React.FC = () => {
                 <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl bg-glass-100 backdrop-blur-md group">
                      <img 
                         src="/images/mrudnev-avatar.png" 
+                        alt="Mykola Rudnev - Senior Front-End Developer" 
+                        width={224}
+                        height={224}
+                        loading="eager"
+                        fetchPriority="high"
+                        decoding="async"
                         onError={(e) => { e.currentTarget.src = 'https://picsum.photos/seed/mrudnev/300/300' }}
-                        alt="Mykola Rudnev" 
                         className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700" 
                     />
                  </div>
