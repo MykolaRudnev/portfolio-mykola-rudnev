@@ -1,0 +1,44 @@
+# Mykola Rudnev - Senior Front-End Developer Portfolio
+
+## Overview
+Mykola Rudnev is a Senior Front-End Developer based in Lublin, Poland, with over 5 years of experience. He specializes in building high-performance web applications and e-commerce platforms using React.js, Next.js, TypeScript, and Magento 2.
+
+## Contact Information
+- **Email:** rudnevmykola@gmail.com
+- **Phone:** +48 790 240 418
+- **LinkedIn:** [Mykola Rudnev](https://www.linkedin.com/in/mykola-rudnev-1525a5145/)
+- **GitHub:** [MykolaRudnev](https://github.com/MykolaRudnev)
+- **Portfolio:** [https://www.mrudnev.com/](https://www.mrudnev.com/)
+
+## Technical Skills
+- **Core:** JavaScript (ES6+), TypeScript, HTML5, CSS3
+- **Frameworks:** React.js, Next.js, Gatsby.js, Magento 2, Hyvä, WordPress
+- **Styling:** Tailwind CSS, Styled Components, SASS/LESS
+- **Tools:** Git, Docker, JIRA, Azure DevOps, Figma, Adobe XD
+- **APIs:** REST, GraphQL
+
+## Work Experience
+1. **For Better Future Software House** (Aug 2020 - Present) - Senior Front-End Developer
+   - Developed high-traffic e-commerce sites (Magento 2).
+   - Built recruitment and corporate websites (Next.js, Gatsby).
+2. **3mk Protection** (Mar 2024 - Jun 2024) - Front-End Developer
+   - Magento 2 custom theme development and optimization.
+3. **ORBA** (Jan 2020 - Apr 2020) - Junior Front-End Developer
+   - E-commerce development for the cosmetics industry.
+
+## Key Projects
+- **Ponadczasowi:** Optimized Next.js e-commerce site for watches.
+- **Copernicspace:** NFT marketplace built from scratch with Next.js.
+- **Housetipster:** Full Magento 2 e-commerce build.
+- **PMI Careers:** Recruitment website migration to Next.js.
+- **Internorm:** Corporate site using Gatsby.js & WordPress.
+- **HRK:** Recruitment platform with Gatsby.
+
+## Education
+- Engineer of Computer Science, University of Economics and Innovation in Lublin (2014 - 2018)
+
+## Languages
+- Polish (Fluent)
+- Ukrainian (Native)
+- Russian (Native)
+- English (Very Good)
