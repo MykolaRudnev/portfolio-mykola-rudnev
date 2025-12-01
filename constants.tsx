@@ -154,7 +154,7 @@ export const projects: Project[] = [
         name: "dreamroots.pl",
         description: "Performance optimization, translation fixes, and new page development for Magento 2 store.",
         link: "https://dreamroots.pl",
-        image: "/images/projects/placeholder.png",
+        image: "/images/projects/dreamroots.pl.png",
         technologies: ["Magento 2", "XML", "CSS"]
     },
     {

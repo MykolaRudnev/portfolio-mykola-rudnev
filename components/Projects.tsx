@@ -1,13 +1,15 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '../constants';
 import GlassCard from './ui/GlassCard';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const categories = ["All", "Magento 2", "React/Next", "WordPress"];
+const INITIAL_PROJECTS_COUNT = 6;
 
 const Projects: React.FC = () => {
     const [activeTab, setActiveTab] = useState("All");
+    const [showAll, setShowAll] = useState(false);
 
     const filteredProjects = useMemo(() => {
         if (activeTab === "All") return projects;
@@ -17,6 +19,16 @@ const Projects: React.FC = () => {
             if (activeTab === "WordPress") return p.technologies.some(t => t.toLowerCase().includes("wordpress"));
             return false;
         });
+    }, [activeTab]);
+
+    const displayedProjects = useMemo(() => {
+        return showAll ? filteredProjects : filteredProjects.slice(0, INITIAL_PROJECTS_COUNT);
+    }, [filteredProjects, showAll]);
+
+    const hasMoreProjects = filteredProjects.length > INITIAL_PROJECTS_COUNT;
+
+    useEffect(() => {
+        setShowAll(false);
     }, [activeTab]);
 
     return (
@@ -46,7 +58,7 @@ const Projects: React.FC = () => {
 
                 <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <AnimatePresence mode='popLayout'>
-                        {filteredProjects.map((project, idx) => (
+                        {displayedProjects.map((project, idx) => (
                             <motion.div
                                 key={project.name + idx}
                                 layout
@@ -62,7 +74,7 @@ const Projects: React.FC = () => {
                                             alt={project.name}
                                             // Fallback for missing local images
                                             onError={(e) => { e.currentTarget.src = `https://picsum.photos/seed/${project.name.replace(/\s/g, '')}/800/600` }}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                                         />
                                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
                                             {project.link && (
@@ -90,6 +102,17 @@ const Projects: React.FC = () => {
                         ))}
                     </AnimatePresence>
                 </motion.div>
+
+                {hasMoreProjects && (
+                    <div className="flex justify-center mt-8">
+                        <button
+                            onClick={() => setShowAll(!showAll)}
+                            className="px-8 py-3 rounded-full text-sm font-medium transition-all border bg-white text-black border-white shadow-lg shadow-white/20 hover:scale-105 hover:shadow-xl hover:shadow-white/30"
+                        >
+                            {showAll ? 'See Less' : 'See More'}
+                        </button>
+                    </div>
+                )}
             </div>
         </section>
     );
