@@ -55,10 +55,10 @@ const Hero: React.FC = () => {
                 Mykola <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Rudnev</span>
               </h1>
               <h2 className="text-2xl md:text-3xl text-gray-300 font-light mb-6">
-                Front-End Developer
+                Senior Front-End Developer
               </h2>
               <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-lg mx-auto lg:mx-0">
-                 Specializing in Magento 2, React.js, Gatsby.js, and Next.js
+                 Magento 2 (Hyvä) · React · Next.js · TypeScript — building high-performance, production-ready e-commerce storefronts.
               </p>
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
