@@ -1,14 +1,12 @@
 import { Project, Skill, WorkExperience, Recommendation, Education, Course, Language } from './types';
-import { FaBitbucket, FaCss3Alt, FaFigma, FaGit, FaGitlab, FaHtml5, FaJs, FaReact, FaWordpress, FaLinkedin, FaGithub, FaEnvelope, FaCode, FaDocker, FaJira, FaTrello } from "react-icons/fa";
+import { FaBitbucket, FaCss3Alt, FaFigma, FaGit, FaGitlab, FaHtml5, FaJs, FaReact, FaWordpress, FaLinkedin, FaGithub, FaEnvelope, FaCode, FaDocker, FaJira, FaTrello, FaMagento, FaPaintBrush } from "react-icons/fa";
 import { VscAzureDevops } from "react-icons/vsc";
 import {
-    SiAdobexd,
     SiEslint,
     SiGatsby,
     SiGraphql,
     SiJquery,
     SiJson,
-    SiMagento,
     SiNextdotjs,
     SiPrettier,
     SiStyledcomponents,
@@ -181,7 +179,7 @@ export const technicalSkills: Skill[] = [
     { name: 'React', icon: FaReact, color: '#61DAFB' },
     { name: 'Next.js', icon: SiNextdotjs, color: '#FFFFFF' },
     { name: 'Gatsby.js', icon: SiGatsby, color: '#663399' },
-    { name: 'Magento 2', icon: SiMagento, color: '#EE672F' },
+    { name: 'Magento 2', icon: FaMagento, color: '#EE672F' },
     { name: 'Hyvä', icon: FaCode, color: '#F4A261' }, // Generic code icon as placeholder for Hyvä
     { name: 'WordPress', icon: FaWordpress, color: '#21759B' },
     { name: 'Tailwind', icon: SiTailwindcss, color: '#06B6D4' },
@@ -197,7 +195,7 @@ export const technicalSkills: Skill[] = [
     { name: 'ClickUp', icon: SiClickup, color: '#7B68EE' },
     { name: 'Trello', icon: FaTrello, color: '#0079BF' },
     { name: 'Figma', icon: FaFigma, color: '#F24E1E' },
-    { name: 'Adobe XD', icon: SiAdobexd, color: '#FF61F6' },
+    { name: 'Adobe XD', icon: FaPaintBrush, color: '#FF61F6' },
 ]
 
 export const softSkills: Skill[] = [
@@ -210,40 +208,92 @@ export const softSkills: Skill[] = [
 
 export const workExperiences: WorkExperience[] = [
     {
+        company: 'Lufed IT',
+        position: 'Senior Front-End Developer',
+        period: 'January 2026 - Present',
+        logo: '/images/lufed-it.png',
+        responsibilities: [
+            'E-Commerce / Magento 2 (Hyvä Theme):',
+            'Leading front-end development and architecture for Magento 2 (Hyvä Theme) projects as the sole Front-End Developer responsible for the entire frontend layer.',
+            'Full ownership of the frontend across all key areas: Home, Category (PLP), Product (PDP), Cart, Checkout and Customer Account.',
+            'Driving a complete redesign and migration from Magento 2 Enterprise to Hyvä, focused on performance and UX.',
+            'Building and customizing reusable components using Hyvä CMS and a scalable component system.',
+            'Collaboration & SEO:',
+            'Direct communication with clients — gathering requirements and delivering business-oriented solutions.',
+            'Close collaboration with the SEO team and implementation of technical SEO optimizations (Core Web Vitals, performance).'
+        ]
+    },
+    {
         company: 'For Better Future Software House',
-        position: 'Front-End Developer',
-        period: 'August 2020 - Present',
+        position: 'Senior Front-End Developer',
+        period: 'September 2020 - February 2026',
         logo: '/images/for-better-future-logo.jpeg',
         responsibilities: [
-            'E-Commerce Development (Magento 2):',
-            'Contributed to the development and ongoing maintenance of 16 high-traffic e-commerce sites, ensuring optimal performance and user experience.',
-            'Innovated new features and streamlined operations for online stores, enhancing user engagement and sales conversions.',
-            'Assisted in architecting and launching multiple e-commerce platforms from the ground up, tailoring solutions to client needs.',
-            'Websites Development (React.js, Gatsby.js, Next.js):',
-            'Developed and migrated a comprehensive recruitment website using React.js and Next.js, improving both functionality and aesthetics.',
-            'Engineered an IT company website using TypeScript and React.js, focusing on scalability and responsive design.',
-            'Built a dynamic PVC company website using WordPress, TypeScript, and Gatsby.js, ensuring cross-platform compatibility.',
-            'Created a user-friendly job application website using TypeScript and Gatsby.js, optimizing it for performance and usability.'
+            'E-Commerce & Marketplaces (Magento 2):',
+            'Led development and maintenance of 16 e-commerce platforms, ensuring performance and scalability.',
+            'Delivered new features and optimized existing functionalities to improve UX and business efficiency.',
+            'Built multiple e-commerce solutions from scratch with a focus on clean architecture and reusability.',
+            'Tech: Magento 2, XML, JavaScript, jQuery, Docker, LESS, Sass.',
+            'Web Applications (React.js, Next.js, Gatsby.js):',
+            'Ponadczasowi (ponadczasowi.pl) — built and optimized a Next.js e-commerce platform (checkout, payments, shipping, blog) with lazy loading and code splitting.',
+            'Copernicspace (copernicspace.com) — developed an NFT marketplace from scratch (builder, listings, profiles) with focus on performance and scalability.',
+            'Carneoo (carneoo.de) — improved the platform with bug fixes, new features and custom components, enhancing UX and stability.',
+            'HRK (hrk.pl) — built a recruitment platform with Gatsby + TypeScript and improved SEO (+50% organic traffic).',
+            'PMI Careers (pmicareers.pl) — developed the platform and migrated from React to Next.js, improving performance and scalability.',
+            'LearningSpace (learningspace.app) — built an educational platform focused on UX and scalability.',
+            'Internorm — developed a corporate website with SEO-focused structure (Gatsby + WordPress).',
+            'Billennium — built a modular Next.js website with reusable components and Storybook.',
+            'Novum Klinika — improved responsive UI and cross-device compatibility.',
+            'Shopify (Liquid):',
+            'Developed and customized 6 Shopify stores based on Figma designs — custom themes focused on performance, UX and scalability.',
+            'Delivered key pages (Home, Collection, Product), collaborated with clients and implemented SEO best practices.'
+        ]
+    },
+    {
+        company: 'Cloudflight',
+        position: 'Front-End Developer',
+        period: 'July 2022 - October 2024',
+        logo: '/images/cloudflight-logo.png',
+        responsibilities: [
+            'Magento 2 / Enterprise Delivery:',
+            'Worked on ~9 Magento 2 e-commerce projects across different industries.',
+            'Delivered full frontend implementations including Home, Category (PLP), Product (PDP), Cart, Checkout and CMS pages.',
+            'Built custom components and extended Magento functionality using best practices.',
+            'Contributed to Hyvä Theme implementation in one of the projects.',
+            'Key Projects:',
+            'British American Tobacco (4 stores) — product pages, checkout, account flows, multi-market delivery.',
+            'catering24.co.uk — custom storefront with advanced integrations and full frontend delivery.',
+            'solar.com.pl — CMS-driven storefront with custom UI components and features.',
+            'Collaboration & Process:',
+            'Collaborated in cross-functional teams (developers, QA, PM), typically 5+ members.',
+            'Worked closely with testers and backend developers to ensure high-quality, stable releases.',
+            'Participated in the full development lifecycle: implementation, optimization, bug fixing and maintenance.',
+            'Focused on performance, UX and scalable frontend architecture.'
         ]
     },
     {
         company: '3mk Protection',
-        position: 'Front-end Developer',
+        position: 'Front-End Developer',
         period: 'March 2024 - June 2024',
         logo: '/images/3mk-logo.jpeg',
         responsibilities: [
-            'Implemented advanced front-end features using Magento 2, JavaScript, XML, CSS, and HTML5, enhancing site functionality and user interaction.',
-            'Leveraged JIRA for efficient project management and Docker for seamless containerization, improving development workflow and deployment processes.'
+            'Magento 2 Project (from scratch):',
+            'Built a Magento 2 e-commerce platform from scratch, delivering key pages including Home, Category and custom CMS-driven components.',
+            'Developed custom frontend elements and landing pages focused on UX and conversion.',
+            'Worked in a team with backend and frontend developers to deliver scalable solutions.',
+            'Provided client training on CMS usage and content management.',
+            'Tech: Magento 2, JavaScript, XML, CSS, HTML5, Docker, JIRA.'
         ]
     },
     {
         company: 'ORBA',
-        position: 'Junior Front-end Developer',
+        position: 'Front-End Developer',
         period: 'January 2020 - April 2020',
         logo: '/images/orba-logo.jpg',
         responsibilities: [
-            'Specialized in developing an e-commerce website for the cosmetics industry using Magento 2, focusing on robust, scalable solutions.',
-            'Enhanced site performance and user experience by utilizing the advanced capabilities of Magento 2, resulting in increased user retention and sales.'
+            'Worked as a front-end developer on an e-commerce website for the cosmetics industry, specializing in Magento 2.',
+            'Utilized key Magento 2 capabilities and technologies to improve site performance and user experience.',
+            'Contributed to robust, scalable storefront solutions under the guidance of senior developers.'
         ]
     }
 ]

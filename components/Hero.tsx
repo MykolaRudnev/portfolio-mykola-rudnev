@@ -89,10 +89,13 @@ const Hero: React.FC = () => {
                     </h3>
                     <div className="flex flex-col gap-6 text-gray-200 leading-relaxed text-lg">
                         <p>
-                            Front-End Developer with <strong className="text-white">5+ years of experience</strong> building high-performance web applications and e-commerce platforms across Europe. Specialized in <strong className="text-white">React.js, Next.js, and TypeScript</strong>, with strong expertise in Magento 2.
+                            Senior Front-End Developer with <strong className="text-white">6+ years of experience</strong> building high-performance web applications and production-ready e-commerce platforms across Europe. Specialized in <strong className="text-white">React.js, Next.js, and TypeScript</strong>, with deep expertise in <strong className="text-white">Magento 2 and Hyvä</strong> — owning the frontend end-to-end across PLP, PDP, Cart, Checkout and Customer Account.
                         </p>
                         <p>
-                            Skilled at improving performance, SEO, and user experience, delivering measurable business results such as <strong className="text-white">50% traffic growth</strong> and faster conversion flows. I'm committed to driving technical excellence and tackling new challenges in modern web development.
+                            Experienced in migration, redesign, and scalable component architecture, working directly with clients and business stakeholders. Focused on <strong className="text-white">performance (Core Web Vitals)</strong>, SEO, and UX — delivering measurable results such as <strong className="text-white">50% organic traffic growth</strong> and faster conversion flows.
+                        </p>
+                        <p>
+                            <strong className="text-white">AI-augmented development</strong>: faster planning, refactoring, and validation — with full ownership of architecture and production quality.
                         </p>
                     </div>
                 </GlassCard>

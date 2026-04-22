@@ -172,8 +172,8 @@ This project is private and proprietary.
 ## 👤 Author
 
 **Mykola Rudnev**
-- Front-End Developer with 5+ years of experience
-- Specialized in React.js, Next.js, TypeScript, and Magento 2
+- Senior Front-End Developer with 6+ years of experience
+- Specialized in React.js, Next.js, TypeScript, and Magento 2 (Hyvä)
 - [LinkedIn](https://www.linkedin.com/in/mykola-rudnev-1525a5145/)
 - [GitHub](https://github.com/MykolaRudnev)
 
