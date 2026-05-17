@@ -5,7 +5,7 @@ import GlassCard from './ui/GlassCard';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const categories = ["All", "Magento 2", "React/Next", "WordPress"];
-const INITIAL_PROJECTS_COUNT = 6;
+const INITIAL_PROJECTS_COUNT = 999;
 
 const Projects: React.FC = () => {
     const [activeTab, setActiveTab] = useState("All");

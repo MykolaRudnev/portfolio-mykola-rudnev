@@ -1,7 +1,7 @@
 # Mykola Rudnev - Senior Front-End Developer Portfolio
 
 ## Overview
-Mykola Rudnev is a Senior Front-End Developer based in Lublin, Poland, with 6+ years of experience. He specializes in building high-performance web applications and production-ready e-commerce platforms using React.js, Next.js, TypeScript, and Magento 2 (Hyvä). He owns the frontend end-to-end across PLP, PDP, Cart, Checkout, and Customer Account, with focus on performance (Core Web Vitals), SEO, and UX. AI-augmented development with full ownership of architecture and production quality.
+Mykola Rudnev is a Senior Front-End Developer with 6+ years of experience. He specializes in building high-performance web applications and production-ready e-commerce platforms using React.js, Next.js, TypeScript, and Magento 2 (Hyvä). He owns the frontend end-to-end across PLP, PDP, Cart, Checkout, and Customer Account, with focus on performance (Core Web Vitals), SEO, and UX. AI-augmented development with full ownership of architecture and production quality.
 
 ## Contact Information
 - **Email:** rudnevmykola@gmail.com
