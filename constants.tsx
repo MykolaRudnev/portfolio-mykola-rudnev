@@ -334,13 +334,13 @@ export const recommendations: Recommendation[] = [
     {
         name: "Dmytro Deinershtein",
         role: "Senior Front-end Developer",
-        text: "Pracowałem z Mykołą przez rok i w tym czasie pokazał się jako odpowiedzialny inżynier, który ceni ciągły rozwój oraz stosuje najlepsze praktyki programistyczne. Oprócz solidnych umiejętności technicznych, jest również bardzo przyjemny we współpracy і otwarty na opinie, szybko dostosowuje się do wymagań i zawsze zachowuje pozytywne nastawienie.",
+        text: "I worked with Mykola for a year and he proved to be a responsible engineer who values continuous improvement and follows strong engineering practices. Beyond solid technical skills, he is pleasant to collaborate with, open to feedback, adapts quickly to requirements, and always keeps a positive attitude.",
         linkedin: "https://www.linkedin.com/in/dmytro-deinershtein-a60657183/"
     },
     {
         name: "Sebastian Palewski",
         role: "Magento 2 & Laravel Software Developer",
-        text: "Pracowałem z Mykolą w kilku projektach na zasadzie współpracy backend-dev z frontend-dev. Świetny współpracownik. Tematy dowożone szybko i sprawnie. Bardzo fajna komunikacja. Technicznie bardzo sprawny, szuka rozwiązań i zawsze znajduje kilka sposobów implementacji. Wniesie dużo do każdego zespołu developerskiego.",
+        text: "I worked with Mykola on several projects as a backend–frontend pair. A great collaborator — topics delivered quickly and efficiently, with clear communication. Technically strong, he explores options and always finds practical implementation paths. He would add a lot to any development team.",
         linkedin: "https://www.linkedin.com/in/sebastianpalewski/"
     },
     {
