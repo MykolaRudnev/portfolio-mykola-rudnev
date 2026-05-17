@@ -254,29 +254,91 @@ function AvailabilitySection() {
   )
 }
 
+const CAREER_TIMELINE_ITEMS = workExperiences.slice(0, 4)
+
 function CareerTimelineSection() {
   return (
-    <section className="px-6 py-14 pb-24">
+    <section className="px-6 py-16 border-t border-white/5">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold mb-8">Career path</h2>
-        <div className="space-y-5">
-          {workExperiences.slice(0, 4).map((exp) => (
-            <div key={exp.company} className="flex gap-4 items-start border-l-2 border-cyan-500/30 pl-5">
-              <img
-                src={exp.logo}
-                alt={exp.company}
-                className="w-11 h-11 rounded-lg object-contain bg-white/5 shrink-0 -ml-[1.35rem] ring-4 ring-black"
-              />
-              <div className="pt-0.5">
-                <h3 className="font-semibold text-white">{exp.position}</h3>
-                <p className="text-cyan-400 text-sm">{exp.company}</p>
-                <p className="text-gray-500 text-sm">{exp.period}</p>
-              </div>
-            </div>
-          ))}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+          <div>
+            <h2 className="text-2xl font-bold mb-2">Career path</h2>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              Recent roles — responsibilities and project detail on the front-end page.
+            </p>
+          </div>
+          <Link
+            to={ROUTES.frontendDeveloper}
+            className="text-sm text-cyan-400 hover:text-cyan-300 shrink-0 transition-colors"
+          >
+            Full experience →
+          </Link>
         </div>
+
+        <ol className="list-none m-0 p-0">
+          {CAREER_TIMELINE_ITEMS.map((exp, index) => (
+            <CareerTimelineItem
+              key={`${exp.company}-${exp.period}`}
+              experience={exp}
+              isCurrent={index === 0}
+              isLast={index === CAREER_TIMELINE_ITEMS.length - 1}
+            />
+          ))}
+        </ol>
       </div>
     </section>
+  )
+}
+
+interface CareerTimelineItemProps {
+  experience: (typeof workExperiences)[number]
+  isCurrent: boolean
+  isLast: boolean
+}
+
+function CareerTimelineItem({ experience, isCurrent, isLast }: CareerTimelineItemProps) {
+  return (
+    <li className="flex gap-5 items-stretch">
+      <div className="flex w-12 shrink-0 flex-col items-center pt-0.5">
+        <div
+          className={`relative z-10 flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border bg-[#0a0a0a] ${
+            isCurrent
+              ? "border-cyan-500/40 shadow-md shadow-cyan-500/10"
+              : "border-white/10"
+          }`}
+        >
+          <img
+            src={experience.logo}
+            alt={`${experience.company} logo`}
+            width={48}
+            height={48}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-contain p-1.5"
+            onError={(e) => {
+              e.currentTarget.src = `https://picsum.photos/seed/${experience.company.replace(/\s/g, "")}/96/96`
+            }}
+          />
+          {isCurrent && (
+            <span className="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-cyan-400 ring-2 ring-[#050505]" />
+          )}
+        </div>
+        {!isLast && (
+          <span
+            className="my-2 w-px min-h-8 flex-1 bg-gradient-to-b from-cyan-500/50 via-white/15 to-transparent"
+            aria-hidden
+          />
+        )}
+      </div>
+
+      <article className={`min-w-0 flex-1 ${isLast ? "pb-0" : "pb-10"}`}>
+        <h3 className="font-semibold text-white leading-snug">{experience.position}</h3>
+        <p className="mt-0.5 text-sm font-medium text-cyan-400/90">{experience.company}</p>
+        <p className="mt-2 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs text-gray-400">
+          {experience.period}
+        </p>
+      </article>
+    </li>
   )
 }
 
