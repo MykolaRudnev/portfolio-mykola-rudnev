@@ -26,7 +26,7 @@ export function ProjectHighlightList({
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-white hover:text-cyan-400 transition-colors"
+                className="font-medium text-white underline underline-offset-4 hover:text-cyan-400 transition-colors"
               >
                 {item.name}
               </a>

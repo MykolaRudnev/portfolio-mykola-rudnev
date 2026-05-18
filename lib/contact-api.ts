@@ -1,4 +1,9 @@
-export type ContactFormType = "contact" | "recruiter" | "client" | "emergency" | "qualify"
+export type ContactFormType =
+  | "contact"
+  | "recruiter"
+  | "client"
+  | "magento_brief"
+  | "emergency"
 
 export interface ContactPayload {
   formType: ContactFormType

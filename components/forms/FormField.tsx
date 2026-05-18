@@ -1,17 +1,36 @@
-import React from "react"
+"use client"
+
+import { useId } from "react"
 
 interface FormFieldProps {
   label: string
   error?: string
-  children: React.ReactNode
+  children: (fieldProps: {
+    id: string
+    "aria-invalid"?: boolean
+    "aria-describedby"?: string
+  }) => React.ReactNode
 }
 
 export function FormField({ label, error, children }: FormFieldProps) {
+  const id = useId()
+  const errorId = error ? `${id}-error` : undefined
+
   return (
     <div className="flex flex-col gap-2">
-      <label className="text-sm font-medium text-gray-300">{label}</label>
-      {children}
-      {error && <p className="text-sm text-red-400">{error}</p>}
+      <label htmlFor={id} className="text-sm font-medium text-gray-300">
+        {label}
+      </label>
+      {children({
+        id,
+        "aria-invalid": error ? true : undefined,
+        "aria-describedby": errorId,
+      })}
+      {error && (
+        <p id={errorId} className="text-sm text-red-400" role="alert">
+          {error}
+        </p>
+      )}
     </div>
   )
 }

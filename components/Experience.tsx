@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import { workExperiences, education } from '../constants';
 import GlassCard from './ui/GlassCard';

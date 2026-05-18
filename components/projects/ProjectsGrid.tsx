@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useMemo, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaExternalLinkAlt } from "react-icons/fa"

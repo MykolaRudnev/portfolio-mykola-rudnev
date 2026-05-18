@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import { recommendations } from '../constants';
 import GlassCard from './ui/GlassCard';
