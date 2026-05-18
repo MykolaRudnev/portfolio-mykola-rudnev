@@ -1,9 +1,8 @@
 import { describe, it, expect } from "vitest"
 import { render, screen } from "@testing-library/react"
-import { MemoryRouter } from "react-router-dom"
-import { PricingPage } from "../pages/PricingPage"
-import { MagentoHyvaSupportPage } from "../pages/MagentoHyvaSupportPage"
-import { projects } from "../constants"
+import { PricingPage } from "@/views/PricingPage"
+import { MagentoHyvaSupportPage } from "@/views/MagentoHyvaSupportPage"
+import { projects } from "@/constants"
 
 const POLISH_UI_PATTERNS = [
   /Wyślij/i,
@@ -17,11 +16,7 @@ const POLISH_UI_PATTERNS = [
 
 describe("English-only UI", () => {
   it("renders Pricing page without Polish UI strings", () => {
-    const { container } = render(
-      <MemoryRouter>
-        <PricingPage />
-      </MemoryRouter>
-    )
+    const { container } = render(<PricingPage />)
     const text = container.textContent ?? ""
     for (const pattern of POLISH_UI_PATTERNS) {
       expect(text).not.toMatch(pattern)
@@ -30,11 +25,7 @@ describe("English-only UI", () => {
   })
 
   it("renders Magento support page without Polish UI strings", () => {
-    const { container } = render(
-      <MemoryRouter>
-        <MagentoHyvaSupportPage />
-      </MemoryRouter>
-    )
+    const { container } = render(<MagentoHyvaSupportPage />)
     const text = container.textContent ?? ""
     for (const pattern of POLISH_UI_PATTERNS) {
       expect(text).not.toMatch(pattern)

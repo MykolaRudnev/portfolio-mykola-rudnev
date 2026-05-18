@@ -4,6 +4,13 @@ export interface CaseStudyMetric {
   after: string
 }
 
+export interface CaseStudyVisualProof {
+  label: string
+  beforeSrc?: string
+  afterSrc?: string
+  caption?: string
+}
+
 export interface CaseStudySection {
   title: string
   items: string[]
@@ -27,6 +34,7 @@ export interface CaseStudy {
   myRole: string
   seoTitle: string
   seoDescription: string
+  visualProof?: CaseStudyVisualProof[]
 }
 
 export const detailedCaseStudies: CaseStudy[] = [

@@ -1,8 +1,9 @@
-import React from "react"
+"use client"
+
 import { motion } from "framer-motion"
-import { useLocation } from "react-router-dom"
+import { usePathname } from "next/navigation"
 import { PageBreadcrumbs, type BreadcrumbItem } from "./PageBreadcrumbs"
-import { ROUTES } from "../../constants/routes"
+import { ROUTES } from "@/constants/routes"
 import { PAGE_CONTENT_CLASS } from "./page-container"
 
 interface PageHeaderProps {
@@ -22,7 +23,7 @@ export function PageHeader({
   breadcrumbLabel,
   breadcrumbs,
 }: PageHeaderProps) {
-  const { pathname } = useLocation()
+  const pathname = usePathname()
   const shouldShowBreadcrumbs = showBreadcrumbs && pathname !== ROUTES.home
 
   return (
@@ -38,7 +39,7 @@ export function PageHeader({
           </motion.div>
         )}
 
-        <PageHeaderInner>
+        <div className="text-center w-full">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,12 +67,8 @@ export function PageHeader({
               {children}
             </motion.div>
           )}
-        </PageHeaderInner>
+        </div>
       </div>
     </section>
   )
-}
-
-function PageHeaderInner({ children }: { children: React.ReactNode }) {
-  return <div className="text-center w-full">{children}</div>
 }

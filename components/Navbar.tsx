@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
+"use client"
+
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaBars, FaTimes } from "react-icons/fa"
-import { ROUTES } from "../constants/routes"
+import { ROUTES } from "@/constants/routes"
 
 const navItems = [
   { label: "Home", path: ROUTES.home },
@@ -16,7 +19,7 @@ const navItems = [
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const { pathname } = useLocation()
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -41,7 +44,7 @@ function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          <Link to={ROUTES.home} className="text-xl font-bold tracking-wider text-white">
+          <Link href={ROUTES.home} className="text-xl font-bold tracking-wider text-white">
             MR<span className="text-cyan-400">.</span>
           </Link>
 
@@ -52,6 +55,7 @@ function Navbar() {
             className="lg:hidden p-2 text-gray-300 hover:text-white"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -96,7 +100,7 @@ interface NavItem {
 function NavLink({ item, isActive }: { item: NavItem; isActive: boolean }) {
   return (
     <Link
-      to={item.path}
+      href={item.path}
       className={`relative px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:text-white ${
         isActive ? "text-white" : "text-gray-400"
       }`}
@@ -116,7 +120,7 @@ function NavLink({ item, isActive }: { item: NavItem; isActive: boolean }) {
 function MobileNavLink({ item, isActive }: { item: NavItem; isActive: boolean }) {
   return (
     <Link
-      to={item.path}
+      href={item.path}
       className={`w-full text-left px-4 py-3 rounded-xl transition-all block ${
         isActive ? "bg-white/10 text-white" : "text-gray-400 hover:bg-white/5 hover:text-white"
       }`}

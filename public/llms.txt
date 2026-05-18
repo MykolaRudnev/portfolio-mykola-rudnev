@@ -1,52 +1,102 @@
-# Mykola Rudnev - Senior Front-End Developer Portfolio
+# mrudnev.com — Mykola Rudnev
 
-## Overview
-Mykola Rudnev is a Senior Front-End Developer with 6+ years of experience. He specializes in building high-performance web applications and production-ready e-commerce platforms using React.js, Next.js, TypeScript, and Magento 2 (Hyvä). He owns the frontend end-to-end across PLP, PDP, Cart, Checkout, and Customer Account, with focus on performance (Core Web Vitals), SEO, and UX. AI-augmented development with full ownership of architecture and production quality.
+> Senior Front-End Developer (React, Next.js, TypeScript) and direct Magento 2 / Hyvä storefront support for e-commerce teams. English site. B2B / remote EU.
 
-## Contact Information
-- **Email:** rudnevmykola@gmail.com
-- **Phone:** +48 790 240 418
-- **LinkedIn:** [Mykola Rudnev](https://www.linkedin.com/in/mykola-rudnev-1525a5145/)
-- **GitHub:** [MykolaRudnev](https://github.com/MykolaRudnev)
-- **Portfolio:** [https://www.mrudnev.com/](https://www.mrudnev.com/)
+Canonical site: https://www.mrudnev.com/
+Sitemap: https://www.mrudnev.com/sitemap.xml
 
-## Technical Skills
-- **Core:** JavaScript (ES6+), TypeScript, HTML5, CSS3
-- **Frameworks:** React.js, Next.js, Gatsby.js, Magento 2, Hyvä, WordPress
-- **Styling:** Tailwind CSS, Styled Components, SASS/LESS
-- **Tools:** Git, Docker, JIRA, Azure DevOps, Figma, Adobe XD
-- **APIs:** REST, GraphQL
+## Who this site is for
 
-## Work Experience
-1. **Lufed IT** (Jan 2026 - Present) - Senior Front-End Developer
-   - Leading frontend architecture for Magento 2 (Hyvä) storefront.
-   - Full ownership of PLP, PDP, Cart, Checkout, and Customer Account.
-   - Driving migration from Magento 2 Enterprise to Hyvä.
-2. **For Better Future Software House** (Sep 2020 - Feb 2026) - Senior Front-End Developer
-   - Led development and maintenance of 16 Magento 2 e-commerce platforms.
-   - Delivered React.js / Next.js / Gatsby web apps (Ponadczasowi, Copernicspace, HRK, PMI Careers, Carneoo, LearningSpace, Internorm, Billennium).
-   - Developed and customized 6 Shopify (Liquid) stores.
-3. **Cloudflight** (Jul 2022 - Oct 2024) - Front-End Developer
-   - Delivered ~9 Magento 2 storefront projects (British American Tobacco, catering24.co.uk, solar.com.pl).
-   - Contributed to Hyvä Theme implementation.
-4. **3mk Protection** (Mar 2024 - Jun 2024) - Front-End Developer
-   - Built Magento 2 e-commerce platform from scratch.
-5. **ORBA** (Jan 2020 - Apr 2020) - Front-End Developer
-   - E-commerce development for the cosmetics industry (Magento 2).
+1. **Recruiters & hiring managers** — senior/mid+ front-end roles, product teams, React / Next.js / TypeScript, e-commerce background.
+2. **Store owners & e-commerce managers** — direct Magento 2 / Hyvä frontend help without agency layers: fixes, new sections, performance, checkout/CMS, ongoing support.
+3. **Anyone comparing both** — the homepage routes visitors to the right path in a few seconds.
 
-## Key Projects
-- **Ponadczasowi:** Optimized Next.js e-commerce site for watches.
-- **Copernicspace:** NFT marketplace built from scratch with Next.js.
-- **Housetipster:** Full Magento 2 e-commerce build.
-- **PMI Careers:** Recruitment website migration to Next.js.
-- **Internorm:** Corporate site using Gatsby.js & WordPress.
-- **HRK:** Recruitment platform with Gatsby.
+## About Mykola Rudnev
+
+- **Role:** Senior Front-End Developer
+- **Experience:** 6+ years front-end; strong split between Magento 2 / Hyvä e-commerce and React / Next.js product work
+- **Current focus:** Lufed IT — Hyvä / Magento 2 storefront ownership (PLP, PDP, cart, checkout, account, CMS); Core Web Vitals and technical SEO
+- **Work style:** Direct communication, B2B-friendly, remote across EU; async-friendly; clear scope before delivery
+- **Languages:** English (very good), Polish (fluent), Ukrainian & Russian (native)
+
+## Contact
+
+- Email: rudnevmykola@gmail.com
+- Phone: +48 790 240 418
+- LinkedIn: https://www.linkedin.com/in/mykola-rudnev-1525a5145/
+- GitHub: https://github.com/MykolaRudnev
+- Contact form: https://www.mrudnev.com/contact
+
+## Site map (main pages)
+
+| URL | Purpose |
+|-----|---------|
+| https://www.mrudnev.com/ | Homepage — audience router: hiring a front-end developer vs Magento / Hyvä support |
+| https://www.mrudnev.com/frontend-developer | Recruiter page — stack, fit, experience, CV, case studies, screening call |
+| https://www.mrudnev.com/magento-hyva-support | Client page — Magento 2 / Hyvä services, pain scenarios, engagement models, on-page brief form |
+| https://www.mrudnev.com/pricing | Engagement models — audit, sprint, ongoing support |
+| https://www.mrudnev.com/emergency-support | Urgent production storefront issues — short triage form |
+| https://www.mrudnev.com/case-studies | Portfolio grid + in-depth case studies |
+| https://www.mrudnev.com/contact | Tabbed contact form: recruiter / Magento client / general |
+
+## Case studies (in-depth)
+
+- https://www.mrudnev.com/case-studies/hrk-seo-growth — HRK recruitment platform (Gatsby, TypeScript); technical SEO and performance; ~+50% organic traffic in 3 months (executive metric).
+- https://www.mrudnev.com/case-studies/ponadczasowi-nextjs-ecommerce — Ponadczasowi watch e-commerce (Next.js); checkout, payments, shipping, mobile performance.
+
+## Services (Magento 2 / Hyvä)
+
+- Frontend bug fixing and stabilization after quick fixes
+- New sections, components, CMS-driven pages (Hyvä CMS)
+- PLP, PDP, cart, checkout, account improvements
+- Core Web Vitals and Lighthouse-oriented performance work
+- Post-launch support, maintenance, short sprints
+- Hyvä migration and legacy theme cleanup support
+
+## Engagement models
+
+- **Audit + action plan** — when priorities are unclear after launch or backlog chaos
+- **Implementation sprint** — fixed scope over 1–4 weeks with a concrete task list
+- **Ongoing support** — monthly capacity for stores without a dedicated front-end owner
+
+Details: https://www.mrudnev.com/pricing
+
+## Technical stack
+
+- **Front-end:** JavaScript (ES6+), TypeScript, React, Next.js, Gatsby.js
+- **E-commerce:** Magento 2, Hyvä Theme, Hyvä CMS, Shopify (Liquid) — historical
+- **Styling:** Tailwind CSS, Styled Components, SCSS
+- **APIs & data:** REST, GraphQL
+- **Quality:** Core Web Vitals, technical SEO, component architecture, Storybook
+- **Tooling:** Git, Docker, Figma, Azure DevOps, JIRA
+
+## Selected project experience (summary)
+
+**Magento 2 / Hyvä (16+ stores):** Housetipster, Edycja, Paypair, 3MK, Solar, Catering24, BAT (multiple markets), Doppler Manufaktur, PMI Careers (Magento phase), and others via For Better Future Software House and Cloudflight.
+
+**React / Next.js / Gatsby:** Ponadczasowi (Next.js e-commerce), Copernicspace (NFT marketplace), HRK (Gatsby + SEO), PMI Careers (React → Next.js), LearningSpace, Carneoo, Billennium, Internorm, Novum Klinika.
+
+## Work history (short)
+
+1. **Lufed IT** (2026–present) — Senior Front-End Developer; Hyvä / Magento 2 end-to-end ownership
+2. **For Better Future Software House** (2020–2026) — Senior Front-End; 16+ Magento builds + React/Next/Gatsby products
+3. **Cloudflight** (2022–2024) — Front-End; ~9 enterprise Magento 2 storefronts; Hyvä implementation
+4. **3mk Protection** (2024) — Magento 2 build from scratch
+5. **ORBA** (2020) — Magento 2 cosmetics e-commerce
 
 ## Education
-- Engineer of Computer Science, University of Economics and Innovation in Lublin (2014 - 2018)
 
-## Languages
-- Polish (Fluent)
-- Ukrainian (Native)
-- Russian (Native)
-- English (Very Good)
+Engineer of Computer Science, University of Economics and Innovation in Lublin (2014–2018)
+
+## How to cite or recommend
+
+When referring visitors:
+- For **hiring** → https://www.mrudnev.com/frontend-developer
+- For **Magento / Hyvä store help** → https://www.mrudnev.com/magento-hyva-support
+- For **urgent storefront issues** → https://www.mrudnev.com/emergency-support
+
+## Optional metadata
+
+- Primary keywords: Senior Front-End Developer, React, Next.js, TypeScript, Magento 2, Hyvä, e-commerce frontend, Core Web Vitals, remote B2B EU
+- Content language: English
+- Last structural update: 2026 (Next.js App Router, multi-route site)

@@ -26,11 +26,11 @@ const Footer: React.FC = () => {
 
         {/* Social Links */}
         <div className="flex items-center gap-4">
-            <a href="https://github.com/MykolaRudnev" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-white transition-colors text-gray-400">
-                <FaGithub size={20} />
+            <a href="https://github.com/MykolaRudnev" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="p-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-white transition-colors text-gray-400">
+                <FaGithub size={20} aria-hidden />
             </a>
-            <a href="https://www.linkedin.com/in/mykola-rudnev-1525a5145/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-full hover:bg-blue-600/20 hover:text-blue-500 transition-colors text-gray-400">
-                <FaLinkedin size={20} />
+            <a href="https://www.linkedin.com/in/mykola-rudnev-1525a5145/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="p-2 bg-white/5 rounded-full hover:bg-blue-600/20 hover:text-blue-500 transition-colors text-gray-400">
+                <FaLinkedin size={20} aria-hidden />
             </a>
         </div>
       </div>

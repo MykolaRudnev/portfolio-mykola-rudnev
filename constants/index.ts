@@ -1,1 +1,1 @@
-export * from "../constants.tsx"
+export * from "./data"

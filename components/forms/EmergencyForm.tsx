@@ -1,11 +1,14 @@
-import React, { useState } from "react"
+"use client"
+
+import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { FormField, inputClassName } from "./FormField"
 import { useRecaptchaToken } from "./use-recaptcha-token"
-import { submitContactForm } from "../../lib/contact-api"
-import { trackEvent } from "../../lib/analytics"
+import { submitContactForm } from "@/lib/contact-api"
+import { trackEvent } from "@/lib/analytics"
+import { FormStatusMessage } from "./FormStatusMessage"
 
 const schema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -14,6 +17,7 @@ const schema = z.object({
   issueDescription: z.string().min(10, "Please describe the issue"),
   isProduction: z.enum(["yes", "no"], { message: "Select environment" }),
   accessAvailable: z.string().optional(),
+  consent: z.literal(true, { message: "Consent is required" }),
 })
 
 type FormData = z.infer<typeof schema>
@@ -34,10 +38,12 @@ export function EmergencyForm() {
     setStatus("loading")
     trackEvent("cta_emergency")
     const recaptchaToken = await getToken()
+    const { consent: _, ...fields } = data
     const result = await submitContactForm({
       formType: "emergency",
       recaptchaToken,
-      ...data,
+      consent: "yes",
+      ...fields,
     })
 
     if (!result.ok) {
@@ -55,36 +61,45 @@ export function EmergencyForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
       <FormField label="Name" error={errors.name?.message}>
-        <input {...register("name")} className={inputClassName} />
+        {(field) => <input {...register("name")} {...field} className={inputClassName} />}
       </FormField>
       <FormField label="Email" error={errors.email?.message}>
-        <input type="email" {...register("email")} className={inputClassName} />
+        {(field) => <input type="email" {...register("email")} {...field} className={inputClassName} />}
       </FormField>
       <FormField label="Store URL" error={errors.websiteUrl?.message}>
-        <input {...register("websiteUrl")} placeholder="https://" className={inputClassName} />
+        {(field) => (
+          <input {...register("websiteUrl")} {...field} placeholder="https://" className={inputClassName} />
+        )}
       </FormField>
       <FormField label="Issue description" error={errors.issueDescription?.message}>
-        <textarea {...register("issueDescription")} rows={4} className={inputClassName} />
+        {(field) => <textarea {...register("issueDescription")} {...field} rows={4} className={inputClassName} />}
       </FormField>
       <FormField label="Is this on production?" error={errors.isProduction?.message}>
-        <select {...register("isProduction")} className={inputClassName}>
-          <option value="">Select</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
+        {(field) => (
+          <select {...register("isProduction")} {...field} className={inputClassName} defaultValue="">
+            <option value="" disabled>Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        )}
       </FormField>
       <FormField label="Repo / admin access (optional)" error={errors.accessAvailable?.message}>
-        <input {...register("accessAvailable")} className={inputClassName} />
+        {(field) => <input {...register("accessAvailable")} {...field} className={inputClassName} />}
       </FormField>
+      <label className="flex items-start gap-3 text-sm text-gray-400 cursor-pointer">
+        <input type="checkbox" {...register("consent")} className="mt-1 rounded border-white/20" />
+        <span>I agree to be contacted about this inquiry.</span>
+      </label>
+      {errors.consent?.message && <p className="text-sm text-red-400">{errors.consent.message}</p>}
       <button
         type="submit"
         disabled={status === "loading"}
         className="px-8 py-3 rounded-full bg-red-500/90 text-white font-semibold hover:bg-red-500 disabled:opacity-50"
+        aria-busy={status === "loading"}
       >
         {status === "loading" ? "Sending…" : "Send urgent request"}
       </button>
-      {status === "success" && <p className="text-cyan-400 text-sm">{statusMessage}</p>}
-      {status === "error" && <p className="text-red-400 text-sm">{statusMessage}</p>}
+      <FormStatusMessage status={status} message={statusMessage} />
     </form>
   )
 }

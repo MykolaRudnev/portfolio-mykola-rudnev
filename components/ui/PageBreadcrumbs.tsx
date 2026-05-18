@@ -1,11 +1,13 @@
-import React from "react"
-import { Link, useLocation } from "react-router-dom"
-import { ROUTES } from "../../constants/routes"
-import { getCaseStudyBySlug } from "../../constants/case-studies"
+"use client"
+
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { ROUTES } from "@/constants/routes"
+import { getCaseStudyBySlug } from "@/constants/case-studies"
 
 export interface BreadcrumbItem {
   label: string
-  to?: string
+  href?: string
 }
 
 interface PageBreadcrumbsProps {
@@ -15,7 +17,7 @@ interface PageBreadcrumbsProps {
 }
 
 export function resolveBreadcrumbs(pathname: string, currentLabel?: string): BreadcrumbItem[] {
-  const home: BreadcrumbItem = { label: "Home", to: ROUTES.home }
+  const home: BreadcrumbItem = { label: "Home", href: ROUTES.home }
 
   if (pathname === ROUTES.home) return []
 
@@ -28,14 +30,14 @@ export function resolveBreadcrumbs(pathname: string, currentLabel?: string): Bre
   if (pathname === ROUTES.pricing)
     return [
       home,
-      { label: "Magento 2 / Hyvä Support", to: ROUTES.magentoSupport },
+      { label: "Magento 2 / Hyvä Support", href: ROUTES.magentoSupport },
       { label: currentLabel ?? "Pricing" },
     ]
 
   if (pathname === ROUTES.emergencySupport)
     return [
       home,
-      { label: "Magento 2 / Hyvä Support", to: ROUTES.magentoSupport },
+      { label: "Magento 2 / Hyvä Support", href: ROUTES.magentoSupport },
       { label: currentLabel ?? "Emergency support" },
     ]
 
@@ -48,7 +50,7 @@ export function resolveBreadcrumbs(pathname: string, currentLabel?: string): Bre
     const detailLabel = currentLabel ?? study?.client ?? "Case study"
     return [
       home,
-      { label: "Case studies", to: ROUTES.caseStudies },
+      { label: "Case studies", href: ROUTES.caseStudies },
       { label: detailLabel },
     ]
   }
@@ -60,7 +62,7 @@ export function resolveBreadcrumbs(pathname: string, currentLabel?: string): Bre
 }
 
 export function PageBreadcrumbs({ items, currentLabel, className = "" }: PageBreadcrumbsProps) {
-  const { pathname } = useLocation()
+  const pathname = usePathname() ?? ""
   const crumbs = items ?? resolveBreadcrumbs(pathname, currentLabel)
 
   if (crumbs.length === 0) return null
@@ -78,10 +80,10 @@ export function PageBreadcrumbs({ items, currentLabel, className = "" }: PageBre
                   /
                 </span>
               )}
-              {crumb.to && !isLast ? (
+              {crumb.href && !isLast ? (
                 <Link
-                  to={crumb.to}
-                  className="hover:text-cyan-400 transition-colors truncate max-w-[12rem] sm:max-w-none"
+                  href={crumb.href}
+                  className="underline underline-offset-4 hover:text-cyan-400 transition-colors truncate max-w-[12rem] sm:max-w-none"
                 >
                   {crumb.label}
                 </Link>

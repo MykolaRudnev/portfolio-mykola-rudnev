@@ -1,6 +1,7 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import { trackEvent, type AnalyticsEvent } from "../../lib/analytics"
+"use client"
+
+import Link from "next/link"
+import { trackEvent, type AnalyticsEvent } from "@/lib/analytics"
 
 interface CtaButtonProps {
   to?: string
@@ -37,7 +38,7 @@ export function CtaButton({
 
   if (to)
     return (
-      <Link to={to} className={classes} onClick={handleClick}>
+      <Link href={to} className={classes} onClick={handleClick}>
         {children}
       </Link>
     )

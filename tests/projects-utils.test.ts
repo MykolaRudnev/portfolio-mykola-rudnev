@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest"
-import { projects } from "../constants.tsx"
+import { projects } from "@/constants"
 import { getMagentoProjects, getReactProjects } from "../constants/projects-utils"
 
 describe("projects-utils", () => {

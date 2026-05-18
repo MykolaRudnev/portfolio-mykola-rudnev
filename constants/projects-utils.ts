@@ -1,4 +1,4 @@
-import { projects } from "../constants.tsx"
+import { projects } from "@/constants"
 import type { Project } from "../types"
 
 export type ProjectCategory = "magento" | "react" | "wordpress" | "other"
