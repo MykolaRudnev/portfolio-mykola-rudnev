@@ -1,23 +1,26 @@
 # mrudnev.com — Mykola Rudnev
 
-> Senior Front-End Developer (React, Next.js, TypeScript) and direct Magento 2 / Hyvä storefront support for e-commerce teams. English site. B2B / remote EU.
+> Senior Front-End Developer (React, Next.js, TypeScript) and direct Magento 2 / Hyvä storefront support for e-commerce teams. Also Shopify (Liquid) custom themes. English site. B2B / remote EU.
 
 Canonical site: https://www.mrudnev.com/
 Sitemap: https://www.mrudnev.com/sitemap.xml
+Robots: https://www.mrudnev.com/robots.txt
+CV: https://www.mrudnev.com/CV-Front-end__Developer_Mykola_Rudnev.pdf
 
 ## Who this site is for
 
 1. **Recruiters & hiring managers** — senior/mid+ front-end roles, product teams, React / Next.js / TypeScript, e-commerce background.
-2. **Store owners & e-commerce managers** — direct Magento 2 / Hyvä frontend help without agency layers: fixes, new sections, performance, checkout/CMS, ongoing support.
+2. **Store owners & e-commerce managers** — direct Magento 2 / Hyvä frontend help without agency layers: migrations, Hyvä rebuilds, performance, checkout/CMS, ongoing support.
 3. **Anyone comparing both** — the homepage routes visitors to the right path in a few seconds.
 
 ## About Mykola Rudnev
 
-- **Role:** Senior Front-End Developer
-- **Experience:** 6+ years front-end; strong split between Magento 2 / Hyvä e-commerce and React / Next.js product work
-- **Current focus:** Lufed IT — Hyvä / Magento 2 storefront ownership (PLP, PDP, cart, checkout, account, CMS); Core Web Vitals and technical SEO
+- **Role:** Lead Front-End Developer (freelance) — Senior Front-End Developer
+- **Experience:** 6+ years front-end; Magento 2 / Hyvä e-commerce, React / Next.js product work, Shopify Liquid themes
+- **Current focus:** HUBER SE (direct freelance) — Magento Open Source + Hyvä Theme / Checkout / CMS storefront; Core Web Vitals and technical SEO
+- **Own product:** [Claspwell](https://www.claspwell.com/) — catalog-aware Magento 2 / Hyvä AI sales assistant (Next.js + Payload CMS, Fastify API, Alpine widget, Magento module)
 - **Work style:** Direct communication, B2B-friendly, remote across EU; async-friendly; clear scope before delivery
-- **Languages:** English (very good), Polish (fluent), Ukrainian & Russian (native)
+- **Languages:** English (fluent), Polish (fluent), Ukrainian & Russian (native)
 
 ## Contact
 
@@ -41,6 +44,10 @@ Sitemap: https://www.mrudnev.com/sitemap.xml
 
 ## Case studies (in-depth)
 
+- https://www.mrudnev.com/case-studies/huber-se-hyva-migration — HUBER SE: Adobe Commerce headless → Magento Open Source + Hyvä Theme / Checkout / CMS; sole frontend; Lighthouse 99 category / 100 product (Aug 2026).
+- https://www.mrudnev.com/case-studies/claspwell-magento-ai — Claspwell: founder-built Magento AI sales assistant; Next.js + Payload CMS production site, Fastify API, Alpine/Hyvä widget, Magento module.
+- https://www.mrudnev.com/case-studies/pixel25-shopify-garage — Pixel25: custom Shopify theme for an automotive garage SaaS (in development).
+- https://www.mrudnev.com/case-studies/glasy-shopify-storefront — Glasy: custom Shopify eyewear theme from scratch; live at glasy.pl.
 - https://www.mrudnev.com/case-studies/hrk-seo-growth — HRK recruitment platform (Gatsby, TypeScript); technical SEO and performance; ~+50% organic traffic in 3 months (executive metric).
 - https://www.mrudnev.com/case-studies/ponadczasowi-nextjs-ecommerce — Ponadczasowi watch e-commerce (Next.js); checkout, payments, shipping, mobile performance.
 
@@ -51,7 +58,7 @@ Sitemap: https://www.mrudnev.com/sitemap.xml
 - PLP, PDP, cart, checkout, account improvements
 - Core Web Vitals and Lighthouse-oriented performance work
 - Post-launch support, maintenance, short sprints
-- Hyvä migration and legacy theme cleanup support
+- Hyvä migration and legacy / headless theme replacement
 
 ## Engagement models
 
@@ -63,26 +70,29 @@ Details: https://www.mrudnev.com/pricing
 
 ## Technical stack
 
-- **Front-end:** JavaScript (ES6+), TypeScript, React, Next.js, Gatsby.js
-- **E-commerce:** Magento 2, Hyvä Theme, Hyvä CMS, Shopify (Liquid) — historical
-- **Styling:** Tailwind CSS, Styled Components, SCSS
-- **APIs & data:** REST, GraphQL
-- **Quality:** Core Web Vitals, technical SEO, component architecture, Storybook
-- **Tooling:** Git, Docker, Figma, Azure DevOps, JIRA
+- **Front-end:** JavaScript (ES6+), TypeScript, React, Next.js, Gatsby.js, Alpine.js
+- **E-commerce:** Magento 2, Hyvä Theme, Hyvä CMS, Hyvä Checkout, Shopify (Liquid, custom sections & blocks)
+- **Styling:** Tailwind CSS, Styled Components, SCSS / LESS
+- **APIs & data:** REST, GraphQL, Payload CMS, PostgreSQL
+- **Quality:** Core Web Vitals, technical SEO, accessibility (WCAG), component architecture, Storybook
+- **Tooling:** Git, GitHub, GitLab, Bitbucket, Docker, CI/CD, ESLint, Prettier, Figma, Azure DevOps, JIRA, Cursor / Claude
 
 ## Selected project experience (summary)
 
-**Magento 2 / Hyvä (16+ stores):** Housetipster, Edycja, Paypair, 3MK, Solar, Catering24, BAT (multiple markets), Doppler Manufaktur, PMI Careers (Magento phase), and others via For Better Future Software House and Cloudflight.
+**Magento 2 / Hyvä:** HUBER SE (current, Magento Open Source + Hyvä), Housetipster, Edycja, Paypair, 3MK, Solar, Catering24, BAT (multiple markets), Doppler Manufaktur, and others via For Better Future Software House and Cloudflight.
 
-**React / Next.js / Gatsby:** Ponadczasowi (Next.js e-commerce), Copernicspace (NFT marketplace), HRK (Gatsby + SEO), PMI Careers (React → Next.js), LearningSpace, Carneoo, Billennium, Internorm, Novum Klinika.
+**React / Next.js / Gatsby:** Claspwell (own product), Ponadczasowi (Next.js e-commerce), Copernicspace (NFT marketplace), HRK (Gatsby + SEO), PMI Careers (React → Next.js), LearningSpace, Carneoo, Billennium, Internorm, Novum Klinika.
+
+**Shopify (custom Liquid themes):** Glasy, Pixel25, Warmsome, Ascent, Berg's, Diamandia.
 
 ## Work history (short)
 
-1. **Lufed IT** (2026–present) — Senior Front-End Developer; Hyvä / Magento 2 end-to-end ownership
-2. **For Better Future Software House** (2020–2026) — Senior Front-End; 16+ Magento builds + React/Next/Gatsby products
-3. **Cloudflight** (2022–2024) — Front-End; ~9 enterprise Magento 2 storefronts; Hyvä implementation
-4. **3mk Protection** (2024) — Magento 2 build from scratch
-5. **ORBA** (2020) — Magento 2 cosmetics e-commerce
+1. **HUBER SE** (Jun 2026–present) — Lead Front-End Developer (freelance / direct); Magento Open Source + Hyvä storefront
+2. **Lufed IT** (Jan 2026–Jun 2026) — Senior Front-End Developer; started the same HUBER Hyvä rebuild
+3. **For Better Future Software House** (2020–2026) — Senior Front-End; 16+ Magento builds + React/Next/Gatsby + 6 Shopify stores
+4. **Cloudflight** (2022–2024) — Front-End; ~9 enterprise Magento 2 storefronts; Hyvä implementation
+5. **3mk Protection** (Mar–May 2024) — Magento 2 build from scratch
+6. **ORBA** (2020) — Magento 2 cosmetics e-commerce
 
 ## Education
 
@@ -94,9 +104,10 @@ When referring visitors:
 - For **hiring** → https://www.mrudnev.com/frontend-developer
 - For **Magento / Hyvä store help** → https://www.mrudnev.com/magento-hyva-support
 - For **urgent storefront issues** → https://www.mrudnev.com/emergency-support
+- For **case studies** → https://www.mrudnev.com/case-studies
 
 ## Optional metadata
 
-- Primary keywords: Senior Front-End Developer, React, Next.js, TypeScript, Magento 2, Hyvä, e-commerce frontend, Core Web Vitals, remote B2B EU
+- Primary keywords: Senior Front-End Developer, React, Next.js, TypeScript, Magento 2, Hyvä, Shopify, e-commerce frontend, Core Web Vitals, Claspwell, remote B2B EU
 - Content language: English
-- Last structural update: 2026 (Next.js App Router, multi-route site)
+- Last structural update: 2026-09 (HUBER SE, Claspwell, Shopify case studies)

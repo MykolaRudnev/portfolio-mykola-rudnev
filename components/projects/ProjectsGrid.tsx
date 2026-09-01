@@ -7,7 +7,7 @@ import type { Project } from "../../types"
 import GlassCard from "../ui/GlassCard"
 import { getProjectLink } from "../../constants/projects-utils"
 
-interface ProjectsGridProps {
+export interface ProjectsGridProps {
   projects: Project[]
   categories?: string[]
   initialCount?: number
@@ -16,7 +16,7 @@ interface ProjectsGridProps {
   showFilters?: boolean
 }
 
-const DEFAULT_CATEGORIES = ["All", "Magento 2", "React/Next", "WordPress"]
+const DEFAULT_CATEGORIES = ["All", "Magento 2", "React/Next", "Shopify", "WordPress"]
 
 function filterByCategory(list: Project[], category: string): Project[] {
   if (category === "All") return list
@@ -25,6 +25,7 @@ function filterByCategory(list: Project[], category: string): Project[] {
     if (category === "Magento 2") return techs.includes("magento")
     if (category === "React/Next")
       return techs.includes("react") || techs.includes("next") || techs.includes("gatsby")
+    if (category === "Shopify") return techs.includes("shopify") || techs.includes("liquid")
     if (category === "WordPress") return techs.includes("wordpress")
     return false
   })

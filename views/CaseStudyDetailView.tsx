@@ -1,7 +1,5 @@
-"use client"
-
-import Link from "next/link"
 import { PageHeader } from "@/components/ui/PageHeader"
+import { PrefetchLink } from "@/components/ui/PrefetchLink"
 import GlassCard from "@/components/ui/GlassCard"
 import { CtaButton } from "@/components/ui/CtaButton"
 import { VisualProofSection } from "@/components/case-studies/VisualProofSection"
@@ -23,6 +21,18 @@ export function CaseStudyDetailView({ study }: CaseStudyDetailViewProps) {
         <p className="text-sm text-gray-500">
           {study.client} · {study.industry} · {study.projectType} · {study.year}
         </p>
+        {study.liveUrl && (
+          <p className="mt-3">
+            <a
+              href={study.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300 text-sm"
+            >
+              Visit live site →
+            </a>
+          </p>
+        )}
       </PageHeader>
 
       <article className="px-6 max-w-3xl mx-auto pb-24 space-y-12">
@@ -43,9 +53,9 @@ export function CaseStudyDetailView({ study }: CaseStudyDetailViewProps) {
         <div className="text-center pt-8">
           <CtaButton to={ROUTES.contact}>Discuss a similar project</CtaButton>
           <p className="mt-6">
-            <Link href={ROUTES.caseStudies} className="text-gray-500 hover:text-white text-sm">
+            <PrefetchLink href={ROUTES.caseStudies} className="text-gray-500 hover:text-white text-sm">
               ← All case studies
-            </Link>
+            </PrefetchLink>
           </p>
         </div>
       </article>

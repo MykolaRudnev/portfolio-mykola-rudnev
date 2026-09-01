@@ -6,9 +6,9 @@ export const personJsonLd = {
   name: "Mykola Rudnev",
   givenName: "Mykola",
   familyName: "Rudnev",
-  jobTitle: "Senior Front-End Developer",
+  jobTitle: "Lead Front-End Developer (Freelance)",
   description:
-    "Senior Front-End Developer with 6+ years of experience building high-performance web applications and production-ready e-commerce platforms (Magento 2 / Hyvä, React, Next.js, TypeScript).",
+    "Senior Front-End Developer with 6+ years of experience building high-performance web applications and production-ready e-commerce platforms (React, Next.js, TypeScript, Magento 2 / Hyvä, Shopify).",
   url: SITE_URL,
   image: `${SITE_URL}/images/mrudnev-avatar.png`,
   email: "mailto:rudnevmykola@gmail.com",
@@ -17,7 +17,7 @@ export const personJsonLd = {
     "https://www.linkedin.com/in/mykola-rudnev-1525a5145/",
     "https://github.com/MykolaRudnev",
   ],
-  worksFor: { "@type": "Organization", name: "Lufed IT" },
+  worksFor: { "@type": "Organization", name: "HUBER SE" },
   knowsAbout: [
     "Senior Front-End Development",
     "React.js",
@@ -25,8 +25,13 @@ export const personJsonLd = {
     "TypeScript",
     "Magento 2",
     "Hyvä Theme",
+    "Hyvä CMS",
+    "Shopify",
+    "Liquid",
+    "Alpine.js",
     "Core Web Vitals",
     "Technical SEO",
+    "Payload CMS",
   ],
 }
 
@@ -37,7 +42,7 @@ export const websiteJsonLd = {
   url: `${SITE_URL}/`,
   inLanguage: "en",
   description:
-    "Portfolio of Mykola Rudnev — Senior Front-End Developer specializing in Magento 2 (Hyvä), React, Next.js, and TypeScript.",
+    "Portfolio of Mykola Rudnev — Senior Front-End Developer specializing in React, Next.js, TypeScript, Magento 2 (Hyvä), and Shopify.",
   author: { "@type": "Person", name: "Mykola Rudnev", url: SITE_URL },
 }
 
@@ -47,7 +52,7 @@ export function professionalServiceJsonLd() {
     "@type": "ProfessionalService",
     name: "Magento 2 / Hyvä Support — Mykola Rudnev",
     description:
-      "Direct Magento 2 / Hyvä frontend support: fixes, new sections, performance, checkout/CMS, and ongoing maintenance.",
+      "Direct Magento 2 / Hyvä frontend support: migrations, Hyvä rebuilds, fixes, new sections, performance, checkout/CMS, and ongoing maintenance.",
     provider: { "@type": "Person", name: "Mykola Rudnev", url: SITE_URL },
     areaServed: ["Poland", "European Union", "Remote"],
     serviceType: ["Magento 2 Support", "Hyvä Theme Development", "E-commerce Frontend"],

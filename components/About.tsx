@@ -18,10 +18,10 @@ const About: React.FC = () => {
             <GlassCard className="p-8 md:p-12" hoverEffect>
                 <div className="flex flex-col gap-6 text-center md:text-left">
                     <p className="text-lg text-gray-300 leading-relaxed">
-                        Senior Front-End Developer with <strong className="text-white">6+ years of experience</strong>, specializing in <strong className="text-white">TypeScript, React.js, Next.js, and Magento 2 (Hyvä)</strong>. I build scalable, high-performance storefronts and web applications that elevate user experience end-to-end.
+                        Senior Front-End Developer with <strong className="text-white">6+ years of experience</strong>, specializing in <strong className="text-white">TypeScript, React.js, Next.js, Magento 2 (Hyvä), and Shopify</strong>. I build scalable, high-performance storefronts and web applications — including <strong className="text-white">Claspwell</strong>, my own Magento AI product, and the <strong className="text-white">HUBER SE</strong> Hyvä rebuild.
                     </p>
                     <p className="text-lg text-gray-300 leading-relaxed">
-                        I care about performance (Core Web Vitals), SEO, and clean component architecture, and I regularly work directly with clients and stakeholders. Outside of coding, I’m passionate about cryptocurrency, music, and anime.
+                        I care about performance (Core Web Vitals), SEO, and clean component architecture, and I regularly work directly with clients and stakeholders. Currently on a direct freelance contract with HUBER SE. Outside of coding, I’m passionate about cryptocurrency, music, and anime.
                     </p>
                 </div>
             </GlassCard>

@@ -32,7 +32,7 @@ describe("English-only UI", () => {
     }
   })
 
-  it("lists 21 portfolio projects in constants", () => {
-    expect(projects).toHaveLength(21)
+  it("lists 29 portfolio projects in constants", () => {
+    expect(projects).toHaveLength(29)
   })
 })

@@ -6,7 +6,7 @@ import { projects } from '../constants';
 import GlassCard from './ui/GlassCard';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-const categories = ["All", "Magento 2", "React/Next", "WordPress"];
+const categories = ["All", "Magento 2", "React/Next", "Shopify", "WordPress"];
 const INITIAL_PROJECTS_COUNT = 999;
 
 const Projects: React.FC = () => {
@@ -18,6 +18,7 @@ const Projects: React.FC = () => {
         return projects.filter(p => {
             if (activeTab === "Magento 2") return p.technologies.some(t => t.toLowerCase().includes("magento"));
             if (activeTab === "React/Next") return p.technologies.some(t => t.toLowerCase().includes("react") || t.toLowerCase().includes("next") || t.toLowerCase().includes("gatsby"));
+            if (activeTab === "Shopify") return p.technologies.some(t => t.toLowerCase().includes("shopify") || t.toLowerCase().includes("liquid"));
             if (activeTab === "WordPress") return p.technologies.some(t => t.toLowerCase().includes("wordpress"));
             return false;
         });

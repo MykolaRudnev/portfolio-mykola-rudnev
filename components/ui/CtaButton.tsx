@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { PrefetchLink } from "@/components/ui/PrefetchLink"
 import { trackEvent, type AnalyticsEvent } from "@/lib/analytics"
 
 interface CtaButtonProps {
@@ -38,9 +38,9 @@ export function CtaButton({
 
   if (to)
     return (
-      <Link href={to} className={classes} onClick={handleClick}>
+      <PrefetchLink href={to} className={classes} onClick={handleClick}>
         {children}
-      </Link>
+      </PrefetchLink>
     )
 
   if (href)

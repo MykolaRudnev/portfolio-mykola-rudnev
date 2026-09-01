@@ -18,7 +18,37 @@ export function buildPageMetadata({
   return {
     title,
     description,
-    alternates: { canonical: url },
+    authors: [{ name: "Mykola Rudnev", url: SITE_URL }],
+    creator: "Mykola Rudnev",
+    keywords: [
+      "Senior Front-End Developer",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Magento 2",
+      "Hyvä",
+      "Shopify",
+      "Core Web Vitals",
+      "Claspwell",
+      "HUBER SE",
+    ],
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+    alternates: {
+      canonical: url,
+      types: {
+        "text/plain": `${SITE_URL}/llms.txt`,
+      },
+    },
     openGraph: {
       type: "website",
       url,

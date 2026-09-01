@@ -27,8 +27,8 @@ describe("routing constants", () => {
 })
 
 describe("case studies", () => {
-  it("includes two published case studies with required sections", () => {
-    expect(detailedCaseStudies).toHaveLength(2)
+  it("includes six published case studies with required sections", () => {
+    expect(detailedCaseStudies).toHaveLength(6)
     for (const study of detailedCaseStudies) {
       expect(study.slug).toBeTruthy()
       expect(study.startingPoint.length).toBeGreaterThan(20)
@@ -40,6 +40,8 @@ describe("case studies", () => {
 
   it("resolves case study by slug", () => {
     expect(getCaseStudyBySlug("hrk-seo-growth")?.client).toBe("HRK")
+    expect(getCaseStudyBySlug("huber-se-hyva-migration")?.client).toBe("HUBER SE")
+    expect(getCaseStudyBySlug("claspwell-magento-ai")?.client).toBe("Claspwell")
     expect(getCaseStudyBySlug("unknown")).toBeUndefined()
   })
 
