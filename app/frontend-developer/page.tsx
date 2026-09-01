@@ -3,6 +3,8 @@ import { FrontendDeveloperPage } from "@/views/FrontendDeveloperPage"
 import { getMetadataForPath } from "@/lib/metadata"
 import { ROUTES } from "@/constants/routes"
 
+export const dynamic = "force-static"
+
 export const metadata: Metadata = getMetadataForPath(ROUTES.frontendDeveloper)
 
 export default function FrontendDeveloperRoute() {

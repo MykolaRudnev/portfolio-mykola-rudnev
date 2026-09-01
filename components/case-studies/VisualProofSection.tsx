@@ -8,15 +8,17 @@ interface VisualProofSectionProps {
 export function VisualProofSection({ items }: VisualProofSectionProps) {
   if (items.length === 0) return null
 
+  const hasBefore = items.some((item) => Boolean(item.beforeSrc))
+
   return (
     <section>
-      <h2 className="text-xl font-bold mb-6">Before & after</h2>
+      <h2 className="text-xl font-bold mb-6">{hasBefore ? "Before & after" : "Visual proof"}</h2>
       <div className="space-y-10">
         {items.map((item) => (
           <div key={item.label}>
             <h3 className="text-sm font-semibold text-cyan-400 mb-3">{item.label}</h3>
             {item.caption && <p className="text-gray-400 text-sm mb-4">{item.caption}</p>}
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className={`grid gap-4 ${item.beforeSrc && item.afterSrc ? "sm:grid-cols-2" : ""}`}>
               {item.beforeSrc && (
                 <figure className="rounded-xl overflow-hidden border border-white/10 bg-white/5">
                   <div className="px-3 py-2 text-xs text-gray-500 border-b border-white/10">Before</div>

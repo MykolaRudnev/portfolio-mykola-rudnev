@@ -4,8 +4,13 @@ export interface ProjectHighlight {
   link?: string
 }
 
-/** React / Next.js / Gatsby — from CV & portfolio (For Better Future, Cloudflight, product work). */
+/** React / Next.js / Gatsby — from CV & portfolio (For Better Future, product work, own SaaS). */
 export const REACT_PROJECT_HIGHLIGHTS: ProjectHighlight[] = [
+  {
+    name: "Claspwell",
+    summary: "Founder-built Magento AI assistant — Next.js + Payload CMS site, Fastify API, Alpine widget",
+    link: "https://www.claspwell.com/",
+  },
   {
     name: "Ponadczasowi",
     summary: "Next.js e-commerce — checkout, payments, shipping, performance & mobile UX",
@@ -50,6 +55,16 @@ export const REACT_PROJECT_HIGHLIGHTS: ProjectHighlight[] = [
 
 /** Magento 2 / Hyvä — from CV & portfolio (16+ stores, enterprise & SMB). */
 export const MAGENTO_PROJECT_HIGHLIGHTS: ProjectHighlight[] = [
+  {
+    name: "HUBER SE",
+    summary: "Adobe Commerce headless → Magento Open Source + Hyvä Theme / Checkout / CMS — Lighthouse 99–100 on catalog",
+    link: "https://shop.huber-se.com/",
+  },
+  {
+    name: "Claspwell",
+    summary: "Own Magento 2 / Hyvä AI sales assistant — category-first catalog chat, EU-hosted",
+    link: "https://www.claspwell.com/",
+  },
   {
     name: "Housetipster",
     summary: "Full Magento 2 build — home, PLP, PDP, CMS, account, custom components",
@@ -107,5 +122,38 @@ export const MAGENTO_PROJECT_HIGHLIGHTS: ProjectHighlight[] = [
   {
     name: "Excellent",
     summary: "Full custom theme build — homepage, PLP, PDP, account, CMS",
+  },
+]
+
+/** Shopify — custom Liquid themes, not preset restyles. */
+export const SHOPIFY_PROJECT_HIGHLIGHTS: ProjectHighlight[] = [
+  {
+    name: "Glasy",
+    summary: "Live eyewear store — custom theme from scratch, homepage, PLP, header/footer, Admin",
+    link: "https://glasy.pl/",
+  },
+  {
+    name: "Pixel25",
+    summary: "Automotive garage SaaS — application-style Liquid sections, AI garage flow (in development)",
+  },
+  {
+    name: "Warmsome",
+    summary: "Custom sections, responsive components, live Shopify storefront",
+    link: "https://warmsome.com/",
+  },
+  {
+    name: "Ascent",
+    summary: "Custom homepage from designs — reusable Liquid sections, Admin configuration",
+    link: "https://ascent-development.myshopify.com/",
+  },
+  {
+    name: "Berg's",
+    summary: "PDP improvements, custom product logic, frontend fixes on a live store",
+    link: "https://bergs.co/",
+  },
+  {
+    name: "Diamandia",
+    summary: "Homepage sections and theme work — version not released",
+    link: "https://diamandia.com/",
   },
 ]

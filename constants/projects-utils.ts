@@ -1,7 +1,7 @@
 import { projects } from "@/constants"
 import type { Project } from "../types"
 
-export type ProjectCategory = "magento" | "react" | "wordpress" | "other"
+export type ProjectCategory = "magento" | "react" | "shopify" | "wordpress" | "other"
 
 function normalizeTech(tech: string): string {
   return tech.toLowerCase()
@@ -9,6 +9,7 @@ function normalizeTech(tech: string): string {
 
 export function getProjectCategory(project: Project): ProjectCategory {
   const techs = project.technologies.map(normalizeTech).join(" ")
+  if (techs.includes("shopify") || techs.includes("liquid")) return "shopify"
   if (techs.includes("magento")) return "magento"
   if (
     techs.includes("react") ||
@@ -31,6 +32,10 @@ export function getMagentoProjects(): Project[] {
 
 export function getWordPressProjects(): Project[] {
   return projects.filter((p) => getProjectCategory(p) === "wordpress")
+}
+
+export function getShopifyProjects(): Project[] {
+  return projects.filter((p) => getProjectCategory(p) === "shopify")
 }
 
 export function getReactProjects(): Project[] {

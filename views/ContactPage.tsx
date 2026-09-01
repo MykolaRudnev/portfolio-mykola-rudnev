@@ -1,19 +1,16 @@
-"use client"
-
+import { Suspense } from "react"
 import { PageHeader } from "@/components/ui/PageHeader"
 import GlassCard from "@/components/ui/GlassCard"
 import { CtaButton } from "@/components/ui/CtaButton"
 import { ContactForm } from "@/components/forms/ContactForm"
 import { PAGE_CONTENT_CLASS } from "@/components/ui/page-container"
+import { Providers } from "@/app/providers"
+import { SectionSkeleton } from "@/components/ui/PageSkeleton"
 import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaArrowDown } from "react-icons/fa"
 
 const CONTACT_FORM_ID = "contact-form"
 
-interface ContactPageProps {
-  defaultTab?: "recruiter" | "client" | "general"
-}
-
-export function ContactPage({ defaultTab = "general" }: ContactPageProps) {
+export function ContactPage() {
   return (
     <>
       <PageHeader
@@ -50,7 +47,11 @@ export function ContactPage({ defaultTab = "general" }: ContactPageProps) {
               All fields marked without “optional” are required.
             </p>
             <GlassCard className="p-8 md:p-10 lg:p-12">
-              <ContactForm size="large" defaultTab={defaultTab} />
+              <Providers>
+                <Suspense fallback={<SectionSkeleton />}>
+                  <ContactForm size="large" />
+                </Suspense>
+              </Providers>
             </GlassCard>
           </div>
 

@@ -1,12 +1,12 @@
 import { Project, Skill, WorkExperience, Recommendation, Education, Course, Language } from "@/types"
-import { FaBitbucket, FaCss3Alt, FaFigma, FaGit, FaGitlab, FaHtml5, FaJs, FaReact, FaWordpress, FaLinkedin, FaGithub, FaEnvelope, FaCode, FaDocker, FaJira, FaTrello, FaMagento, FaPaintBrush } from "react-icons/fa";
+import { FaBitbucket, FaCss3Alt, FaFigma, FaGit, FaGitlab, FaHtml5, FaJs, FaReact, FaWordpress, FaGithub, FaCode, FaDocker, FaJira, FaTrello, FaMagento, FaPaintBrush, FaShopify, FaRobot, FaUsers } from "react-icons/fa";
 import { VscAzureDevops } from "react-icons/vsc";
 import {
+    SiAlpinedotjs,
     SiEslint,
     SiGatsby,
     SiGraphql,
     SiJquery,
-    SiJson,
     SiNextdotjs,
     SiPrettier,
     SiStyledcomponents,
@@ -17,12 +17,69 @@ import {
     SiClickup
 } from "react-icons/si";
 import { GiTeamUpgrade } from "react-icons/gi";
-import { MdOutlineAutorenew } from "react-icons/md";
+import { MdOutlineAutorenew, MdOutlineAccessibilityNew } from "react-icons/md";
 import { BsLightbulb } from "react-icons/bs";
 import { AiOutlineAudit } from "react-icons/ai";
 import { IoMdChatbubbles } from "react-icons/io";
+import { TbApi } from "react-icons/tb";
+import { BiGitBranch } from "react-icons/bi";
 
 export const projects: Project[] = [
+    {
+        name: "HUBER SE",
+        description: "Lead frontend on the Magento Open Source + Hyvä rebuild: migration from Adobe Commerce headless, full redesign, Hyvä Theme / Checkout / CMS. Catalog Lighthouse 99–100. Live storefront plus custom modules such as Cart Share.",
+        link: "https://shop.huber-se.com/",
+        image: "/images/projects/huber-se/storefront.jpg",
+        technologies: ["Magento 2", "Hyvä", "Hyvä CMS", "Alpine.js", "Tailwind CSS", "PHP"]
+    },
+    {
+        name: "Claspwell",
+        description: "Founder-built Magento 2 / Hyvä AI sales assistant. Production Next.js site with Payload CMS and PostgreSQL, Fastify API, Alpine widget and Magento module — category-first catalog chat, EU-hosted.",
+        link: "https://www.claspwell.com/",
+        image: "/images/projects/claspwell/homepage.jpg",
+        technologies: ["Next.js", "TypeScript", "Payload CMS", "Fastify", "Alpine.js"]
+    },
+    {
+        name: "Glasy",
+        description: "Custom Shopify theme from scratch for a live eyewear store — homepage, collections/PLP, header, footer, Liquid sections and Shopify Admin configuration.",
+        link: "https://glasy.pl/",
+        image: "/images/projects/shopify/glasy.jpg",
+        technologies: ["Shopify", "Liquid", "JavaScript", "HTML/CSS"]
+    },
+    {
+        name: "Pixel25",
+        description: "Automotive / garage SaaS storefront on a custom Shopify theme. Application-style Liquid sections and AI-assisted garage creation for cars listed for sale. In development.",
+        image: "/images/projects/placeholder.png",
+        technologies: ["Shopify", "Liquid", "JavaScript", "Custom sections"]
+    },
+    {
+        name: "Warmsome",
+        description: "Custom Shopify storefront sections, responsive components and theme development for a live product brand.",
+        link: "https://warmsome.com/",
+        image: "/images/projects/shopify/warmsome.jpg",
+        technologies: ["Shopify", "Liquid", "JavaScript", "HTML/CSS"]
+    },
+    {
+        name: "Ascent",
+        description: "Custom homepage from provided designs — reusable Liquid sections and Shopify Admin configuration on a development store.",
+        link: "https://ascent-development.myshopify.com/",
+        image: "/images/projects/shopify/ascent.jpg",
+        technologies: ["Shopify", "Liquid", "JavaScript", "JSON templates"]
+    },
+    {
+        name: "Berg's",
+        description: "Product page improvements, custom product logic and frontend fixes on an existing live Shopify store.",
+        link: "https://bergs.co/",
+        image: "/images/projects/shopify/bergs.jpg",
+        technologies: ["Shopify", "Liquid", "JavaScript"]
+    },
+    {
+        name: "Diamandia",
+        description: "Homepage sections, social integrations and theme improvements. Development stopped before this version was released.",
+        link: "https://diamandia.com/",
+        image: "/images/projects/shopify/diamandia.jpg",
+        technologies: ["Shopify", "Liquid", "JavaScript"]
+    },
     {
         name: "Housetipster",
         description: "Full Magento 2 e-commerce build with CMS, product, and account pages. Worked on homepage, category page, product page, cms static pages, account pages and custom elements.",
@@ -180,22 +237,35 @@ export const technicalSkills: Skill[] = [
     { name: 'Next.js', icon: SiNextdotjs, color: '#FFFFFF' },
     { name: 'Gatsby.js', icon: SiGatsby, color: '#663399' },
     { name: 'Magento 2', icon: FaMagento, color: '#EE672F' },
-    { name: 'Hyvä', icon: FaCode, color: '#F4A261' }, // Generic code icon as placeholder for Hyvä
+    { name: 'Hyvä', icon: FaCode, color: '#F4A261' },
+    { name: 'Hyvä CMS', icon: FaCode, color: '#E76F51' },
+    { name: 'Shopify', icon: FaShopify, color: '#96BF48' },
+    { name: 'Liquid', icon: FaCode, color: '#7AB55C' },
+    { name: 'Alpine.js', icon: SiAlpinedotjs, color: '#8BC0D0' },
     { name: 'WordPress', icon: FaWordpress, color: '#21759B' },
     { name: 'Tailwind', icon: SiTailwindcss, color: '#06B6D4' },
     { name: 'Styled Components', icon: SiStyledcomponents, color: '#DB7093' },
     { name: 'SASS/LESS', icon: SiSass, color: '#CC6699' },
-    { name: 'jQuery', icon: SiJquery,color: '#1572B6'},
+    { name: 'jQuery', icon: SiJquery, color: '#1572B6' },
+    { name: 'REST API', icon: TbApi, color: '#4CAF50' },
     { name: 'GraphQL', icon: SiGraphql, color: '#E10098' },
     { name: 'Storybook', icon: SiStorybook, color: '#FF4785' },
     { name: 'Docker', icon: FaDocker, color: '#2496ED' },
+    { name: 'CI/CD', icon: BiGitBranch, color: '#2088FF' },
     { name: 'Git', icon: FaGit, color: '#F05032' },
+    { name: 'GitHub', icon: FaGithub, color: '#FFFFFF' },
+    { name: 'GitLab', icon: FaGitlab, color: '#FC6D26' },
+    { name: 'Bitbucket', icon: FaBitbucket, color: '#0052CC' },
+    { name: 'ESLint', icon: SiEslint, color: '#4B32C3' },
+    { name: 'Prettier', icon: SiPrettier, color: '#F7B93E' },
     { name: 'JIRA', icon: FaJira, color: '#0052CC' },
     { name: 'Azure DevOps', icon: VscAzureDevops, color: '#0078D7' },
     { name: 'ClickUp', icon: SiClickup, color: '#7B68EE' },
     { name: 'Trello', icon: FaTrello, color: '#0079BF' },
     { name: 'Figma', icon: FaFigma, color: '#F24E1E' },
     { name: 'Adobe XD', icon: FaPaintBrush, color: '#FF61F6' },
+    { name: 'Cursor / Claude', icon: FaRobot, color: '#22D3EE' },
+    { name: 'WCAG / a11y', icon: MdOutlineAccessibilityNew, color: '#84CC16' },
 ]
 
 export const softSkills: Skill[] = [
@@ -204,23 +274,41 @@ export const softSkills: Skill[] = [
     { name: 'Problem-solving', icon: BsLightbulb, color: '#FFC107' },
     { name: 'Attention to detail', icon: AiOutlineAudit, color: '#9C27B0' },
     { name: 'Communication', icon: IoMdChatbubbles, color: '#E91E63' },
+    { name: 'Leadership', icon: FaUsers, color: '#06B6D4' },
+    { name: 'AI-assisted development', icon: FaRobot, color: '#A78BFA' },
 ]
 
 export const workExperiences: WorkExperience[] = [
     {
+        company: 'HUBER SE',
+        position: 'Lead Front-End Developer — Magento 2 / Hyvä',
+        period: 'June 2026 - Present',
+        logo: '/images/huber-logo.svg',
+        responsibilities: [
+            'Direct client Magento 2 / Hyvä e-commerce platform (self-employed / remote, Germany):',
+            'Leading frontend delivery for the customer-facing storefront as the main frontend contact.',
+            'Same storefront started at Lufed IT — continued under a direct freelance contract with HUBER SE.',
+            'Translating business, SEO and marketing requirements into frontend tasks and Magento module work.',
+            'Building Hyvä CMS structures, reusable components, translations and multi-store frontend improvements.',
+            'Implementing features across CMS pages, PLP, PDP, cart, Hyvä Checkout and customer account.',
+            'Shipping custom Magento modules with backend (example: Cart Share — snapshot from cart, review URL, live recipient prices, admin grid).',
+            'Improving UX, Core Web Vitals, accessibility, technical SEO and maintainability on Magento Open Source + Hyvä Theme / Checkout / CMS.',
+        ]
+    },
+    {
         company: 'Lufed IT',
         position: 'Senior Front-End Developer',
-        period: 'January 2026 - Present',
+        period: 'January 2026 - June 2026',
         logo: '/images/lufed-it.png',
         responsibilities: [
-            'E-Commerce / Magento 2 (Hyvä Theme):',
-            'Leading front-end development and architecture for Magento 2 (Hyvä Theme) projects as the sole Front-End Developer responsible for the entire frontend layer.',
-            'Full ownership of the frontend across all key areas: Home, Category (PLP), Product (PDP), Cart, Checkout and Customer Account.',
-            'Driving a complete redesign and migration from Magento 2 Enterprise to Hyvä, focused on performance and UX.',
-            'Building and customizing reusable components using Hyvä CMS and a scalable component system.',
-            'Collaboration & SEO:',
-            'Direct communication with clients — gathering requirements and delivering business-oriented solutions.',
-            'Close collaboration with the SEO team and implementation of technical SEO optimizations (Core Web Vitals, performance).'
+            'E-Commerce / Magento 2 (Hyvä Theme) — HUBER SE storefront:',
+            'Started the HUBER rebuild as sole Front-End Developer: Magento Open Source + Hyvä after Adobe Commerce headless.',
+            'Full ownership of Home, Category (PLP), Product (PDP), Cart, Hyvä Checkout and Customer Account.',
+            'Drove redesign and migration from Adobe Commerce / Enterprise headless to Hyvä Theme, Hyvä Checkout and Hyvä CMS.',
+            'Building reusable components with Hyvä CMS and a scalable component system.',
+            'Task management for frontend and backend work; collaborated on Magento modules.',
+            'Direct client communication and close work with SEO on Core Web Vitals and technical SEO.',
+            'Frontend went to production in this window (January–July 2026 including the direct-client continuation).'
         ]
     },
     {
@@ -245,8 +333,11 @@ export const workExperiences: WorkExperience[] = [
             'Billennium — built a modular Next.js website with reusable components and Storybook.',
             'Novum Klinika — improved responsive UI and cross-device compatibility.',
             'Shopify (Liquid):',
-            'Developed and customized 6 Shopify stores based on Figma designs — custom themes focused on performance, UX and scalability.',
-            'Delivered key pages (Home, Collection, Product), collaborated with clients and implemented SEO best practices.'
+            'Developed and customized 6 Shopify stores from Figma — custom Liquid themes, not preset restyles.',
+            'Glasy (glasy.pl) — live eyewear store: homepage, PLP, header, footer, Admin sections from scratch.',
+            'Pixel25 — automotive garage SaaS storefront with application-style Liquid sections (in development).',
+            "Warmsome (warmsome.com), Berg's (bergs.co), Ascent (development store), Diamandia (theme work; version not released).",
+            'Delivered Home, Collection/PLP, Product/PDP, footer, custom elements and Shopify Admin configuration.'
         ]
     },
     {
@@ -274,7 +365,7 @@ export const workExperiences: WorkExperience[] = [
     {
         company: '3mk Protection',
         position: 'Front-End Developer',
-        period: 'March 2024 - June 2024',
+        period: 'March 2024 - May 2024',
         logo: '/images/3mk-logo.jpeg',
         responsibilities: [
             'Magento 2 Project (from scratch):',
@@ -311,10 +402,11 @@ export const languages: Language[] = [
     { language: "Polish", proficiency: "Fluent", flag: "🇵🇱" },
     { language: "Ukrainian", proficiency: "Native Speaker", flag: "🇺🇦" },
     { language: "Russian", proficiency: "Native Speaker", flag: "🇷🇺" },
-    { language: "English", proficiency: "Very Good", flag: "🇬🇧" },
+    { language: "English", proficiency: "Fluent", flag: "🇬🇧" },
 ];
 
 export const courses: Course[] = [
+    { name: "Frontend System Design Essentials", provider: "Juntao Qiu", date: "Aug 2026" },
     { name: "Cursor & Claude Code Professional AI Setup", provider: "Cursor", date: "Sep 2025" },
     { name: "Modern JavaScript Full Course", provider: "fireship.io", date: "2025" },
     { name: "Next.js - The Full Course", provider: "fireship.io", date: "2025" },

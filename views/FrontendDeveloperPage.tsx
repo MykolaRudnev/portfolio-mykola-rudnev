@@ -7,17 +7,19 @@ import { CtaButton } from "@/components/ui/CtaButton"
 import GlassCard from "@/components/ui/GlassCard"
 import { ROUTES } from "@/constants/routes"
 import { technicalSkills } from "@/constants"
-import { LoadingFallback } from "@/components/layout/LoadingFallback"
 import { PAGE_CONTENT_CLASS } from "@/components/ui/page-container"
+import { ProjectsGridSkeleton, SectionSkeleton } from "@/components/ui/PageSkeleton"
 import { ProjectHighlightList } from "@/components/ui/ProjectHighlightList"
-import { REACT_PROJECT_HIGHLIGHTS } from "@/constants/audience-highlights"
+import { REACT_PROJECT_HIGHLIGHTS, SHOPIFY_PROJECT_HIGHLIGHTS } from "@/constants/audience-highlights"
 
 const Experience = lazy(() => import("@/components/Experience"))
 const Projects = lazy(() => import("@/components/Projects"))
 const Recommendations = lazy(() => import("@/components/Recommendations"))
+const Skills = lazy(() => import("@/components/Skills"))
 
 const FIT_CASES = [
   "Product teams needing a reliable front-end developer",
+  "Shipped product work (Claspwell — Next.js, CMS, API, Magento widget)",
   "Migration work from legacy frontends",
   "Design-to-code implementation from Figma",
   "Performance and Core Web Vitals improvements",
@@ -31,7 +33,7 @@ export function FrontendDeveloperPage() {
     <>
       <PageHeader
         title="Senior Front-end Developer"
-        subtitle="React, Next.js, TypeScript, e-commerce and scalable UI work for product teams."
+        subtitle="React, Next.js, TypeScript — product UI, e-commerce, and a shipped Next.js product (Claspwell)."
       >
         <div className="flex flex-wrap justify-center gap-4">
           <CtaButton href="mailto:rudnevmykola@gmail.com?subject=Screening%20call" event="cta_book_call">
@@ -78,6 +80,18 @@ export function FrontendDeveloperPage() {
           />
         </GlassCard>
 
+        <GlassCard className="p-8 mb-12">
+          <h2 className="text-2xl font-bold mb-2">Shopify / Liquid</h2>
+          <p className="text-gray-400 text-sm mb-6">
+            Custom themes from scratch — sections, blocks, Admin configuration, not preset restyles.
+          </p>
+          <ProjectHighlightList
+            title=""
+            items={SHOPIFY_PROJECT_HIGHLIGHTS}
+            accentClass="text-green-400"
+          />
+        </GlassCard>
+
         <GlassCard className="p-8">
           <h2 className="text-2xl font-bold mb-6">What I'm a strong fit for</h2>
           <ul className="grid md:grid-cols-2 gap-3">
@@ -91,13 +105,16 @@ export function FrontendDeveloperPage() {
         </GlassCard>
       </section>
 
-      <Suspense fallback={<LoadingFallback />}>
+      <Suspense fallback={<SectionSkeleton />}>
+        <Skills />
+      </Suspense>
+      <Suspense fallback={<SectionSkeleton />}>
         <Experience />
       </Suspense>
-      <Suspense fallback={<LoadingFallback />}>
+      <Suspense fallback={<ProjectsGridSkeleton />}>
         <Projects />
       </Suspense>
-      <Suspense fallback={<LoadingFallback />}>
+      <Suspense fallback={<SectionSkeleton />}>
         <Recommendations />
       </Suspense>
     </>

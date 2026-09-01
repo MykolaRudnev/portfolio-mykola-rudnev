@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useSearchParams } from "next/navigation"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -63,13 +64,22 @@ const TABS: { id: TabId; label: string }[] = [
   { id: "general", label: "General" },
 ]
 
+function tabFromIntent(intent: string | null): TabId {
+  if (intent === "magento" || intent === "client") return "client"
+  if (intent === "recruiter") return "recruiter"
+  return "general"
+}
+
 interface ContactFormProps {
   size?: "default" | "large"
   defaultTab?: TabId
 }
 
-export function ContactForm({ size = "default", defaultTab = "general" }: ContactFormProps) {
-  const [activeTab, setActiveTab] = useState<TabId>(defaultTab)
+export function ContactForm({ size = "default", defaultTab }: ContactFormProps) {
+  const searchParams = useSearchParams()
+  const [activeTab, setActiveTab] = useState<TabId>(
+    () => defaultTab ?? tabFromIntent(searchParams.get("intent"))
+  )
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [statusMessage, setStatusMessage] = useState("")
   const { getToken } = useRecaptchaToken("contact_form")

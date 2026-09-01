@@ -1,7 +1,7 @@
 "use client"
 
-import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { PrefetchLink } from "@/components/ui/PrefetchLink"
 import { ROUTES } from "@/constants/routes"
 import { getCaseStudyBySlug } from "@/constants/case-studies"
 
@@ -81,12 +81,12 @@ export function PageBreadcrumbs({ items, currentLabel, className = "" }: PageBre
                 </span>
               )}
               {crumb.href && !isLast ? (
-                <Link
+                <PrefetchLink
                   href={crumb.href}
                   className="underline underline-offset-4 hover:text-cyan-400 transition-colors truncate max-w-[12rem] sm:max-w-none"
                 >
                   {crumb.label}
-                </Link>
+                </PrefetchLink>
               ) : (
                 <span
                   className={`truncate max-w-[14rem] sm:max-w-none ${isLast ? "text-gray-300" : ""}`}

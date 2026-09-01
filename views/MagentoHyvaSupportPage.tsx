@@ -1,16 +1,15 @@
-"use client"
-
-import Link from "next/link"
 import { PageHeader } from "@/components/ui/PageHeader"
 import { CtaButton } from "@/components/ui/CtaButton"
 import GlassCard from "@/components/ui/GlassCard"
-import { ProjectsGrid } from "@/components/projects/ProjectsGrid"
+import { PrefetchLink } from "@/components/ui/PrefetchLink"
 import { ROUTES } from "@/constants/routes"
 import { MagentoBriefForm } from "@/components/forms/MagentoBriefForm"
 import { getMagentoProjects } from "@/constants/projects-utils"
 import { PAGE_CONTENT_CLASS } from "@/components/ui/page-container"
 import { ProjectHighlightList } from "@/components/ui/ProjectHighlightList"
 import { MAGENTO_PROJECT_HIGHLIGHTS } from "@/constants/audience-highlights"
+import { ProjectsGridLazy } from "@/components/projects/ProjectsGridLazy"
+import { Providers } from "@/app/providers"
 
 const SERVICES = [
   "Frontend bug fixing on Magento 2 / Hyvä",
@@ -105,7 +104,7 @@ export function MagentoHyvaSupportPage() {
     <>
       <PageHeader
         title="Magento 2 / Hyvä support — direct, no middlemen"
-        subtitle="I help e-commerce teams build and fix Magento 2 / Hyvä frontends: faster, cleaner, and without agency overhead. ~6 years on Magento storefronts, Hyvä end-to-end, B2B remote across the EU."
+        subtitle="I help e-commerce teams build and fix Magento 2 / Hyvä frontends: faster, cleaner, and without agency overhead. Current work: HUBER SE Hyvä rebuild (Lighthouse 99–100 on catalog) and Claspwell, a Magento-native AI assistant I built end-to-end."
       >
         <HeaderCtas />
       </PageHeader>
@@ -114,8 +113,10 @@ export function MagentoHyvaSupportPage() {
         <GlassCard className="p-8 md:p-10 mb-12">
           <h2 className="text-2xl font-bold mb-2">Magento 2 stores I&apos;ve worked on</h2>
           <p className="text-gray-400 text-sm mb-6">
-            16+ production storefronts — full builds, enterprise multi-market delivery, Hyvä migrations and
-            long-term support. Examples from my CV and portfolio (not only BAT or a single client):
+            16+ production storefronts — full builds, enterprise multi-market delivery, Hyvä migrations
+            (HUBER SE: Adobe Commerce headless → Magento Open Source) and long-term support. Also{" "}
+            <a href="https://www.claspwell.com/" className="text-cyan-400 underline underline-offset-4" target="_blank" rel="noopener noreferrer">Claspwell</a>
+            , my catalog-aware Magento / Hyvä AI assistant.
           </p>
           <ProjectHighlightList
             title=""
@@ -183,7 +184,7 @@ export function MagentoHyvaSupportPage() {
         <p className="text-gray-400 text-sm text-center max-w-2xl mx-auto mb-8">
           Pick the model that matches where your store is today. Full comparison and details on the pricing page.
         </p>
-        {motionFallbackEngagementModels()}
+        <EngagementModels />
         <div className="text-center mt-8">
           <CtaButton to={ROUTES.pricing} variant="secondary" event="cta_magento_support">
             View full comparison
@@ -211,7 +212,7 @@ export function MagentoHyvaSupportPage() {
           Send your store URL and a short description of the problem. I will reply whether I can take it on
           and which engagement model fits best.
         </p>
-        {motionFallbackMidPageCtas()}
+        <MidPageCtas />
       </section>
 
       <section id="send-brief" className="px-6 py-12 max-w-xl mx-auto scroll-mt-28">
@@ -220,7 +221,9 @@ export function MagentoHyvaSupportPage() {
           <p className="text-gray-400 text-sm mb-6">
             Store URL, what you need, and a short problem description — I will reply with fit and next steps.
           </p>
-          <MagentoBriefForm />
+          <Providers>
+            <MagentoBriefForm />
+          </Providers>
         </GlassCard>
       </section>
 
@@ -234,13 +237,13 @@ export function MagentoHyvaSupportPage() {
           </p>
           <p className="text-gray-400 text-sm">
             See the{" "}
-            <Link href={ROUTES.caseStudies} className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300">
+            <PrefetchLink href={ROUTES.caseStudies} className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300">
               full portfolio
-            </Link>{" "}
-            for React / Next.js projects and in-depth case studies (HRK, Ponadczasowi).
+            </PrefetchLink>{" "}
+            for React / Next.js, Shopify and in-depth case studies (HUBER SE, Claspwell, Glasy, HRK).
           </p>
         </GlassCard>
-        <ProjectsGrid
+        <ProjectsGridLazy
           projects={magentoProjects}
           title=""
           showTitle={false}
@@ -253,16 +256,16 @@ export function MagentoHyvaSupportPage() {
         <h2 className="text-2xl font-bold mb-4">Ready to talk?</h2>
         <p className="text-gray-400 mb-6 text-sm max-w-lg mx-auto">
           General inquiries and project briefs — use the{" "}
-          <Link href={ROUTES.contact} className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300">
+          <PrefetchLink href={ROUTES.contact} className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300">
             contact page
-          </Link>
+          </PrefetchLink>
           . For urgent production issues, see{" "}
-          <Link href={ROUTES.emergencySupport} className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300">
+          <PrefetchLink href={ROUTES.emergencySupport} className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300">
             emergency support
-          </Link>
+          </PrefetchLink>
           .
         </p>
-        {motionFallbackFooterCtas()}
+        <FooterCtas />
       </section>
     </>
   )
@@ -288,13 +291,13 @@ function HeaderCtas() {
   )
 }
 
-function motionFallbackEngagementModels() {
+function EngagementModels() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
       {ENGAGEMENT_MODELS.map((model) => (
         <GlassCard key={model.name} className="p-8 flex flex-col" hoverEffect>
           <h3 className="text-lg font-bold mb-2">{model.name}</h3>
-          <p className="text-gray-400 text-sm mb-4 flex-grow">{model.description}</p>
+          <p className="text-gray-400 text-sm mb-4 grow">{model.description}</p>
           <p className="text-cyan-400 text-xs">Best for: {model.bestFor}</p>
         </GlassCard>
       ))}
@@ -302,8 +305,7 @@ function motionFallbackEngagementModels() {
   )
 }
 
-
-function motionFallbackMidPageCtas() {
+function MidPageCtas() {
   return (
     <div className="flex flex-wrap gap-4 justify-center">
       <CtaButton href="#send-brief" event="cta_send_brief">
@@ -316,7 +318,7 @@ function motionFallbackMidPageCtas() {
   )
 }
 
-function motionFallbackFooterCtas() {
+function FooterCtas() {
   return (
     <div className="flex flex-wrap gap-4 justify-center">
       <CtaButton href="#send-brief" event="cta_send_brief">

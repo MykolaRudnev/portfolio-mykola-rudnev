@@ -12,6 +12,9 @@ interface CaseStudyPageProps {
   params: Promise<{ slug: string }>
 }
 
+export const dynamic = "force-static"
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return detailedCaseStudies.map((study) => ({ slug: study.slug }))
 }

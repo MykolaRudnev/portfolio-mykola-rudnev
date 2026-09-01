@@ -1,6 +1,3 @@
-"use client"
-
-import React from "react"
 import { PageHeader } from "@/components/ui/PageHeader"
 import { CtaButton } from "@/components/ui/CtaButton"
 import GlassCard from "@/components/ui/GlassCard"

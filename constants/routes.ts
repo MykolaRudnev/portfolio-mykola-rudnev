@@ -33,21 +33,21 @@ export const PAGE_SEO: PageSeoMeta[] = [
     path: ROUTES.home,
     title: "Mykola Rudnev | Front-end Developer and Magento 2 / Hyvä Support",
     description:
-      "Front-end Developer for React / Next.js teams and direct Magento 2 / Hyvä support for e-commerce stores. Case studies, availability and direct contact.",
+      "Senior Front-end Developer — React, Next.js, TypeScript, Magento 2 / Hyvä and Shopify. HUBER SE Hyvä rebuild, Claspwell AI product, case studies and direct contact.",
     lang: "en",
   },
   {
     path: ROUTES.frontendDeveloper,
     title: "Senior Front-end Developer React / Next.js / TypeScript | Mykola Rudnev",
     description:
-      "Senior Front-end Developer with React, Next.js, TypeScript and e-commerce experience. Available for B2B roles, product teams and fast-moving frontend work.",
+      "Senior Front-end Developer with React, Next.js, TypeScript, e-commerce and a shipped Next.js product (Claspwell). Available for B2B roles, product teams and frontend work.",
     lang: "en",
   },
   {
     path: ROUTES.magentoSupport,
     title: "Magento 2 / Hyvä Support — Direct Frontend Help | Mykola Rudnev",
     description:
-      "Direct Magento 2 / Hyvä frontend support: fixes, new sections, performance, checkout/CMS, and ongoing maintenance. No agency layers.",
+      "Direct Magento 2 / Hyvä frontend support: Hyvä migrations (HUBER SE), catalog-aware AI (Claspwell), performance, checkout/CMS, and ongoing maintenance. No agency layers.",
     lang: "en",
   },
   {
@@ -68,7 +68,7 @@ export const PAGE_SEO: PageSeoMeta[] = [
     path: ROUTES.caseStudies,
     title: "Case Studies & Projects | Mykola Rudnev",
     description:
-      "Magento 2, Hyvä, and React / Next.js projects with measurable outcomes — performance, delivery and frontend ownership.",
+      "Magento 2, Hyvä, Shopify, React and Next.js projects with measurable outcomes — HUBER SE Lighthouse 99, Claspwell, Glasy, HRK and more.",
     lang: "en",
   },
   {

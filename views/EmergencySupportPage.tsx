@@ -1,9 +1,7 @@
-"use client"
-
-import React from "react"
 import { PageHeader } from "@/components/ui/PageHeader"
 import GlassCard from "@/components/ui/GlassCard"
 import { EmergencyForm } from "@/components/forms/EmergencyForm"
+import { Providers } from "@/app/providers"
 
 const CASES = [
   "Checkout or cart error on production",
@@ -68,7 +66,9 @@ export function EmergencySupportPage() {
       <section className="px-6 py-12 pb-24 max-w-xl mx-auto">
         <GlassCard className="p-8">
           <h2 className="text-xl font-bold mb-6 text-center">Urgent request form</h2>
-          <EmergencyForm />
+          <Providers>
+            <EmergencyForm />
+          </Providers>
         </GlassCard>
       </section>
     </>
