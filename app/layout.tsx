@@ -18,12 +18,19 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   ...getMetadataForPath(ROUTES.home),
+  verification: {
+    google: "KKQ-tlyd6OxMLIEsi7OzSwUcX_7PDCs-nwvgwEHGI4U",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <head>
+        <meta
+          name="google-site-verification"
+          content="KKQ-tlyd6OxMLIEsi7OzSwUcX_7PDCs-nwvgwEHGI4U"
+        />
         <link rel="icon" href="/images/favicon.ico" />
         <link rel="apple-touch-icon" href="/images/mrudnev-avatar.png" />
         <JsonLdScript data={[personJsonLd, websiteJsonLd]} />
