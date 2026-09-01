@@ -1,5 +1,5 @@
 interface JsonLdScriptProps {
-  data: Record<string, unknown> | Record<string, unknown>[]
+  data: object | object[]
 }
 
 export function JsonLdScript({ data }: JsonLdScriptProps) {

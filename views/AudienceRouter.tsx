@@ -61,7 +61,7 @@ function PersonalIntro() {
 
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
             <p className="text-cyan-400 text-sm font-medium uppercase tracking-widest mb-2">
-              Senior Front-End Developer
+              Hire a Senior Front-End Engineer
             </p>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Mykola{" "}
@@ -70,9 +70,10 @@ function PersonalIntro() {
               </span>
             </h1>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              I build production-ready storefronts and web apps —{" "}
-              <strong className="text-white">Magento 2 / Hyvä</strong> on one side,{" "}
-              <strong className="text-white">React / Next.js / TypeScript</strong> on the other.
+              The front-end developer to hire for production{" "}
+              <strong className="text-white">Magento 2 / Hyvä</strong> storefronts and{" "}
+              <strong className="text-white">React / Next.js / TypeScript</strong> product UIs.
+              Remote B2B across the EU — available now.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
@@ -133,18 +134,18 @@ function AudiencePathSection() {
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <AudienceCard
-            title="I'm hiring a Front-end Developer"
+            title="Hire a Front-end Developer"
             description="React, Next.js, TypeScript — e-commerce, marketplaces, recruitment and product UIs, plus a shipped Next.js product (Claspwell). Shopify Liquid themes alongside Magento work."
             to={ROUTES.frontendDeveloper}
             event="cta_frontend_hire"
-            ctaLabel="Front-end Developer page"
+            ctaLabel="Hire a senior front-end engineer"
           />
           <AudienceCard
-            title="I need Magento 2 / Hyvä Support"
+            title="Hire Magento 2 / Hyvä support"
             description="Direct storefront help after 16+ Magento projects — HUBER SE Hyvä rebuild (Lighthouse 99–100 on catalog), Claspwell Magento AI, Housetipster, Edycja, enterprise BAT/Catering24/Solar, PLP/PDP/checkout/CMS, performance and ongoing support."
             to={ROUTES.magentoSupport}
             event="cta_magento_support"
-            ctaLabel="Magento / Hyvä support"
+            ctaLabel="Hire a Hyvä frontend developer"
           />
         </div>
       </div>

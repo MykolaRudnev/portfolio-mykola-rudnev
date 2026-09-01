@@ -11,6 +11,8 @@ import { PAGE_CONTENT_CLASS } from "@/components/ui/page-container"
 import { ProjectsGridSkeleton, SectionSkeleton } from "@/components/ui/PageSkeleton"
 import { ProjectHighlightList } from "@/components/ui/ProjectHighlightList"
 import { REACT_PROJECT_HIGHLIGHTS, SHOPIFY_PROJECT_HIGHLIGHTS } from "@/constants/audience-highlights"
+import { FaqSection } from "@/components/seo/FaqSection"
+import { HIRE_FAQ, IDENTITY_FAQ } from "@/constants/faq"
 
 const Experience = lazy(() => import("@/components/Experience"))
 const Projects = lazy(() => import("@/components/Projects"))
@@ -32,8 +34,8 @@ export function FrontendDeveloperPage() {
   return (
     <>
       <PageHeader
-        title="Senior Front-end Developer"
-        subtitle="React, Next.js, TypeScript — product UI, e-commerce, and a shipped Next.js product (Claspwell)."
+        title="Hire a Senior Front-End Engineer"
+        subtitle="React, Next.js, TypeScript — the front-end developer to hire for product UI, e-commerce, and a shipped Next.js product (Claspwell). Remote B2B, EU."
       >
         <div className="flex flex-wrap justify-center gap-4">
           <CtaButton href="mailto:rudnevmykola@gmail.com?subject=Screening%20call" event="cta_book_call">
@@ -104,6 +106,8 @@ export function FrontendDeveloperPage() {
           </ul>
         </GlassCard>
       </section>
+
+      <FaqSection items={[...IDENTITY_FAQ, ...HIRE_FAQ]} />
 
       <Suspense fallback={<SectionSkeleton />}>
         <Skills />

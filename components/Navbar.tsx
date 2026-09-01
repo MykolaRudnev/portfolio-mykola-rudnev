@@ -9,6 +9,7 @@ import { PrefetchLink } from "@/components/ui/PrefetchLink"
 
 const navItems = [
   { label: "Home", path: ROUTES.home },
+  { label: "About", path: ROUTES.about },
   { label: "Front-end", path: ROUTES.frontendDeveloper },
   { label: "Magento / Hyvä", path: ROUTES.magentoSupport },
   { label: "Case studies", path: ROUTES.caseStudies },
@@ -21,6 +22,7 @@ const CASE_STUDY_PREFETCH = detailedCaseStudies
   .map((study) => ROUTES.caseStudyDetail(study.slug))
 
 function extraPrefetch(path: string) {
+  if (path === ROUTES.about) return [ROUTES.frontendDeveloper, ROUTES.magentoSupport]
   if (path === ROUTES.caseStudies) return CASE_STUDY_PREFETCH
   if (path === ROUTES.frontendDeveloper) return [ROUTES.caseStudies]
   if (path === ROUTES.magentoSupport) return [ROUTES.caseStudies, ROUTES.pricing]

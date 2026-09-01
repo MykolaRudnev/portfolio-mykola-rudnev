@@ -7,6 +7,13 @@ describe("resolveBreadcrumbs", () => {
     expect(resolveBreadcrumbs(ROUTES.home)).toEqual([])
   })
 
+  it("builds about trail", () => {
+    expect(resolveBreadcrumbs(ROUTES.about)).toEqual([
+      { label: "Home", href: ROUTES.home },
+      { label: "About Mykola Rudnev" },
+    ])
+  })
+
   it("builds frontend developer trail", () => {
     expect(resolveBreadcrumbs(ROUTES.frontendDeveloper)).toEqual([
       { label: "Home", href: ROUTES.home },

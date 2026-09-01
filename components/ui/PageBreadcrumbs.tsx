@@ -21,6 +21,9 @@ export function resolveBreadcrumbs(pathname: string, currentLabel?: string): Bre
 
   if (pathname === ROUTES.home) return []
 
+  if (pathname === ROUTES.about)
+    return [home, { label: currentLabel ?? "About Mykola Rudnev" }]
+
   if (pathname === ROUTES.frontendDeveloper)
     return [home, { label: currentLabel ?? "Front-end Developer" }]
 

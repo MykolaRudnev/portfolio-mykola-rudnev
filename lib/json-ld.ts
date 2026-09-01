@@ -1,33 +1,60 @@
 import { SITE_URL, ROUTES } from "@/constants/routes"
+import type { FaqItem } from "@/constants/faq"
+
+export const PERSON_ID = `${SITE_URL}/#person`
 
 export const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": PERSON_ID,
   name: "Mykola Rudnev",
   givenName: "Mykola",
   familyName: "Rudnev",
-  jobTitle: "Lead Front-End Developer (Freelance)",
+  alternateName: ["Mykola Rudniev"],
+  jobTitle: "Senior Front-End Engineer",
   description:
-    "Senior Front-End Developer with 6+ years of experience building high-performance web applications and production-ready e-commerce platforms (React, Next.js, TypeScript, Magento 2 / Hyvä, Shopify).",
+    "Senior front-end engineer to hire for React, Next.js, TypeScript, Magento 2 / Hyvä and Shopify. Based in Lublin, Poland. Remote B2B across the EU. Current work: HUBER SE Hyvä storefront and Claspwell Magento AI.",
   url: SITE_URL,
   image: `${SITE_URL}/images/mrudnev-avatar.png`,
   email: "mailto:rudnevmykola@gmail.com",
   telephone: "+48790240418",
   sameAs: [
-    "https://www.linkedin.com/in/mykola-rudnev-1525a5145/",
+    "https://www.linkedin.com/in/mykola-r-1525a5145/",
     "https://github.com/MykolaRudnev",
+    "https://himalayas.app/@mykolarudnev",
   ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Lublin",
+    addressCountry: "PL",
+  },
+  homeLocation: {
+    "@type": "Place",
+    name: "Lublin, Poland",
+  },
   worksFor: { "@type": "Organization", name: "HUBER SE" },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "University of Economics and Innovation in Lublin",
+  },
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "Senior Front-End Developer",
+    occupationalCategory: "15-1254.00",
+    skills: "React, Next.js, TypeScript, Magento 2, Hyvä, Shopify, Core Web Vitals, technical SEO",
+  },
+  knowsLanguage: ["en", "pl", "uk", "ru"],
   knowsAbout: [
     "Senior Front-End Development",
+    "Hire Senior Front-End Engineer",
     "React.js",
     "Next.js",
     "TypeScript",
-    "Magento 2",
+    "Magento 2 frontend",
     "Hyvä Theme",
     "Hyvä CMS",
-    "Shopify",
-    "Liquid",
+    "Hyvä Checkout",
+    "Shopify Liquid",
     "Alpine.js",
     "Core Web Vitals",
     "Technical SEO",
@@ -38,12 +65,39 @@ export const personJsonLd = {
 export const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Mykola Rudnev Portfolio",
+  name: "Mykola Rudnev — Senior Front-End Engineer",
   url: `${SITE_URL}/`,
   inLanguage: "en",
   description:
-    "Portfolio of Mykola Rudnev — Senior Front-End Developer specializing in React, Next.js, TypeScript, Magento 2 (Hyvä), and Shopify.",
-  author: { "@type": "Person", name: "Mykola Rudnev", url: SITE_URL },
+    "Hire Mykola Rudnev for senior front-end work: React, Next.js, TypeScript, Magento 2 / Hyvä, Shopify. Remote B2B, EU.",
+  author: { "@id": PERSON_ID },
+  about: { "@id": PERSON_ID },
+}
+
+export function profilePageJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    name: "Who is Mykola Rudnev?",
+    url: `${SITE_URL}${ROUTES.about}`,
+    inLanguage: "en",
+    mainEntity: { "@id": PERSON_ID },
+  }
+}
+
+export function faqJsonLd(items: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  }
 }
 
 export function professionalServiceJsonLd() {
@@ -52,10 +106,15 @@ export function professionalServiceJsonLd() {
     "@type": "ProfessionalService",
     name: "Magento 2 / Hyvä Support — Mykola Rudnev",
     description:
-      "Direct Magento 2 / Hyvä frontend support: migrations, Hyvä rebuilds, fixes, new sections, performance, checkout/CMS, and ongoing maintenance.",
-    provider: { "@type": "Person", name: "Mykola Rudnev", url: SITE_URL },
+      "Hire a Magento 2 / Hyvä frontend developer directly: migrations, Hyvä rebuilds, fixes, new sections, performance, checkout/CMS, and ongoing maintenance.",
+    provider: { "@id": PERSON_ID },
     areaServed: ["Poland", "European Union", "Remote"],
-    serviceType: ["Magento 2 Support", "Hyvä Theme Development", "E-commerce Frontend"],
+    serviceType: [
+      "Magento 2 Support",
+      "Hyvä Theme Development",
+      "Hire Magento frontend developer",
+      "E-commerce Frontend",
+    ],
     url: `${SITE_URL}${ROUTES.magentoSupport}`,
   }
 }
