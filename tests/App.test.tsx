@@ -8,7 +8,7 @@ describe("Home audience router", () => {
 
     expect(screen.getByRole("heading", { name: /Mykola/i })).toBeInTheDocument()
     expect(screen.getByText(/What I did before:/i)).toBeInTheDocument()
-    expect(screen.getByText(/I'm hiring a Front-end Developer/i)).toBeInTheDocument()
-    expect(screen.getByText(/I need Magento 2 \/ Hyvä Support/i)).toBeInTheDocument()
+    expect(screen.getByText(/Hire a Front-end Developer/i)).toBeInTheDocument()
+    expect(screen.getByText(/Hire Magento 2 \/ Hyvä support/i)).toBeInTheDocument()
   })
 })

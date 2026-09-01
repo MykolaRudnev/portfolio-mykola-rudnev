@@ -7,6 +7,7 @@ describe("metadata", () => {
   it("returns metadata for all primary routes", () => {
     for (const path of [
       ROUTES.home,
+      ROUTES.about,
       ROUTES.frontendDeveloper,
       ROUTES.magentoSupport,
       ROUTES.pricing,

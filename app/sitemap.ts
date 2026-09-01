@@ -9,7 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: path === ROUTES.home ? SITE_URL : `${SITE_URL}${path}`,
     lastModified,
     changeFrequency: path === ROUTES.home ? "weekly" : "monthly",
-    priority: path === ROUTES.home ? 1 : path === ROUTES.frontendDeveloper || path === ROUTES.magentoSupport ? 0.9 : 0.8,
+    priority:
+      path === ROUTES.home
+        ? 1
+        : path === ROUTES.about || path === ROUTES.frontendDeveloper || path === ROUTES.magentoSupport
+          ? 0.9
+          : 0.8,
   }))
 
   const caseStudyEntries: MetadataRoute.Sitemap = detailedCaseStudies.map((study) => ({

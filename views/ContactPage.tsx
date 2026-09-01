@@ -94,7 +94,7 @@ function ContactLinks() {
       </li>
       <li>
         <a
-          href="https://www.linkedin.com/in/mykola-rudnev-1525a5145/"
+          href="https://www.linkedin.com/in/mykola-r-1525a5145/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 hover:text-blue-400 transition-colors"

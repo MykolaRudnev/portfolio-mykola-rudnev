@@ -6,7 +6,7 @@ import Footer from "@/components/Footer"
 import { JsonLdScript } from "@/components/seo/JsonLdScript"
 import { personJsonLd, websiteJsonLd } from "@/lib/json-ld"
 import { getMetadataForPath } from "@/lib/metadata"
-import { ROUTES } from "@/constants/routes"
+import { ROUTES, SITE_URL } from "@/constants/routes"
 import "./globals.css"
 
 const inter = Inter({
@@ -15,7 +15,10 @@ const inter = Inter({
   display: "swap",
 })
 
-export const metadata: Metadata = getMetadataForPath(ROUTES.home)
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  ...getMetadataForPath(ROUTES.home),
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

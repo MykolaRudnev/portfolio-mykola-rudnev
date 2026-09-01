@@ -2,6 +2,7 @@ export const SITE_URL = "https://www.mrudnev.com"
 
 export const ROUTES = {
   home: "/",
+  about: "/about",
   frontendDeveloper: "/frontend-developer",
   magentoSupport: "/magento-hyva-support",
   pricing: "/pricing",
@@ -13,6 +14,7 @@ export const ROUTES = {
 
 export const ALL_ROUTES = [
   ROUTES.home,
+  ROUTES.about,
   ROUTES.frontendDeveloper,
   ROUTES.magentoSupport,
   ROUTES.pricing,
@@ -31,23 +33,30 @@ export interface PageSeoMeta {
 export const PAGE_SEO: PageSeoMeta[] = [
   {
     path: ROUTES.home,
-    title: "Mykola Rudnev | Front-end Developer and Magento 2 / Hyvä Support",
+    title: "Mykola Rudnev | Hire a Senior Front-End Engineer — React, Next.js, Magento 2 / Hyvä",
     description:
-      "Senior Front-end Developer — React, Next.js, TypeScript, Magento 2 / Hyvä and Shopify. HUBER SE Hyvä rebuild, Claspwell AI product, case studies and direct contact.",
+      "Hire Mykola Rudnev — senior front-end engineer for React / Next.js product teams and Magento 2 / Hyvä storefronts. Remote B2B, EU. HUBER SE Hyvä rebuild, Claspwell, case studies.",
+    lang: "en",
+  },
+  {
+    path: ROUTES.about,
+    title: "Who is Mykola Rudnev? | Senior Front-End Engineer to Hire",
+    description:
+      "Mykola Rudnev is a senior front-end engineer in Lublin, Poland. Hire him for React, Next.js, TypeScript, Magento 2 / Hyvä and Shopify — remote B2B with English- and Polish-speaking teams across the EU.",
     lang: "en",
   },
   {
     path: ROUTES.frontendDeveloper,
-    title: "Senior Front-end Developer React / Next.js / TypeScript | Mykola Rudnev",
+    title: "Hire a Senior Front-End Developer (React / Next.js) | Mykola Rudnev",
     description:
-      "Senior Front-end Developer with React, Next.js, TypeScript, e-commerce and a shipped Next.js product (Claspwell). Available for B2B roles, product teams and frontend work.",
+      "Need to hire a senior front-end developer? Mykola Rudnev ships React, Next.js, TypeScript and e-commerce UIs — plus Claspwell, a production Next.js product. Available for B2B / remote EU roles.",
     lang: "en",
   },
   {
     path: ROUTES.magentoSupport,
-    title: "Magento 2 / Hyvä Support — Direct Frontend Help | Mykola Rudnev",
+    title: "Hire a Magento 2 / Hyvä Frontend Developer | Mykola Rudnev",
     description:
-      "Direct Magento 2 / Hyvä frontend support: Hyvä migrations (HUBER SE), catalog-aware AI (Claspwell), performance, checkout/CMS, and ongoing maintenance. No agency layers.",
+      "Hire a Magento 2 / Hyvä frontend developer directly: Hyvä migrations (HUBER SE, Lighthouse 99–100 on catalog), checkout/CMS, Core Web Vitals, ongoing support. No agency layers.",
     lang: "en",
   },
   {
@@ -75,7 +84,7 @@ export const PAGE_SEO: PageSeoMeta[] = [
     path: ROUTES.contact,
     title: "Contact | Mykola Rudnev",
     description:
-      "Get in touch for B2B front-end roles, Magento 2 / Hyvä support, or general inquiries.",
+      "Get in touch to hire Mykola Rudnev — B2B senior front-end roles, Magento 2 / Hyvä support, or a general question.",
     lang: "en",
   },
 ]

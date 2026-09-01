@@ -3,9 +3,10 @@ import { ALL_ROUTES, PAGE_SEO, ROUTES, getPageSeo } from "../constants/routes"
 import { detailedCaseStudies, getCaseStudyBySlug } from "../constants/case-studies"
 
 describe("routing constants", () => {
-  it("defines all 7 primary routes plus case study pattern", () => {
-    expect(ALL_ROUTES).toHaveLength(7)
+  it("defines all 8 primary routes plus case study pattern", () => {
+    expect(ALL_ROUTES).toHaveLength(8)
     expect(ALL_ROUTES).toContain(ROUTES.home)
+    expect(ALL_ROUTES).toContain(ROUTES.about)
     expect(ALL_ROUTES).toContain(ROUTES.frontendDeveloper)
     expect(ALL_ROUTES).toContain(ROUTES.magentoSupport)
     expect(ALL_ROUTES).toContain(ROUTES.pricing)

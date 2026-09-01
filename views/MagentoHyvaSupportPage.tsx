@@ -10,6 +10,8 @@ import { ProjectHighlightList } from "@/components/ui/ProjectHighlightList"
 import { MAGENTO_PROJECT_HIGHLIGHTS } from "@/constants/audience-highlights"
 import { ProjectsGridLazy } from "@/components/projects/ProjectsGridLazy"
 import { Providers } from "@/app/providers"
+import { FaqSection } from "@/components/seo/FaqSection"
+import { MAGENTO_FAQ } from "@/constants/faq"
 
 const SERVICES = [
   "Frontend bug fixing on Magento 2 / Hyvä",
@@ -251,6 +253,8 @@ export function MagentoHyvaSupportPage() {
           initialCount={999}
         />
       </section>
+
+      <FaqSection items={MAGENTO_FAQ} title="Hire a Magento 2 / Hyvä frontend developer" />
 
       <section className="px-6 py-16 pb-24 text-center max-w-xl mx-auto">
         <h2 className="text-2xl font-bold mb-4">Ready to talk?</h2>
