@@ -6,7 +6,7 @@ import { detailedCaseStudies } from "@/constants/case-studies"
 describe("metadata", () => {
   it("includes the Google Search Console verification token", () => {
     expect(getMetadataForPath(ROUTES.home).verification).toEqual({
-      google: "oqAizXxmEE7Pi3QPr7--Hc33v-LwyJR10lVg9HBceCE",
+      google: "KKQ-tlyd6OxMLIEsi7OzSwUcX_7PDCs-nwvgwEHGI4U",
     })
   })
 
