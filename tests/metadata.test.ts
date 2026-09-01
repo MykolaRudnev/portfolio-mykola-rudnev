@@ -4,6 +4,12 @@ import { ROUTES } from "@/constants/routes"
 import { detailedCaseStudies } from "@/constants/case-studies"
 
 describe("metadata", () => {
+  it("includes the Google Search Console verification token", () => {
+    expect(getMetadataForPath(ROUTES.home).verification).toEqual({
+      google: "oqAizXxmEE7Pi3QPr7--Hc33v-LwyJR10lVg9HBceCE",
+    })
+  })
+
   it("returns metadata for all primary routes", () => {
     for (const path of [
       ROUTES.home,
