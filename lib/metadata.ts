@@ -39,7 +39,7 @@ export function buildPageMetadata({
       "HUBER SE",
     ],
     verification: {
-      google: "oqAizXxmEE7Pi3QPr7--Hc33v-LwyJR10lVg9HBceCE",
+      google: "KKQ-tlyd6OxMLIEsi7OzSwUcX_7PDCs-nwvgwEHGI4U",
     },
     robots: {
       index: true,
