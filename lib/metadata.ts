@@ -38,6 +38,9 @@ export function buildPageMetadata({
       "Claspwell",
       "HUBER SE",
     ],
+    verification: {
+      google: "oqAizXxmEE7Pi3QPr7--Hc33v-LwyJR10lVg9HBceCE",
+    },
     robots: {
       index: true,
       follow: true,
