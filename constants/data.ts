@@ -53,8 +53,29 @@ export const projects: Project[] = [
         technologies: ["Shopify", "Liquid", "JavaScript", "Custom sections"]
     },
     {
+        name: "Ponadczasowi",
+        description: "2025 — Built and optimized Next.js e-commerce website for watch retailer. Implemented checkout system, payment integrations, shipping methods, and performance optimizations including code splitting and lazy loading. Improved UX and mobile responsiveness.",
+        link: "https://ponadczasowi.pl/",
+        image: "/images/projects/ponadczasowi.jpg",
+        technologies: ["JavaScript", "React.js", "Next.js", "Scss"]
+    },
+    {
+        name: "bragan.net",
+        description: "2025 — Maintained and improved a Magento 2 automotive parts storefront, delivering updates and resolving frontend bugs.",
+        link: "https://bragan.net",
+        image: "/images/projects/bragan.net.png",
+        technologies: ["Magento 2", "JavaScript", "XML"]
+    },
+    {
+        name: "fmic.pl",
+        description: "2025 — Enhanced business logic and storefront functionality for a performance automotive parts store, supporting the existing Magento 2 implementation.",
+        link: "https://fmic.pl",
+        image: "/images/projects/fmic.pl.png",
+        technologies: ["Magento 2", "JavaScript", "Smarty"]
+    },
+    {
         name: "Warmsome",
-        description: "Custom Shopify storefront sections, responsive components and theme development for a live product brand.",
+        description: "Joined an existing Shopify project in development and completed approximately the final 30% of the storefront. Updated the homepage, finished category and product pages, and helped bring the store to its MVP release.",
         link: "https://warmsome.com/",
         image: "/images/projects/shopify/warmsome.jpg",
         technologies: ["Shopify", "Liquid", "JavaScript", "HTML/CSS"]
@@ -82,14 +103,13 @@ export const projects: Project[] = [
     },
     {
         name: "Housetipster",
-        description: "Full Magento 2 e-commerce build with CMS, product, and account pages. Worked on homepage, category page, product page, cms static pages, account pages and custom elements.",
-        link: "https://housetipster.com/",
+        description: "Built the entire Magento 2 storefront from scratch on Magento Blank, implementing custom designs and styles across home, category, product, CMS and customer account pages. Developed extensive custom B2B functionality, including a management panel for B2B customers. Delivered on time; the project has since closed.",
         image: '/images/projects/housetipster-project.png',
         technologies: ["Magento 2", "JavaScript", "XML", "jQuery", "Docker", "LESS/SASS"]
     },
     {
         name: "3MK Protection",
-        description: "Creating with team from scratch a Magento 2 store with a custom theme and advanced features. Worked on category page, homepage, cart page, cms static pages and custom elements.",
+        description: "Helped build a custom Magento 2 storefront, including frontend logic for the homepage Smart Finder, banner implementation and optimization across the site, category and product page styling, and checkout work. Collaborated with SEO specialists on templates and supported the client with Magento CMS training.",
         link: "https://3mk.pl/",
         image: '/images/projects/3mk-project.png',
         technologies: ["Magento 2", "JavaScript", "XML", "jQuery", "Docker"]
@@ -103,8 +123,7 @@ export const projects: Project[] = [
     },
     {
         name: "Paypair",
-        description: "Supporting the development and fixing bugs on a Magento 2 store, implementing new features, UX improvements and custom elements.",
-        link: "paypair.com",
+        description: "Provided Magento 2 support and direct client assistance, improving storefront performance and extending custom logic. The site is no longer operating.",
         image: "/images/projects/paypair-project.png",
         technologies: ["Magento 2", "JavaScript", "XML", "jQuery", "Docker"]
     },
@@ -116,66 +135,50 @@ export const projects: Project[] = [
     },
     {
         name: "Solar",
-        description: "Custom theme with advanced integrations. Creating with team from scratch a Magento 2 store with a custom theme and advanced features. Worked on all pages and custom elements.",
+        description: "Contributed from the start of a complete Magento 2 storefront redesign. Built custom category pages, prepared CMS pages and supported the client during implementation. Trained the client to manage Magento CMS content independently after handover.",
         link: "https://www.solar.com.pl/",
         image: "/images/projects/solar-project.png",
         technologies: ["Magento 2", "JavaScript", "XML", "jQuery", "Docker"]
     },
     {
-        name: "Edycja",
-        description: "Magento 2 store built from scratch with custom theme and advanced elements. Worked on all pages and custom elements.",
-        link: "https://edycja.pl/",
-        image: "/images/projects/edycja-project.png",
-        technologies: ["Magento 2", "JavaScript", "XML", "jQuery", "Docker"]
-    },
-    {
         name: "Doppler Manufaktur",
-        description: "Supporting the development and fixing bugs on a Magento 2 store, implementing new features and custom elements.",
+        description: "Supported an existing Magento 2 storefront, contributing primarily to the homepage, product cards and CMS sections, alongside frontend fixes and improvements.",
         link: "https://doppler-manufaktur.com/",
         image: "/images/projects/doppler-manufaktur-project.png",
         technologies: ["Magento 2", "JavaScript", "XML", "jQuery", "Docker"]
     },
     {
-        name: "Pmi Careers",
-        description: "Developed a recruitment website in React.js, later migrated to Next.js for performance and scalability. Created custom elements and managed all pages.",
-        link: "https://pmicareers.pl/",
+        name: "PMI Careers",
+        description: "2023–2024 — Built the recruitment website in React, covering all pages and custom UI components. After a year of use, migrated it to Next.js. Both versions worked in production; PMI Careers later took the site offline.",
         image: "/images/projects/pmicareers-project.png",
         technologies: ["JavaScript","TypeScript","React.js",  "Next.js", "StyledComponents", "REST API", "LESS"]
     },
     {
         name: "Internorm",
-        description: "Developed corporate site using Gatsby.js & WordPress, integrating custom elements and SEO-friendly design.",
+        description: "2024 — Implemented the complete headless website with WordPress and WordPress SEO, backed by a Gatsby/React frontend and static site generation (SSG). Built all standard and custom pages and reusable templates using Atomic Design architecture.",
         link: "https://internorm-dev.vercel.app/",
         image: "/images/projects/internorm-project.png",
-        technologies: ["WordPress", "TypeScript", "Gatsby.js", "JavaScript", "StyledComponents", "GraphQL"]
+        technologies: ["WordPress", "WordPress SEO", "Gatsby.js", "React", "TypeScript", "GraphQL", "SSG", "Atomic Design"]
     },
     {
         name: "Hrk",
-        description: "Built scalable recruitment platform with Gatsby.js and TypeScript. Implemented SEO strategies that increased organic traffic by 50% in 3 months.",
+        description: "Built a recruitment platform with Gatsby.js and TypeScript, organizing reusable UI with Atomic Design architecture. Implemented SEO strategies that increased organic traffic by 50% in 3 months.",
         link: "https://www.hrk.pl/",
         image: "/images/projects/hrk-project.png",
-        technologies: ["WordPress", "TypeScript", "Gatsby.js", "JavaScript", "StyledComponents", "GraphQL" ]
+        technologies: ["WordPress", "TypeScript", "Gatsby.js", "JavaScript", "StyledComponents", "GraphQL", "Atomic Design"]
     },
     {
         name: "Carneoo",
-        description: "Finalized Next.js car sales platform with bug fixes, new pages, and custom elements to boost engagement.",
+        description: "Joined midway through development of a Next.js car sales platform. Helped build the vehicle configurator, added features and custom components, fixed bugs and optimized images and frontend performance.",
         link: "https://carneoo.de/",
         image: "/images/projects/carneoo-project.png",
         technologies: ["JavaScript", "TypeScript", "React.js", "Next.js", "Tailwindcss", "REST API" ]
     },
     {
         name: "Novum-klinika",
-        description: "Assisted in building a healthcare platform, improving responsive UI and ensuring cross-device compatibility.",
-        link: "https://www.novum.com.pl/",
+        description: "Contributed to a custom fertility clinic application with an extensive questionnaire and custom assessment flow for people planning a pregnancy. Developed the frontend using React, Next.js, TypeScript, Tailwind CSS and Storybook, with Atomic Design architecture. The project did not reach a completed launch.",
         image: "/images/projects/novum-klinika.png",
-        technologies: ["JavaScript", "TypeScript", "React.js", "Next.js", "Tailwindcss", "Storybook", "REST API" ]
-    },
-    {
-        name: "Ponadczasowi",
-        description: "Built and optimized Next.js e-commerce website for watch retailer. Implemented checkout system, payment integrations, shipping methods, and performance optimizations including code splitting and lazy loading. Improved UX and mobile responsiveness.",
-        link: "https://ponadczasowi.pl/",
-        image: "/images/projects/ponadczasowi.jpg",
-        technologies: ["JavaScript", "React.js", "Next.js", "Scss"]
+        technologies: ["JavaScript", "TypeScript", "React.js", "Next.js", "Tailwindcss", "Storybook", "REST API", "Atomic Design"]
     },
     {
         name: "Copernicspace",
@@ -193,14 +196,14 @@ export const projects: Project[] = [
     },
     {
         name: "LearningSpace",
-        description: "Created a full-featured educational platform with React.js & Next.js, delivering dynamic and interactive UX.",
+        description: "Joined near the end of development and helped complete an online learning platform built with Next.js, React and Storybook. The platform lets teachers create courses with image and text blocks, video and audio lessons, and assignments.",
         link:'https://learningspace.app/en/',
         image: "/images/projects/LearningSpace.png",
-        technologies: ["JavaScript", "TypeScript", "React.js", "Next.js", "REST API"]
+        technologies: ["JavaScript", "TypeScript", "React.js", "Next.js", "Storybook", "REST API"]
     },
     {
         name: "hbsgroup.net",
-        description: "Magento 2 updates, new pages, and logic fixes for an enterprise store.",
+        description: "Helped create Magento CMS pages and reusable content structures for the client, enabling them to create and maintain further pages independently.",
         link: "https://hbsgroup.net/",
         image: "/images/projects/hbsgroup.net.png",
         technologies: ["Magento 2", "PHP", "XML", "JavaScript"]
@@ -213,18 +216,11 @@ export const projects: Project[] = [
         technologies: ["Magento 2", "XML", "CSS"]
     },
     {
-        name: "bragan.net",
-        description: "Magento 2 updates and bug fixes for automotive parts store.",
-        link: "https://bragan.net",
-        image: "/images/projects/bragan.net.png",
-        technologies: ["Magento 2", "JavaScript", "XML"]
-    },
-    {
-        name: "fmic.pl",
-        description: "Enhancements to logic and functionality for performance auto parts store.",
-        link: "https://fmic.pl",
-        image: "/images/projects/fmic.pl.png",
-        technologies: ["Magento 2", "JavaScript", "Smarty"]
+        name: "Edycja",
+        description: "2023 — One of my earliest Magento 2 storefront builds, developed from scratch on Magento Blank. Implemented custom styling and frontend pages throughout the store, from the homepage to category, product and CMS pages. The store remains in operation.",
+        link: "https://edycja.pl/",
+        image: "/images/projects/edycja-project.png",
+        technologies: ["Magento 2", "JavaScript", "XML", "jQuery", "Docker"]
     },
 ];
 
@@ -328,10 +324,10 @@ export const workExperiences: WorkExperience[] = [
             'Carneoo (carneoo.de) — improved the platform with bug fixes, new features and custom components, enhancing UX and stability.',
             'HRK (hrk.pl) — built a recruitment platform with Gatsby + TypeScript and improved SEO (+50% organic traffic).',
             'PMI Careers (pmicareers.pl) — developed the platform and migrated from React to Next.js, improving performance and scalability.',
-            'LearningSpace (learningspace.app) — built an educational platform focused on UX and scalability.',
-            'Internorm — developed a corporate website with SEO-focused structure (Gatsby + WordPress).',
+            'LearningSpace (learningspace.app) — joined near the end of development and helped complete a Next.js / React platform for multimedia courses and assignments, using Storybook.',
+            'Internorm — delivered a headless WordPress / Gatsby / React website with SSG, WordPress SEO and Atomic Design; implemented all pages and templates.',
             'Billennium — built a modular Next.js website with reusable components and Storybook.',
-            'Novum Klinika — improved responsive UI and cross-device compatibility.',
+            'Novum Klinika — contributed to a fertility questionnaire application with Next.js, TypeScript, Tailwind CSS, Storybook and Atomic Design; the project did not reach a completed launch.',
             'Shopify (Liquid):',
             'Developed and customized 6 Shopify stores from Figma — custom Liquid themes, not preset restyles.',
             'Glasy (glasy.pl) — live eyewear store: homepage, PLP, header, footer, Admin sections from scratch.',
