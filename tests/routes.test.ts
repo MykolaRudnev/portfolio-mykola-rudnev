@@ -28,8 +28,8 @@ describe("routing constants", () => {
 })
 
 describe("case studies", () => {
-  it("includes six published case studies with required sections", () => {
-    expect(detailedCaseStudies).toHaveLength(6)
+  it("includes sixteen published case studies with required sections", () => {
+    expect(detailedCaseStudies).toHaveLength(16)
     for (const study of detailedCaseStudies) {
       expect(study.slug).toBeTruthy()
       expect(study.startingPoint.length).toBeGreaterThan(20)

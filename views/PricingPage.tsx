@@ -59,7 +59,7 @@ export function PricingPage() {
         ))}
       </section>
 
-      <section className="px-6 py-12 max-w-4xl mx-auto overflow-x-auto">
+      <section className="w-full min-w-0 px-6 py-12 max-w-4xl mx-auto overflow-x-auto">
         <h2 className="text-xl font-bold mb-6 text-center">Comparison</h2>
         <table className="w-full text-sm text-left border-collapse">
           <thead>

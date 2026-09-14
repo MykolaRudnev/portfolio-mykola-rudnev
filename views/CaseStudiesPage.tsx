@@ -11,7 +11,7 @@ export function CaseStudiesPage() {
     <>
       <PageHeader
         title="Projects & case studies"
-        subtitle={`${projects.length} delivered projects — Magento 2, Hyvä, Shopify, React and Next.js. In-depth write-ups: HUBER SE, Claspwell, Pixel25, Glasy, HRK, Ponadczasowi.`}
+        subtitle={`${projects.length} projects across Magento 2, Hyvä, Shopify, React and Next.js. ${detailedCaseStudies.length} in-depth case studies covering storefront builds, B2B functionality, redesigns and platform migrations.`}
       />
 
       <section className="px-6 max-w-4xl mx-auto pb-8">
@@ -25,7 +25,7 @@ export function CaseStudiesPage() {
             >
               <GlassCard className="p-8 hoverEffect block" hoverEffect>
                 <p className="text-cyan-400 text-sm mb-2">
-                  {study.client} · {study.year} · detailed write-up
+                  {study.client}{study.year ? ` · ${study.year}` : ""} · detailed write-up
                 </p>
                 <h3 className="text-xl font-bold mb-3">{study.title}</h3>
                 <p className="text-gray-400">{study.summary}</p>

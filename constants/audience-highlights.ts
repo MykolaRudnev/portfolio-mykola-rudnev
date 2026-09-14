@@ -13,7 +13,7 @@ export const REACT_PROJECT_HIGHLIGHTS: ProjectHighlight[] = [
   },
   {
     name: "Ponadczasowi",
-    summary: "Next.js e-commerce — checkout, payments, shipping, performance & mobile UX",
+    summary: "2025 — Next.js e-commerce, checkout, payments, shipping and mobile performance",
     link: "https://ponadczasowi.pl/",
   },
   {
@@ -23,33 +23,31 @@ export const REACT_PROJECT_HIGHLIGHTS: ProjectHighlight[] = [
   },
   {
     name: "HRK",
-    summary: "Recruitment platform (Gatsby + TypeScript) — technical SEO, +50% organic traffic",
+    summary: "Gatsby + TypeScript recruitment platform — Atomic Design, technical SEO and +50% organic traffic",
     link: "https://www.hrk.pl/",
   },
   {
     name: "PMI Careers",
-    summary: "Recruitment site — built in React, migrated to Next.js for scale",
-    link: "https://pmicareers.pl/",
+    summary: "2023–2024 — React recruitment site, migrated to Next.js after a year; later taken offline by the client",
   },
   {
     name: "LearningSpace",
-    summary: "Educational platform — scalable UI and interactive UX (React / Next.js)",
+    summary: "Joined late to help complete a Next.js / React learning platform — multimedia courses, assignments and Storybook",
     link: "https://learningspace.app/en/",
   },
   {
     name: "Carneoo",
-    summary: "Next.js automotive sales — new features, fixes, conversion-focused UI",
+    summary: "Vehicle configurator contributions, new features, bug fixes and image optimization in Next.js",
     link: "https://carneoo.de/",
   },
   {
     name: "Internorm",
-    summary: "Corporate site — Gatsby + WordPress, SEO-friendly components",
+    summary: "2024 — full headless WordPress / Gatsby / React build, SSG, WordPress SEO and Atomic Design",
     link: "https://internorm-dev.vercel.app/",
   },
   {
     name: "Novum Klinika",
-    summary: "Healthcare platform — responsive UI, cross-device compatibility",
-    link: "https://www.novum.com.pl/",
+    summary: "Fertility questionnaire app — Next.js, Tailwind, Storybook and Atomic Design; project not launched",
   },
 ]
 
@@ -67,17 +65,16 @@ export const MAGENTO_PROJECT_HIGHLIGHTS: ProjectHighlight[] = [
   },
   {
     name: "Housetipster",
-    summary: "Full Magento 2 build — home, PLP, PDP, CMS, account, custom components",
-    link: "https://housetipster.com/",
+    summary: "Custom Magento Blank build across all pages, B2B logic and customer management panel; delivered on time, now closed",
   },
   {
     name: "Edycja",
-    summary: "Store from scratch — custom theme, all customer-facing pages",
+    summary: "2023 — Magento Blank storefront from scratch, custom styles and all page types; still in operation",
     link: "https://edycja.pl/",
   },
   {
     name: "3MK Protection",
-    summary: "Magento 2 from scratch — category, cart, CMS, conversion-focused UI",
+    summary: "Smart Finder frontend, banners, category/PDP styles, checkout, SEO templates and client CMS training",
     link: "https://3mk.pl/",
   },
   {
@@ -91,17 +88,16 @@ export const MAGENTO_PROJECT_HIGHLIGHTS: ProjectHighlight[] = [
   },
   {
     name: "Solar",
-    summary: "CMS-driven storefront — custom UI, integrations, full page set",
+    summary: "Early redesign contribution — custom categories, CMS pages and client CMS training",
     link: "https://www.solar.com.pl/",
   },
   {
     name: "Paypair",
-    summary: "Ongoing support — bug fixes, new features, UX improvements",
-    link: "https://paypair.com/",
+    summary: "Client support, performance improvements and custom Magento logic; site no longer operating",
   },
   {
     name: "FMIC",
-    summary: "Business logic enhancements and performance improvements",
+    summary: "2025 — business logic and storefront functionality enhancements",
     link: "https://fmic.pl/",
   },
   {
@@ -111,12 +107,12 @@ export const MAGENTO_PROJECT_HIGHLIGHTS: ProjectHighlight[] = [
   },
   {
     name: "HBS Group",
-    summary: "New pages, Magento updates, logic fixes",
+    summary: "Magento CMS pages and reusable structures for independent client page creation",
     link: "https://hbsgroup.net/",
   },
   {
     name: "Doppler Manufaktur",
-    summary: "Feature delivery and production fixes on live store",
+    summary: "Magento support — homepage, product cards and CMS sections",
     link: "https://doppler-manufaktur.com/",
   },
   {
@@ -138,7 +134,7 @@ export const SHOPIFY_PROJECT_HIGHLIGHTS: ProjectHighlight[] = [
   },
   {
     name: "Warmsome",
-    summary: "Custom sections, responsive components, live Shopify storefront",
+    summary: "Completed the final ~30% of the Shopify storefront — homepage, category and product pages through MVP release",
     link: "https://warmsome.com/",
   },
   {

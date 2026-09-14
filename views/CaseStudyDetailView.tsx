@@ -19,7 +19,7 @@ export function CaseStudyDetailView({ study }: CaseStudyDetailViewProps) {
         breadcrumbLabel={study.client}
       >
         <p className="text-sm text-gray-500">
-          {study.client} · {study.industry} · {study.projectType} · {study.year}
+          {study.client} · {study.industry} · {study.projectType}{study.year ? ` · ${study.year}` : ""}
         </p>
         {study.liveUrl && (
           <p className="mt-3">
