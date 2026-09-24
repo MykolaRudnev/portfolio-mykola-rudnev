@@ -3,7 +3,7 @@ interface SkeletonBlockProps {
 }
 
 function SkeletonBlock({ className = "" }: SkeletonBlockProps) {
-  return <div className={`animate-pulse rounded-xl bg-white/8 ${className}`} />
+  return <div className={`animate-pulse rounded-xl bg-paper-3 ${className}`} />
 }
 
 export function PageSkeleton() {
@@ -32,7 +32,7 @@ export function PageSkeleton() {
 
 export function CardSkeleton() {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-8 space-y-4">
+    <div className="rounded-2xl border border-rule bg-paper-2 p-8 space-y-4">
       <SkeletonBlock className="h-4 w-32" />
       <SkeletonBlock className="h-7 w-3/4" />
       <SkeletonBlock className="h-4 w-full" />
@@ -47,7 +47,7 @@ export function ProjectsGridSkeleton() {
       <span className="sr-only">Loading projects</span>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {["a", "b", "c", "d", "e", "f"].map((key) => (
-          <div key={key} className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+          <div key={key} className="rounded-2xl border border-rule bg-paper-2 overflow-hidden">
             <SkeletonBlock className="h-44 w-full rounded-none" />
             <div className="p-5 space-y-3">
               <SkeletonBlock className="h-5 w-1/2" />

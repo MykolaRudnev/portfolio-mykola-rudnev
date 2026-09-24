@@ -18,7 +18,7 @@ export function FormField({ label, error, children }: FormFieldProps) {
 
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={id} className="text-sm font-medium text-gray-300">
+      <label htmlFor={id} className="text-sm font-medium text-ink-2">
         {label}
       </label>
       {children({
@@ -36,4 +36,4 @@ export function FormField({ label, error, children }: FormFieldProps) {
 }
 
 export const inputClassName =
-  "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/30"
+  "w-full px-4 py-3 rounded-xl bg-paper-2 border border-rule text-ink placeholder:text-ink-2 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/40"

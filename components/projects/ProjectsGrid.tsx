@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion"
 import { FaExternalLinkAlt } from "react-icons/fa"
 import type { Project } from "../../types"
 import GlassCard from "../ui/GlassCard"
-import { getProjectLink } from "../../constants/projects-utils"
 
 export interface ProjectsGridProps {
   projects: Project[]
@@ -69,7 +68,7 @@ export function ProjectsGrid({
   if (projectList.length === 0) {
     return (
       <section className="py-12 px-6">
-        <p className="text-center text-gray-500">No projects to display.</p>
+        <p className="text-center text-ink-2">No projects to display.</p>
       </section>
     )
   }
@@ -123,8 +122,7 @@ function ProjectsGridContent(props: ContentProps) {
     <div className="max-w-7xl mx-auto px-6">
       {showTitle && (
         <div className="mb-10 text-center">
-          <h2 className="text-3xl font-bold mb-4">{title}</h2>
-          <div className="h-1 w-20 bg-cyan-500 mx-auto rounded-full mb-6" />
+          <h2 className="text-3xl font-bold mb-8">{title}</h2>
           {visibleCategories.length > 1 && (
             <CategoryTabs
               categories={visibleCategories}
@@ -132,7 +130,7 @@ function ProjectsGridContent(props: ContentProps) {
               setActiveTab={setActiveTab}
             />
           )}
-          <p className="text-gray-500 text-sm mt-4">{filteredCount} projects</p>
+          <p className="text-ink-2 text-sm mt-4">{filteredCount} projects</p>
         </div>
       )}
 
@@ -149,7 +147,7 @@ function ProjectsGridContent(props: ContentProps) {
           <button
             type="button"
             onClick={() => setShowAll(!showAll)}
-            className="px-8 py-3 rounded-full text-sm font-medium border bg-white text-black border-white shadow-lg hover:scale-105"
+            className="px-8 py-3 rounded-full text-sm font-medium border bg-ink text-paper border-white shadow-lg hover:scale-105"
           >
             {showAll ? "See Less" : "See More"}
           </button>
@@ -177,8 +175,8 @@ function CategoryTabs({
           onClick={() => setActiveTab(cat)}
           className={`px-5 py-2 rounded-full text-sm font-medium transition-all border ${
             activeTab === cat
-              ? "bg-white text-black border-white shadow-lg shadow-white/20"
-              : "bg-glass-100 text-gray-400 border-glass-border hover:bg-white/10 hover:text-white"
+              ? "bg-ink text-paper border-white shadow-lg shadow-white/20"
+              : "bg-glass-100 text-ink-2 border-glass-border hover:bg-paper-3 hover:text-ink"
           }`}
         >
           {cat}
@@ -189,7 +187,7 @@ function CategoryTabs({
 }
 
 function ProjectCard({ project }: { project: Project }) {
-  const href = getProjectLink(project.link)
+  const href = project.link?.startsWith("http") ? project.link : project.link ? `https://${project.link}` : undefined
 
   return (
     <motion.div
@@ -200,7 +198,7 @@ function ProjectCard({ project }: { project: Project }) {
       transition={{ duration: 0.3 }}
     >
       <GlassCard className="h-full flex flex-col group" hoverEffect>
-        <div className="relative h-44 overflow-hidden rounded-t-2xl bg-black/40">
+        <div className="relative h-44 overflow-hidden rounded-t-2xl bg-paper-3">
           <img
             src={project.image}
             alt={project.name}
@@ -217,12 +215,12 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
         <div className="p-5 flex flex-col flex-grow">
           <h3 className="text-lg font-bold mb-2">{project.name}</h3>
-          <p className="text-gray-400 text-sm mb-4 flex-grow leading-relaxed">{project.description}</p>
+          <p className="text-ink-2 text-sm mb-4 flex-grow leading-relaxed">{project.description}</p>
           <div className="flex flex-wrap gap-2 mt-auto">
             {project.technologies.slice(0, 5).map((tech) => (
               <span
                 key={tech}
-                className="px-2 py-1 text-xs font-medium bg-white/5 border border-white/10 rounded-full text-cyan-200/80"
+                className="px-2 py-1 text-xs font-medium bg-paper-2 border border-rule rounded-full text-accent"
               >
                 {tech}
               </span>
@@ -241,7 +239,7 @@ function ProjectCardOverlay({ href }: { href: string }) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="px-5 py-2 bg-white text-black rounded-full hover:scale-105 transition-transform flex items-center gap-2 font-medium text-sm"
+        className="px-5 py-2 bg-paper text-ink rounded-full hover:scale-105 transition-transform flex items-center gap-2 font-medium text-sm"
       >
         Visit Site <FaExternalLinkAlt size={12} />
       </a>

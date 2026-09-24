@@ -17,14 +17,14 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
   return (
     <section className="min-h-[60vh] flex flex-col items-center justify-center px-6 text-center">
       <h1 className="text-3xl font-bold mb-4">Something went wrong</h1>
-      <p className="text-gray-400 max-w-md mb-8">
+      <p className="text-ink-2 max-w-md mb-8">
         This page failed to render. You can retry, or go back to the homepage.
       </p>
       <div className="flex flex-wrap gap-4 justify-center">
         <button
           type="button"
           onClick={reset}
-          className="px-8 py-3 rounded-full font-semibold bg-white text-black"
+          className="px-8 py-3 rounded-full font-semibold bg-ink text-paper"
         >
           Try again
         </button>

@@ -87,8 +87,8 @@ export function ContactForm({ size = "default", defaultTab }: ContactFormProps) 
   const isLarge = size === "large"
   const fieldClass = isLarge ? `${inputClassName} py-3.5 md:py-4 text-base` : inputClassName
   const buttonClass = isLarge
-    ? "w-full sm:w-auto px-10 py-4 rounded-full bg-white text-black text-base font-semibold hover:bg-gray-200 disabled:opacity-50"
-    : "px-8 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 disabled:opacity-50"
+    ? "w-full sm:w-auto px-10 py-4 rounded-full bg-ink text-paper text-base font-semibold hover:bg-ink/85 disabled:opacity-50"
+    : "px-8 py-3 rounded-full bg-ink text-paper font-semibold hover:bg-ink/85 disabled:opacity-50"
 
   async function submitPayload(
     formType: ContactFormType,
@@ -118,7 +118,7 @@ export function ContactForm({ size = "default", defaultTab }: ContactFormProps) 
 
   return (
     <div className={isLarge ? "flex flex-col gap-6" : "flex flex-col gap-5"}>
-      <div className="flex flex-wrap gap-2 border-b border-white/10 pb-4" role="tablist" aria-label="Inquiry type">
+      <div className="flex flex-wrap gap-2 border-b border-rule pb-4" role="tablist" aria-label="Inquiry type">
         {TABS.map((tab) => (
           <button
             key={tab.id}
@@ -132,8 +132,8 @@ export function ContactForm({ size = "default", defaultTab }: ContactFormProps) 
             }}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               activeTab === tab.id
-                ? "bg-white text-black"
-                : "bg-white/5 text-gray-400 hover:text-white border border-white/10"
+                ? "bg-ink text-paper"
+                : "bg-paper-2 text-ink-2 hover:text-ink border border-rule"
             }`}
           >
             {tab.label}
@@ -242,8 +242,8 @@ function RecruiterForm({ fieldClass, buttonClass, status, onSubmit }: SubFormPro
       <FormField label="Message" error={errors.message?.message}>
         {(field) => <textarea {...register("message")} {...field} rows={4} className={fieldClass} />}
       </FormField>
-      <label className="flex items-start gap-3 text-sm text-gray-400 cursor-pointer">
-        <input type="checkbox" {...register("consent")} className="mt-1 rounded border-white/20" />
+      <label className="flex items-start gap-3 text-sm text-ink-2 cursor-pointer">
+        <input type="checkbox" {...register("consent")} className="mt-1 rounded border-rule" />
         <span>I agree to be contacted about this inquiry.</span>
       </label>
       {errors.consent?.message && <p className="text-sm text-red-400">{errors.consent.message}</p>}
@@ -324,8 +324,8 @@ function ClientForm({ fieldClass, buttonClass, status, onSubmit }: SubFormProps<
       <FormField label="Additional message" error={errors.message?.message}>
         {(field) => <textarea {...register("message")} {...field} rows={2} className={fieldClass} />}
       </FormField>
-      <label className="flex items-start gap-3 text-sm text-gray-400 cursor-pointer">
-        <input type="checkbox" {...register("consent")} className="mt-1 rounded border-white/20" />
+      <label className="flex items-start gap-3 text-sm text-ink-2 cursor-pointer">
+        <input type="checkbox" {...register("consent")} className="mt-1 rounded border-rule" />
         <span>I agree to be contacted about this inquiry.</span>
       </label>
       {errors.consent?.message && <p className="text-sm text-red-400">{errors.consent.message}</p>}
@@ -365,8 +365,8 @@ function GeneralForm({ fieldClass, buttonClass, status, onSubmit }: SubFormProps
       <FormField label="Message" error={errors.message?.message}>
         {(field) => <textarea {...register("message")} {...field} rows={5} className={fieldClass} />}
       </FormField>
-      <label className="flex items-start gap-3 text-sm text-gray-400 cursor-pointer">
-        <input type="checkbox" {...register("consent")} className="mt-1 rounded border-white/20" />
+      <label className="flex items-start gap-3 text-sm text-ink-2 cursor-pointer">
+        <input type="checkbox" {...register("consent")} className="mt-1 rounded border-rule" />
         <span>I agree to be contacted about this inquiry.</span>
       </label>
       {errors.consent?.message && <p className="text-sm text-red-400">{errors.consent.message}</p>}

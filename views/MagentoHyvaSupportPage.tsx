@@ -2,7 +2,7 @@ import { PageHeader } from "@/components/ui/PageHeader"
 import { CtaButton } from "@/components/ui/CtaButton"
 import GlassCard from "@/components/ui/GlassCard"
 import { PrefetchLink } from "@/components/ui/PrefetchLink"
-import { ROUTES } from "@/constants/routes"
+import { BOOKING_URL, ROUTES } from "@/constants/routes"
 import { MagentoBriefForm } from "@/components/forms/MagentoBriefForm"
 import { getMagentoProjects } from "@/constants/projects-utils"
 import { PAGE_CONTENT_CLASS } from "@/components/ui/page-container"
@@ -114,24 +114,24 @@ export function MagentoHyvaSupportPage() {
       <section className={`py-12 ${PAGE_CONTENT_CLASS}`}>
         <GlassCard className="p-8 md:p-10 mb-12">
           <h2 className="text-2xl font-bold mb-2">Magento 2 stores I&apos;ve worked on</h2>
-          <p className="text-gray-400 text-sm mb-6">
+          <p className="text-ink-2 text-sm mb-6">
             16+ production storefronts — full builds, enterprise multi-market delivery, Hyvä migrations
             (HUBER SE: Adobe Commerce headless → Magento Open Source) and long-term support. Also{" "}
-            <a href="https://www.claspwell.com/" className="text-cyan-400 underline underline-offset-4" target="_blank" rel="noopener noreferrer">Claspwell</a>
+            <a href="https://www.claspwell.com/" className="text-accent underline underline-offset-4" target="_blank" rel="noopener noreferrer">Claspwell</a>
             , my catalog-aware Magento / Hyvä AI assistant.
           </p>
           <ProjectHighlightList
             title=""
             items={MAGENTO_PROJECT_HIGHLIGHTS}
-            accentClass="text-orange-400"
+            accentClass="text-accent"
           />
         </GlassCard>
 
         <h2 className="text-2xl font-bold mb-6">What I help with</h2>
         <ul className="space-y-3">
           {SERVICES.map((item) => (
-            <li key={item} className="flex gap-2 text-gray-300">
-              <span className="text-cyan-400 shrink-0">✓</span>
+            <li key={item} className="flex gap-2 text-ink-2">
+              <span className="text-accent shrink-0">✓</span>
               {item}
             </li>
           ))}
@@ -140,14 +140,14 @@ export function MagentoHyvaSupportPage() {
 
       <section className="px-6 py-12 max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold mb-3 text-center">Typical situations</h2>
-        <p className="text-gray-400 text-sm text-center max-w-2xl mx-auto mb-8">
+        <p className="text-ink-2 text-sm text-center max-w-2xl mx-auto mb-8">
           When store owners and e-commerce managers usually reach out — and how I typically step in.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {PAIN_SCENARIOS.map((scenario) => (
             <GlassCard key={scenario.title} className="p-6" hoverEffect>
               <h3 className="font-bold mb-3">{scenario.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{scenario.description}</p>
+              <p className="text-ink-2 text-sm leading-relaxed">{scenario.description}</p>
             </GlassCard>
           ))}
         </div>
@@ -156,14 +156,14 @@ export function MagentoHyvaSupportPage() {
       <section className="px-6 py-12 max-w-5xl mx-auto">
         <GlassCard className="p-8 mb-10">
           <h2 className="text-xl font-bold mb-4">How I work</h2>
-          <p className="text-gray-300 leading-relaxed mb-6">
+          <p className="text-ink-2 leading-relaxed mb-6">
             Direct contact, clear scope, and a fast start. First a short diagnosis (URL + issue summary),
             then a proposal: audit, sprint, or ongoing support. Async-friendly, B2B — Poland and EU remote.
           </p>
           <ul className="space-y-2">
             {WORK_PRINCIPLES.map((item) => (
-              <li key={item} className="flex gap-2 text-gray-300 text-sm">
-                <span className="text-cyan-400 shrink-0">•</span>
+              <li key={item} className="flex gap-2 text-ink-2 text-sm">
+                <span className="text-accent shrink-0">•</span>
                 {item}
               </li>
             ))}
@@ -174,16 +174,16 @@ export function MagentoHyvaSupportPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           {PROOF_BLOCKS.map((block) => (
             <GlassCard key={block.title} className="p-6">
-              <h3 className="font-bold text-cyan-400 mb-2">{block.title}</h3>
-              <p className="text-gray-400 text-sm">{block.text}</p>
+              <h3 className="font-bold text-accent mb-2">{block.title}</h3>
+              <p className="text-ink-2 text-sm">{block.text}</p>
             </GlassCard>
           ))}
         </div>
       </section>
 
-      <section className="px-6 py-12 max-w-6xl mx-auto border-t border-white/5">
+      <section className="px-6 py-12 max-w-6xl mx-auto border-t border-rule">
         <h2 className="text-2xl font-bold mb-3 text-center">Engagement models</h2>
-        <p className="text-gray-400 text-sm text-center max-w-2xl mx-auto mb-8">
+        <p className="text-ink-2 text-sm text-center max-w-2xl mx-auto mb-8">
           Pick the model that matches where your store is today. Full comparison and details on the pricing page.
         </p>
         <EngagementModels />
@@ -199,8 +199,8 @@ export function MagentoHyvaSupportPage() {
           <h2 className="text-xl font-bold mb-4">What you get</h2>
           <ul className="space-y-3">
             {DELIVERABLES.map((item) => (
-              <li key={item} className="flex gap-2 text-gray-300 text-sm">
-                <span className="text-cyan-400 shrink-0">✓</span>
+              <li key={item} className="flex gap-2 text-ink-2 text-sm">
+                <span className="text-accent shrink-0">✓</span>
                 {item}
               </li>
             ))}
@@ -210,7 +210,7 @@ export function MagentoHyvaSupportPage() {
 
       <section className="px-6 py-12 max-w-3xl mx-auto text-center">
         <h2 className="text-2xl font-bold mb-4">Have a Magento 2 / Hyvä store and need support?</h2>
-        <p className="text-gray-400 text-sm leading-relaxed mb-8">
+        <p className="text-ink-2 text-sm leading-relaxed mb-8">
           Send your store URL and a short description of the problem. I will reply whether I can take it on
           and which engagement model fits best.
         </p>
@@ -220,7 +220,7 @@ export function MagentoHyvaSupportPage() {
       <section id="send-brief" className="px-6 py-12 max-w-xl mx-auto scroll-mt-28">
         <GlassCard className="p-8">
           <h2 className="text-xl font-bold mb-2">Send a brief</h2>
-          <p className="text-gray-400 text-sm mb-6">
+          <p className="text-ink-2 text-sm mb-6">
             Store URL, what you need, and a short problem description — I will reply with fit and next steps.
           </p>
           <Providers>
@@ -229,17 +229,17 @@ export function MagentoHyvaSupportPage() {
         </GlassCard>
       </section>
 
-      <section className="border-t border-white/5">
+      <section className="border-t border-rule">
         <GlassCard className="max-w-4xl mx-auto p-8 mb-4 mt-8 mx-6 md:mx-auto">
           <h2 className="text-2xl font-bold mb-3">Magento 2 projects</h2>
-          <p className="text-gray-400 text-sm leading-relaxed mb-2">
+          <p className="text-ink-2 text-sm leading-relaxed mb-2">
             Stores and implementations I have worked on — full builds, enterprise delivery, and ongoing
             frontend support. I lead Hyvä storefront work end-to-end: migration, CMS, components, and Core Web
             Vitals.
           </p>
-          <p className="text-gray-400 text-sm">
+          <p className="text-ink-2 text-sm">
             See the{" "}
-            <PrefetchLink href={ROUTES.caseStudies} className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300">
+            <PrefetchLink href={ROUTES.caseStudies} className="text-accent underline underline-offset-4 hover:text-accent">
               full portfolio
             </PrefetchLink>{" "}
             for React / Next.js, Shopify and in-depth case studies (HUBER SE, Claspwell, Glasy, HRK).
@@ -258,13 +258,13 @@ export function MagentoHyvaSupportPage() {
 
       <section className="px-6 py-16 pb-24 text-center max-w-xl mx-auto">
         <h2 className="text-2xl font-bold mb-4">Ready to talk?</h2>
-        <p className="text-gray-400 mb-6 text-sm max-w-lg mx-auto">
+        <p className="text-ink-2 mb-6 text-sm max-w-lg mx-auto">
           General inquiries and project briefs — use the{" "}
-          <PrefetchLink href={ROUTES.contact} className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300">
+          <PrefetchLink href={ROUTES.contact} className="text-accent underline underline-offset-4 hover:text-accent">
             contact page
           </PrefetchLink>
           . For urgent production issues, see{" "}
-          <PrefetchLink href={ROUTES.emergencySupport} className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300">
+          <PrefetchLink href={ROUTES.emergencySupport} className="text-accent underline underline-offset-4 hover:text-accent">
             emergency support
           </PrefetchLink>
           .
@@ -285,11 +285,11 @@ function HeaderCtas() {
         Need support
       </CtaButton>
       <CtaButton
-        href="mailto:rudnevmykola@gmail.com?subject=Magento%20%2F%20Hyv%C3%A4%20%E2%80%94%2020%20min%20call"
+        href={BOOKING_URL}
         variant="secondary"
         event="cta_book_call"
       >
-        Book a 20-min call
+        Book a 30-min call
       </CtaButton>
     </div>
   )
@@ -301,8 +301,8 @@ function EngagementModels() {
       {ENGAGEMENT_MODELS.map((model) => (
         <GlassCard key={model.name} className="p-8 flex flex-col" hoverEffect>
           <h3 className="text-lg font-bold mb-2">{model.name}</h3>
-          <p className="text-gray-400 text-sm mb-4 grow">{model.description}</p>
-          <p className="text-cyan-400 text-xs">Best for: {model.bestFor}</p>
+          <p className="text-ink-2 text-sm mb-4 grow">{model.description}</p>
+          <p className="text-accent text-xs">Best for: {model.bestFor}</p>
         </GlassCard>
       ))}
     </div>

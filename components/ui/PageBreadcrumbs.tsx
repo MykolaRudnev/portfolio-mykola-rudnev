@@ -72,27 +72,27 @@ export function PageBreadcrumbs({ items, currentLabel, className = "" }: PageBre
 
   return (
     <nav aria-label="Breadcrumb" className={className}>
-      <ol className="flex flex-wrap items-center gap-1.5 text-sm text-gray-400">
+      <ol className="flex flex-wrap items-center gap-1.5 text-sm text-ink-2">
         {crumbs.map((crumb, index) => {
           const isLast = index === crumbs.length - 1
 
           return (
             <li key={`${crumb.label}-${index}`} className="flex items-center gap-1.5 min-w-0">
               {index > 0 && (
-                <span className="text-gray-600 select-none" aria-hidden>
+                <span className="text-ink-2 select-none" aria-hidden>
                   /
                 </span>
               )}
               {crumb.href && !isLast ? (
                 <PrefetchLink
                   href={crumb.href}
-                  className="underline underline-offset-4 hover:text-cyan-400 transition-colors truncate max-w-[12rem] sm:max-w-none"
+                  className="underline underline-offset-4 hover:text-accent transition-colors truncate max-w-[12rem] sm:max-w-none"
                 >
                   {crumb.label}
                 </PrefetchLink>
               ) : (
                 <span
-                  className={`truncate max-w-[14rem] sm:max-w-none ${isLast ? "text-gray-300" : ""}`}
+                  className={`truncate max-w-[14rem] sm:max-w-none ${isLast ? "text-ink-2" : ""}`}
                   aria-current={isLast ? "page" : undefined}
                 >
                   {crumb.label}

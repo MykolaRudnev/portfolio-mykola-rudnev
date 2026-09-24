@@ -23,11 +23,11 @@ export function CtaButton({
   className = "",
 }: CtaButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full font-semibold transition-all"
+    "inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full font-semibold transition-colors duration-200"
   const styles =
     variant === "primary"
-      ? "bg-white text-black hover:bg-gray-200 shadow-lg hover:shadow-cyan-500/20"
-      : "bg-glass-200 border border-glass-border text-white hover:bg-white/20"
+      ? "bg-ink text-paper hover:bg-ink/85"
+      : "bg-sheet border border-rule text-ink hover:bg-paper-2"
 
   function handleClick() {
     if (event) trackEvent(event)

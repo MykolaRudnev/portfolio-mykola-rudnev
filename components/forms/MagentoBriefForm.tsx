@@ -110,15 +110,15 @@ export function MagentoBriefForm() {
       <FormField label="Main problem" error={errors.mainProblem?.message}>
         {(field) => <textarea {...register("mainProblem")} {...field} rows={4} className={inputClassName} />}
       </FormField>
-      <label className="flex items-start gap-3 text-sm text-gray-400 cursor-pointer">
-        <input type="checkbox" {...register("consent")} className="mt-1 rounded border-white/20" />
+      <label className="flex items-start gap-3 text-sm text-ink-2 cursor-pointer">
+        <input type="checkbox" {...register("consent")} className="mt-1 rounded border-rule" />
         <span>I agree to be contacted about this inquiry.</span>
       </label>
       {errors.consent?.message && <p className="text-sm text-red-400">{errors.consent.message}</p>}
       <button
         type="submit"
         disabled={status === "loading"}
-        className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 disabled:opacity-50"
+        className="px-8 py-3 rounded-full bg-ink text-paper font-semibold hover:bg-ink/85 disabled:opacity-50"
       >
         {status === "loading" ? "Sending…" : "Send brief"}
       </button>

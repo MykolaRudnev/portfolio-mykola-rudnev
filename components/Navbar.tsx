@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import { FaBars, FaTimes } from "react-icons/fa"
-import { ROUTES } from "@/constants/routes"
+import { BOOKING_URL, ROUTES } from "@/constants/routes"
 import { detailedCaseStudies } from "@/constants/case-studies"
 import { PrefetchLink } from "@/components/ui/PrefetchLink"
 
@@ -14,7 +14,7 @@ const navItems = [
   { label: "Magento / Hyvä", path: ROUTES.magentoSupport },
   { label: "Case studies", path: ROUTES.caseStudies },
   { label: "Pricing", path: ROUTES.pricing },
-  { label: "Contact", path: ROUTES.contact },
+  { label: "Contact", path: BOOKING_URL, external: true },
 ]
 
 const CASE_STUDY_PREFETCH = detailedCaseStudies
@@ -52,20 +52,20 @@ function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
-        scrolled ? "bg-black/80 backdrop-blur-md border-white/10" : "bg-transparent border-transparent"
+        scrolled ? "bg-paper/95 border-rule" : "bg-transparent border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          <PrefetchLink href={ROUTES.home} className="text-xl font-bold tracking-wider text-white">
-            MR<span className="text-cyan-400">.</span>
+          <PrefetchLink href={ROUTES.home} className="text-xl font-bold tracking-wider text-ink">
+            MR<span className="text-accent">.</span>
           </PrefetchLink>
 
           <DesktopNav isActive={isActive} />
 
           <button
             type="button"
-            className="lg:hidden p-2 text-gray-300 hover:text-white"
+            className="lg:hidden p-2 text-ink-2 hover:text-ink"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
@@ -75,7 +75,7 @@ function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="lg:hidden bg-black/95 border-b border-white/10 backdrop-blur-xl">
+          <div className="lg:hidden bg-paper border-b border-rule">
             <div className="flex flex-col p-4 space-y-2">
               {navItems.map((item) => (
                 <MobileNavLink key={item.path} item={item} isActive={isActive(item.path)} />
@@ -101,31 +101,42 @@ function DesktopNav({ isActive }: { isActive: (path: string) => boolean }) {
 interface NavItem {
   label: string
   path: string
+  external?: boolean
 }
 
 function NavLink({ item, isActive }: { item: NavItem; isActive: boolean }) {
+  const className = `relative px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:text-ink ${
+    isActive ? "text-ink bg-paper-3" : "text-ink-2"
+  }`
+
+  if (item.external)
+    return (
+      <a href={item.path} target="_blank" rel="noopener noreferrer" className={className}>
+        <span className="relative z-10">{item.label}</span>
+      </a>
+    )
+
   return (
-    <PrefetchLink
-      href={item.path}
-      extraHrefs={extraPrefetch(item.path)}
-      className={`relative px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:text-white ${
-        isActive ? "text-white bg-white/10" : "text-gray-400"
-      }`}
-    >
+    <PrefetchLink href={item.path} extraHrefs={extraPrefetch(item.path)} className={className}>
       <span className="relative z-10">{item.label}</span>
     </PrefetchLink>
   )
 }
 
 function MobileNavLink({ item, isActive }: { item: NavItem; isActive: boolean }) {
+  const className = `w-full text-left px-4 py-3 rounded-xl transition-all block ${
+    isActive ? "bg-paper-3 text-ink" : "text-ink-2 hover:bg-paper-2 hover:text-ink"
+  }`
+
+  if (item.external)
+    return (
+      <a href={item.path} target="_blank" rel="noopener noreferrer" className={className}>
+        {item.label}
+      </a>
+    )
+
   return (
-    <PrefetchLink
-      href={item.path}
-      extraHrefs={extraPrefetch(item.path)}
-      className={`w-full text-left px-4 py-3 rounded-xl transition-all block ${
-        isActive ? "bg-white/10 text-white" : "text-gray-400 hover:bg-white/5 hover:text-white"
-      }`}
-    >
+    <PrefetchLink href={item.path} extraHrefs={extraPrefetch(item.path)} className={className}>
       {item.label}
     </PrefetchLink>
   )

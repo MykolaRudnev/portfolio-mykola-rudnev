@@ -5,15 +5,10 @@ interface GlassCardProps {
 }
 
 export function GlassCard({ children, className = "", hoverEffect = false }: GlassCardProps) {
-  const hoverClass = hoverEffect
-    ? "transition-[transform,background-color,box-shadow] duration-200 hover:scale-[1.02] hover:bg-white/15 hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
-    : ""
+  const hoverClass = hoverEffect ? "transition-colors duration-200 hover:bg-paper-2" : ""
 
   return (
-    <div
-      className={`relative overflow-hidden rounded-2xl border border-glass-border bg-glass-200 backdrop-blur-xl shadow-lg ${hoverClass} ${className}`}
-    >
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+    <div className={`rounded-xl border border-rule bg-sheet text-ink ${hoverClass} ${className}`}>
       {children}
     </div>
   )

@@ -35,7 +35,7 @@ export function EmergencySupportPage() {
 
       <section className="px-6 py-12 max-w-3xl mx-auto">
         <h2 className="text-xl font-bold mb-4">Common cases</h2>
-        <ul className="space-y-2 text-gray-300 mb-12">
+        <ul className="space-y-2 text-ink-2 mb-12">
           {CASES.map((item) => (
             <li key={item}>• {item}</li>
           ))}
@@ -43,7 +43,7 @@ export function EmergencySupportPage() {
 
         <GlassCard className="p-8 mb-12">
           <h2 className="text-xl font-bold mb-4">What to include in your first message</h2>
-          <ul className="space-y-2 text-gray-300">
+          <ul className="space-y-2 text-ink-2">
             {SEND_LIST.map((item) => (
               <li key={item}>• {item}</li>
             ))}
@@ -54,10 +54,10 @@ export function EmergencySupportPage() {
         <div className="space-y-4 mb-12">
           {STEPS.map((item) => (
             <div key={item.step} className="flex gap-4 items-start">
-              <span className="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold shrink-0">
+              <span className="w-8 h-8 rounded-full bg-accent/12 text-accent flex items-center justify-center font-bold shrink-0">
                 {item.step}
               </span>
-              <p className="text-gray-300 pt-1">{item.text}</p>
+              <p className="text-ink-2 pt-1">{item.text}</p>
             </div>
           ))}
         </div>

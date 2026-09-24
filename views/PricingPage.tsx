@@ -44,13 +44,13 @@ export function PricingPage() {
         {MODELS.map((model) => (
           <GlassCard
             key={model.name}
-            className={`p-8 flex flex-col ${model.highlighted ? "ring-2 ring-cyan-500/50" : ""}`}
+            className={`p-8 flex flex-col ${model.highlighted ? "ring-2 ring-accent/50" : ""}`}
             hoverEffect
           >
             <h2 className="text-xl font-bold mb-2">{model.name}</h2>
-            <p className="text-gray-400 text-sm mb-4 flex-grow">{model.description}</p>
-            <p className="text-cyan-400 text-xs mb-4">Best for: {model.bestFor}</p>
-            <ul className="space-y-2 mb-6 text-sm text-gray-300">
+            <p className="text-ink-2 text-sm mb-4 flex-grow">{model.description}</p>
+            <p className="text-accent text-xs mb-4">Best for: {model.bestFor}</p>
+            <ul className="space-y-2 mb-6 text-sm text-ink-2">
               {model.includes.map((item) => (
                 <li key={item}>• {item}</li>
               ))}
@@ -63,8 +63,8 @@ export function PricingPage() {
         <h2 className="text-xl font-bold mb-6 text-center">Comparison</h2>
         <table className="w-full text-sm text-left border-collapse">
           <thead>
-            <tr className="border-b border-white/10">
-              <th className="py-3 pr-4 text-gray-500"> </th>
+            <tr className="border-b border-rule">
+              <th className="py-3 pr-4 text-ink-2"> </th>
               <th className="py-3 px-4">Audit</th>
               <th className="py-3 px-4">Sprint</th>
               <th className="py-3 px-4">Ongoing support</th>
@@ -72,8 +72,8 @@ export function PricingPage() {
           </thead>
           <tbody>
             {COMPARISON.map((row) => (
-              <tr key={row.feature} className="border-b border-white/5">
-                <td className="py-3 pr-4 text-gray-400">{row.feature}</td>
+              <tr key={row.feature} className="border-b border-rule">
+                <td className="py-3 pr-4 text-ink-2">{row.feature}</td>
                 <td className="py-3 px-4">{row.audit}</td>
                 <td className="py-3 px-4">{row.sprint}</td>
                 <td className="py-3 px-4">{row.support}</td>

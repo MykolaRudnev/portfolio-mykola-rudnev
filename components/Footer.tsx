@@ -4,23 +4,23 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa"
 
 export default function Footer() {
   return (
-    <footer className="py-12 border-t border-glass-border bg-black relative z-10">
+    <footer className="py-12 border-t border-glass-border bg-paper relative z-10">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-center md:text-left">
-          <div className="text-xl font-bold tracking-wider text-white mb-2">
-            MR<span className="text-cyan-400">.</span>
+          <div className="text-xl font-bold tracking-wider text-ink mb-2">
+            MR<span className="text-accent">.</span>
           </div>
-          <p className="text-gray-500 text-sm mb-2">© {new Date().getFullYear()} Mykola Rudnev. All rights reserved.</p>
-          <PrefetchLink href={ROUTES.about} className="text-sm text-gray-500 hover:text-cyan-400">
+          <p className="text-ink-2 text-sm mb-2">© {new Date().getFullYear()} Mykola Rudnev. All rights reserved.</p>
+          <PrefetchLink href={ROUTES.about} className="text-sm text-ink-2 hover:text-accent">
             Who is Mykola Rudnev?
           </PrefetchLink>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-6 text-sm text-gray-400">
-          <a href="mailto:rudnevmykola@gmail.com" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+        <div className="flex flex-col md:flex-row items-center gap-6 text-sm text-ink-2">
+          <a href="mailto:rudnevmykola@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
             <FaEnvelope /> rudnevmykola@gmail.com
           </a>
-          <a href="tel:+48790240418" className="flex items-center gap-2 hover:text-purple-400 transition-colors">
+          <a href="tel:+48790240418" className="flex items-center gap-2 hover:text-accent transition-colors">
             <FaPhoneAlt /> +48 790 240 418
           </a>
         </div>
@@ -31,7 +31,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub profile"
-            className="p-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-white transition-colors text-gray-400"
+            className="p-2 bg-paper-2 rounded-full hover:bg-paper-3 hover:text-ink transition-colors text-ink-2"
           >
             <FaGithub size={20} aria-hidden />
           </a>
@@ -40,7 +40,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile"
-            className="p-2 bg-white/5 rounded-full hover:bg-blue-600/20 hover:text-blue-500 transition-colors text-gray-400"
+            className="p-2 bg-paper-2 rounded-full hover:bg-paper-3 hover:text-accent transition-colors text-ink-2"
           >
             <FaLinkedin size={20} aria-hidden />
           </a>
