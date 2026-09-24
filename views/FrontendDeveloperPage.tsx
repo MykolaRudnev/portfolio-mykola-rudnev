@@ -5,7 +5,7 @@ import { FaFileAlt } from "react-icons/fa"
 import { PageHeader } from "@/components/ui/PageHeader"
 import { CtaButton } from "@/components/ui/CtaButton"
 import GlassCard from "@/components/ui/GlassCard"
-import { ROUTES } from "@/constants/routes"
+import { BOOKING_URL, ROUTES } from "@/constants/routes"
 import { technicalSkills } from "@/constants"
 import { PAGE_CONTENT_CLASS } from "@/components/ui/page-container"
 import { ProjectsGridSkeleton, SectionSkeleton } from "@/components/ui/PageSkeleton"
@@ -38,7 +38,7 @@ export function FrontendDeveloperPage() {
         subtitle="React, Next.js, TypeScript — the front-end developer to hire for product UI, e-commerce, and a shipped Next.js product (Claspwell). Remote B2B, EU."
       >
         <div className="flex flex-wrap justify-center gap-4">
-          <CtaButton href="mailto:rudnevmykola@gmail.com?subject=Screening%20call" event="cta_book_call">
+          <CtaButton href={BOOKING_URL} event="cta_book_call">
             Book a screening call
           </CtaButton>
           <CtaButton
@@ -60,7 +60,7 @@ export function FrontendDeveloperPage() {
           {technicalSkills.slice(0, 12).map((skill) => (
             <span
               key={skill.name}
-              className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm"
+              className="px-3 py-1 rounded-full bg-paper-2 border border-rule text-sm"
             >
               {skill.name}
             </span>
@@ -71,26 +71,26 @@ export function FrontendDeveloperPage() {
       <section className={`py-12 ${PAGE_CONTENT_CLASS}`}>
         <GlassCard className="p-8 md:p-10 mb-12">
           <h2 className="text-2xl font-bold mb-2">React / Next.js project experience</h2>
-          <p className="text-gray-400 text-sm mb-6">
+          <p className="text-ink-2 text-sm mb-6">
             Production apps across e-commerce, marketplaces, recruitment and education — not limited to a single
             flagship project.
           </p>
           <ProjectHighlightList
             title=""
             items={REACT_PROJECT_HIGHLIGHTS}
-            accentClass="text-cyan-400"
+            accentClass="text-accent"
           />
         </GlassCard>
 
         <GlassCard className="p-8 mb-12">
           <h2 className="text-2xl font-bold mb-2">Shopify / Liquid</h2>
-          <p className="text-gray-400 text-sm mb-6">
+          <p className="text-ink-2 text-sm mb-6">
             Custom themes from scratch — sections, blocks, Admin configuration, not preset restyles.
           </p>
           <ProjectHighlightList
             title=""
             items={SHOPIFY_PROJECT_HIGHLIGHTS}
-            accentClass="text-green-400"
+            accentClass="text-accent"
           />
         </GlassCard>
 
@@ -98,8 +98,8 @@ export function FrontendDeveloperPage() {
           <h2 className="text-2xl font-bold mb-6">What I'm a strong fit for</h2>
           <ul className="grid md:grid-cols-2 gap-3">
             {FIT_CASES.map((item) => (
-              <li key={item} className="flex gap-2 text-gray-300">
-                <span className="text-cyan-400">✓</span>
+              <li key={item} className="flex gap-2 text-ink-2">
+                <span className="text-accent">✓</span>
                 {item}
               </li>
             ))}

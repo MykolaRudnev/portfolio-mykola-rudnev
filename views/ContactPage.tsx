@@ -6,7 +6,8 @@ import { ContactForm } from "@/components/forms/ContactForm"
 import { PAGE_CONTENT_CLASS } from "@/components/ui/page-container"
 import { Providers } from "@/app/providers"
 import { SectionSkeleton } from "@/components/ui/PageSkeleton"
-import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaArrowDown } from "react-icons/fa"
+import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaArrowDown, FaCalendarAlt } from "react-icons/fa"
+import { BOOKING_URL } from "@/constants/routes"
 
 const CONTACT_FORM_ID = "contact-form"
 
@@ -24,12 +25,12 @@ export function ContactPage() {
       </PageHeader>
 
       <section className={`pb-24 ${PAGE_CONTENT_CLASS}`}>
-        <GlassCard className="p-6 md:p-8 mb-10 border border-cyan-500/20">
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed text-center max-w-3xl mx-auto">
+        <GlassCard className="p-6 md:p-8 mb-10 border border-accent/25">
+          <p className="text-ink-2 text-base md:text-lg leading-relaxed text-center max-w-3xl mx-auto">
             The fastest way to reach me is the{" "}
             <a
               href={`#${CONTACT_FORM_ID}`}
-              className="text-cyan-400 font-medium hover:underline underline-offset-4"
+              className="text-accent font-medium hover:underline underline-offset-4"
             >
               contact form on this page
             </a>
@@ -43,7 +44,7 @@ export function ContactPage() {
         >
           <div className="lg:col-span-3">
             <h2 className="text-2xl font-bold mb-2">Send a message</h2>
-            <p className="text-gray-400 text-sm mb-6">
+            <p className="text-ink-2 text-sm mb-6">
               All fields marked without “optional” are required.
             </p>
             <GlassCard className="p-8 md:p-10 lg:p-12">
@@ -58,7 +59,7 @@ export function ContactPage() {
           <aside className="lg:col-span-2 space-y-6">
             <div>
               <h2 className="text-xl font-bold mb-3">Direct contact</h2>
-              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              <p className="text-ink-2 text-sm leading-relaxed mb-6">
                 Prefer email or a call? You can also reach me here — but for project briefs and hiring,
                 the form helps me respond faster with the right context.
               </p>
@@ -73,22 +74,33 @@ export function ContactPage() {
 
 function ContactLinks() {
   return (
-    <ul className="flex flex-col gap-4 text-gray-300">
+    <ul className="flex flex-col gap-4 text-ink-2">
+      <li>
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 p-4 rounded-xl bg-ink text-paper hover:bg-ink/85 transition-colors"
+        >
+          <FaCalendarAlt className="shrink-0" />
+          <span className="text-sm">Book a 30-min call</span>
+        </a>
+      </li>
       <li>
         <a
           href="mailto:rudnevmykola@gmail.com"
-          className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-500/30 hover:text-cyan-400 transition-colors"
+          className="flex items-center gap-3 p-4 rounded-xl bg-paper-2 border border-rule hover:border-accent hover:text-accent transition-colors"
         >
-          <FaEnvelope className="text-cyan-400 shrink-0" />
+          <FaEnvelope className="text-accent shrink-0" />
           <span className="text-sm break-all">rudnevmykola@gmail.com</span>
         </a>
       </li>
       <li>
         <a
           href="tel:+48790240418"
-          className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-purple-500/30 hover:text-purple-400 transition-colors"
+          className="flex items-center gap-3 p-4 rounded-xl bg-paper-2 border border-rule hover:border-accent hover:text-accent transition-colors"
         >
-          <FaPhoneAlt className="text-purple-400 shrink-0" />
+          <FaPhoneAlt className="text-accent shrink-0" />
           <span className="text-sm">+48 790 240 418</span>
         </a>
       </li>
@@ -97,9 +109,9 @@ function ContactLinks() {
           href="https://www.linkedin.com/in/mykola-r-1525a5145/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 hover:text-blue-400 transition-colors"
+          className="flex items-center gap-3 p-4 rounded-xl bg-paper-2 border border-rule hover:border-accent hover:text-accent transition-colors"
         >
-          <FaLinkedin className="text-blue-400 shrink-0" />
+          <FaLinkedin className="text-accent shrink-0" />
           <span className="text-sm">LinkedIn profile</span>
         </a>
       </li>

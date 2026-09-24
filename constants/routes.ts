@@ -1,4 +1,5 @@
 export const SITE_URL = "https://www.mrudnev.com"
+export const BOOKING_URL = "https://cal.com/mykola-rudnev/30min"
 
 export const ROUTES = {
   home: "/",

@@ -16,12 +16,12 @@ export function VisualProofSection({ items }: VisualProofSectionProps) {
       <div className="space-y-10">
         {items.map((item) => (
           <div key={item.label}>
-            <h3 className="text-sm font-semibold text-cyan-400 mb-3">{item.label}</h3>
-            {item.caption && <p className="text-gray-400 text-sm mb-4">{item.caption}</p>}
+            <h3 className="text-sm font-semibold text-accent mb-3">{item.label}</h3>
+            {item.caption && <p className="text-ink-2 text-sm mb-4">{item.caption}</p>}
             <div className={`grid gap-4 ${item.beforeSrc && item.afterSrc ? "sm:grid-cols-2" : ""}`}>
               {item.beforeSrc && (
-                <figure className="rounded-xl overflow-hidden border border-white/10 bg-white/5">
-                  <div className="px-3 py-2 text-xs text-gray-500 border-b border-white/10">Before</div>
+                <figure className="rounded-xl overflow-hidden border border-rule bg-paper-2">
+                  <div className="px-3 py-2 text-xs text-ink-2 border-b border-rule">Before</div>
                   <Image
                     src={item.beforeSrc}
                     alt={`${item.label} before`}
@@ -33,8 +33,8 @@ export function VisualProofSection({ items }: VisualProofSectionProps) {
                 </figure>
               )}
               {item.afterSrc && (
-                <figure className="rounded-xl overflow-hidden border border-cyan-500/20 bg-white/5">
-                  <div className="px-3 py-2 text-xs text-cyan-400 border-b border-white/10">After</div>
+                <figure className="rounded-xl overflow-hidden border border-accent/25 bg-paper-2">
+                  <div className="px-3 py-2 text-xs text-accent border-b border-rule">After</div>
                   <Image
                     src={item.afterSrc}
                     alt={`${item.label} after`}

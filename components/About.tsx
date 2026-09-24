@@ -7,7 +7,6 @@ const About: React.FC = () => {
     <section id="About" className="py-20 relative">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
-        <div className="h-1 w-20 bg-cyan-500 mx-auto rounded-full mb-12"></div>
         
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -17,10 +16,10 @@ const About: React.FC = () => {
         >
             <GlassCard className="p-8 md:p-12" hoverEffect>
                 <div className="flex flex-col gap-6 text-center md:text-left">
-                    <p className="text-lg text-gray-300 leading-relaxed">
-                        Senior Front-End Developer with <strong className="text-white">6+ years of experience</strong>, specializing in <strong className="text-white">TypeScript, React.js, Next.js, Magento 2 (Hyvä), and Shopify</strong>. I build scalable, high-performance storefronts and web applications — including <strong className="text-white">Claspwell</strong>, my own Magento AI product, and the <strong className="text-white">HUBER SE</strong> Hyvä rebuild.
+                    <p className="text-lg text-ink-2 leading-relaxed">
+                        Senior Front-End Developer with <strong className="text-ink">6+ years of experience</strong>, specializing in <strong className="text-ink">TypeScript, React.js, Next.js, Magento 2 (Hyvä), and Shopify</strong>. I build scalable, high-performance storefronts and web applications — including <strong className="text-ink">Claspwell</strong>, my own Magento AI product, and the <strong className="text-ink">HUBER SE</strong> Hyvä rebuild.
                     </p>
-                    <p className="text-lg text-gray-300 leading-relaxed">
+                    <p className="text-lg text-ink-2 leading-relaxed">
                         I care about performance (Core Web Vitals), SEO, and clean component architecture, and I regularly work directly with clients and stakeholders. Currently on a direct freelance contract with HUBER SE. Outside of coding, I’m passionate about cryptocurrency, music, and anime.
                     </p>
                 </div>

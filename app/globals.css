@@ -1,21 +1,58 @@
+/* Hallmark · genre: editorial · macrostructure: Portfolio Grid · theme: Atelier · design-system: design.md · designed-as-app */
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", sans-serif;
-  --color-glass-100: rgba(255, 255, 255, 0.05);
-  --color-glass-200: rgba(255, 255, 255, 0.1);
-  --color-glass-300: rgba(255, 255, 255, 0.2);
-  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --font-sans: var(--font-inter), "Inter", sans-serif;
+  --font-display: var(--font-fraunces), "Iowan Old Style", Palatino, serif;
+  --color-paper: oklch(94.5% 0.028 88);
+  --color-paper-2: oklch(91.5% 0.032 86);
+  --color-paper-3: oklch(88.5% 0.034 84);
+  --color-sheet: oklch(97.2% 0.016 92);
+  --color-ink: oklch(26% 0.028 55);
+  --color-ink-2: oklch(42% 0.022 58);
+  --color-rule: oklch(83% 0.026 80);
+  --color-accent: oklch(40% 0.095 42);
+  --color-accent-ink: oklch(97% 0.016 90);
+  --color-focus: oklch(46% 0.11 42);
+  --color-glass-100: oklch(91.5% 0.032 86);
+  --color-glass-200: oklch(97.2% 0.016 92);
+  --color-glass-300: oklch(88.5% 0.034 84);
+  --color-glass-border: oklch(83% 0.026 80);
+}
+
+html,
+body {
+  overflow-x: clip;
 }
 
 html {
   scroll-behavior: smooth;
+  background: var(--color-paper);
+  color: var(--color-ink);
 }
 
 body {
-  background-color: #050505;
-  color: #ffffff;
-  overflow-x: hidden;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body, var(--font-inter)), Inter, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), "Iowan Old Style", Palatino, serif;
+  font-style: normal;
+  font-weight: 560;
+  letter-spacing: -0.02em;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -32,8 +69,8 @@ body {
   left: -9999px;
   z-index: 100;
   padding: 0.75rem 1rem;
-  background: #fff;
-  color: #000;
+  background: var(--color-ink);
+  color: var(--color-accent-ink);
   font-weight: 600;
   border-radius: 0.5rem;
 }

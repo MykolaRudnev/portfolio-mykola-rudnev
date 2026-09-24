@@ -16,10 +16,10 @@ export function FaqSection({ items, title = "Questions people ask before they hi
         {items.map((item) => (
           <div
             key={item.question}
-            className="rounded-2xl border border-white/10 bg-white/5 p-6"
+            className="rounded-2xl border border-rule bg-paper-2 p-6"
           >
-            <dt className="text-lg font-semibold text-white">{item.question}</dt>
-            <dd className="mt-3 text-gray-400 leading-relaxed">{item.answer}</dd>
+            <dt className="text-lg font-semibold text-ink">{item.question}</dt>
+            <dd className="mt-3 text-ink-2 leading-relaxed">{item.answer}</dd>
           </div>
         ))}
       </dl>

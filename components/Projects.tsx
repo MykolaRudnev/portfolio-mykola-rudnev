@@ -38,8 +38,7 @@ const Projects: React.FC = () => {
         <section id="Projects" className="py-20 relative">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="mb-12 text-center">
-                    <h2 className="text-4xl font-bold mb-4">Selected Works</h2>
-                    <div className="h-1 w-20 bg-cyan-500 mx-auto rounded-full mb-8"></div>
+                    <h2 className="text-4xl font-bold mb-8">Selected Works</h2>
 
                     {/* Tabs */}
                     <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -49,8 +48,8 @@ const Projects: React.FC = () => {
                                 onClick={() => setActiveTab(cat)}
                                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all border ${
                                     activeTab === cat
-                                        ? 'bg-white text-black border-white shadow-lg shadow-white/20'
-                                        : 'bg-glass-100 text-gray-400 border-glass-border hover:bg-white/10 hover:text-white'
+                                        ? 'bg-ink text-paper border-white shadow-lg shadow-white/20'
+                                        : 'bg-glass-100 text-ink-2 border-glass-border hover:bg-paper-3 hover:text-ink'
                                 }`}
                             >
                                 {cat}
@@ -71,7 +70,7 @@ const Projects: React.FC = () => {
                                 transition={{ duration: 0.3 }}
                             >
                                 <GlassCard className="h-full flex flex-col group" hoverEffect>
-                                    <div className="relative h-48 overflow-hidden rounded-t-2xl bg-black/40">
+                                    <div className="relative h-48 overflow-hidden rounded-t-2xl bg-paper-3">
                                         <img
                                             src={project.image}
                                             alt={`${project.name} - ${project.description.substring(0, 100)}`}
@@ -85,7 +84,7 @@ const Projects: React.FC = () => {
                                         />
                                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
                                             {project.link && (
-                                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-white text-black rounded-full hover:scale-105 transition-transform flex items-center gap-2 font-medium">
+                                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-paper text-ink rounded-full hover:scale-105 transition-transform flex items-center gap-2 font-medium">
                                                     Visit Site <FaExternalLinkAlt size={12} />
                                                 </a>
                                             )}
@@ -94,11 +93,11 @@ const Projects: React.FC = () => {
 
                                     <div className="p-6 flex flex-col flex-grow">
                                         <h3 className="text-xl font-bold mb-3">{project.name}</h3>
-                                        <p className="text-gray-400 text-sm mb-6 line-clamp-3 flex-grow leading-relaxed">{project.description}</p>
+                                        <p className="text-ink-2 text-sm mb-6 line-clamp-3 flex-grow leading-relaxed">{project.description}</p>
 
                                         <div className="flex flex-wrap gap-2 mt-auto">
                                             {project.technologies.map(tech => (
-                                                <span key={tech} className="px-3 py-1 text-xs font-medium bg-white/5 border border-white/10 rounded-full text-cyan-200/80">
+                                                <span key={tech} className="px-3 py-1 text-xs font-medium bg-paper-2 border border-rule rounded-full text-accent">
                                             {tech}
                                         </span>
                                             ))}
@@ -114,7 +113,7 @@ const Projects: React.FC = () => {
                     <div className="flex justify-center mt-8">
                         <button
                             onClick={() => setShowAll(!showAll)}
-                            className="px-8 py-3 rounded-full text-sm font-medium transition-all border bg-white text-black border-white shadow-lg shadow-white/20 hover:scale-105 hover:shadow-xl hover:shadow-white/30"
+                            className="px-8 py-3 rounded-full text-sm font-medium transition-all border bg-ink text-paper border-ink shadow-lg hover:scale-105"
                         >
                             {showAll ? 'See Less' : 'See More'}
                         </button>

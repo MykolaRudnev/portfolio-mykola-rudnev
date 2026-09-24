@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Fraunces, Inter } from "next/font/google"
 import Script from "next/script"
 import Navbar from "@/components/Navbar"
+import { BackToTop } from "@/components/ui/BackToTop"
 import Footer from "@/components/Footer"
 import { JsonLdScript } from "@/components/seo/JsonLdScript"
 import { personJsonLd, websiteJsonLd } from "@/lib/json-ld"
@@ -15,6 +16,12 @@ const inter = Inter({
   display: "swap",
 })
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+})
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   ...getMetadataForPath(ROUTES.home),
@@ -25,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable} scroll-smooth`}>
       <head>
         <meta
           name="google-site-verification"
@@ -39,16 +46,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        <div className="min-h-screen bg-black text-white selection:bg-cyan-500 selection:text-white">
-          <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden>
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-900/20 rounded-full blur-[128px]" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-900/20 rounded-full blur-[128px]" />
-          </div>
+        <div className="min-h-screen bg-paper text-ink selection:bg-accent selection:text-paper">
           <Navbar />
           <main id="main-content" className="relative z-10 flex flex-col">
             {children}
           </main>
           <Footer />
+          <BackToTop />
         </div>
         <Script
           src="https://cloud.umami.is/script.js"

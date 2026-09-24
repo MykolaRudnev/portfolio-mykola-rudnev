@@ -10,7 +10,7 @@ export function FormStatusMessage({ status, message }: FormStatusMessageProps) {
     <p
       role="status"
       aria-live="polite"
-      className={`text-sm ${status === "success" ? "text-cyan-400" : "text-red-400"}`}
+      className={`text-sm ${status === "success" ? "text-accent" : "text-red-400"}`}
     >
       {message}
     </p>

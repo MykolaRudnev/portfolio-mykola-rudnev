@@ -30,7 +30,7 @@ export function PageHeader({
         <div className="text-center w-full">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">{title}</h1>
           {subtitle && (
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">{subtitle}</p>
+            <p className="text-lg md:text-xl text-ink-2 max-w-2xl mx-auto">{subtitle}</p>
           )}
           {children && <div className="mt-8">{children}</div>}
         </div>

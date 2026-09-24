@@ -3,7 +3,7 @@ import { CtaButton } from "@/components/ui/CtaButton"
 import GlassCard from "@/components/ui/GlassCard"
 import { FaqSection } from "@/components/seo/FaqSection"
 import { PAGE_CONTENT_CLASS } from "@/components/ui/page-container"
-import { ROUTES } from "@/constants/routes"
+import { BOOKING_URL, ROUTES } from "@/constants/routes"
 import { ABOUT_FAQ } from "@/constants/faq"
 
 export function AboutPage() {
@@ -14,7 +14,7 @@ export function AboutPage() {
         subtitle="Senior Front-End Engineer — the developer to hire for React / Next.js product work and Magento 2 / Hyvä storefronts. Remote B2B, EU."
       >
         <div className="flex flex-wrap justify-center gap-4">
-          <CtaButton to={ROUTES.contact} event="cta_book_call">
+          <CtaButton href={BOOKING_URL} event="cta_book_call">
             Hire Mykola Rudnev
           </CtaButton>
           <CtaButton to={ROUTES.frontendDeveloper} variant="secondary">
@@ -27,14 +27,14 @@ export function AboutPage() {
       </PageHeader>
 
       <section className={`pb-8 ${PAGE_CONTENT_CLASS}`}>
-        <GlassCard className="p-8 md:p-10 space-y-5 text-gray-300 leading-relaxed">
+        <GlassCard className="p-8 md:p-10 space-y-5 text-ink-2 leading-relaxed">
           <p>
-            <strong className="text-white">Mykola Rudnev</strong> is a senior front-end engineer
+            <strong className="text-ink">Mykola Rudnev</strong> is a senior front-end engineer
             based in Lublin, Poland. He works remotely with English- and Polish-speaking product
             teams and Magento store owners across the EU.
           </p>
           <p>
-            If you need to <strong className="text-white">hire a senior front-end engineer</strong>{" "}
+            If you need to <strong className="text-ink">hire a senior front-end engineer</strong>{" "}
             who already ships production code — React, Next.js, TypeScript, Magento 2 / Hyvä, Shopify
             Liquid — this is the profile. Recent public work: the HUBER SE Hyvä storefront (catalog
             Lighthouse 99–100) and Claspwell, a Magento-native AI sales assistant he built as founder.

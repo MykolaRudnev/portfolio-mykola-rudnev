@@ -18,7 +18,7 @@ export function CaseStudyDetailView({ study }: CaseStudyDetailViewProps) {
         subtitle={study.summary}
         breadcrumbLabel={study.client}
       >
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-ink-2">
           {study.client} · {study.industry} · {study.projectType}{study.year ? ` · ${study.year}` : ""}
         </p>
         {study.liveUrl && (
@@ -27,7 +27,7 @@ export function CaseStudyDetailView({ study }: CaseStudyDetailViewProps) {
               href={study.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300 text-sm"
+              className="text-accent underline underline-offset-4 hover:text-accent text-sm"
             >
               Visit live site →
             </a>
@@ -47,13 +47,13 @@ export function CaseStudyDetailView({ study }: CaseStudyDetailViewProps) {
         )}
         <MetricsBlock metrics={study.metrics} />
         <GlassCard className="p-6">
-          <h2 className="font-bold text-cyan-400 mb-2">My role</h2>
-          <p className="text-gray-300">{study.myRole}</p>
+          <h2 className="font-bold text-accent mb-2">My role</h2>
+          <p className="text-ink-2">{study.myRole}</p>
         </GlassCard>
         <div className="text-center pt-8">
           <CtaButton to={ROUTES.contact}>Discuss a similar project</CtaButton>
           <p className="mt-6">
-            <PrefetchLink href={ROUTES.caseStudies} className="text-gray-500 hover:text-white text-sm">
+            <PrefetchLink href={ROUTES.caseStudies} className="text-ink-2 hover:text-ink text-sm">
               ← All case studies
             </PrefetchLink>
           </p>
@@ -67,12 +67,12 @@ function MetaBlock({ study }: { study: CaseStudy }) {
   return (
     <GlassCard className="p-6 grid sm:grid-cols-2 gap-4 text-sm">
       <div>
-        <span className="text-gray-500">Stack</span>
-        <p className="text-white">{study.stack.join(", ")}</p>
+        <span className="text-ink-2">Stack</span>
+        <p className="text-ink">{study.stack.join(", ")}</p>
       </div>
       <div>
-        <span className="text-gray-500">Collaboration</span>
-        <p className="text-white">{study.collaboration}</p>
+        <span className="text-ink-2">Collaboration</span>
+        <p className="text-ink">{study.collaboration}</p>
       </div>
     </GlassCard>
   )
@@ -88,12 +88,12 @@ function Section({ title, content, items }: SectionProps) {
   return (
     <section>
       <h2 className="text-xl font-bold mb-4">{title}</h2>
-      {content && <p className="text-gray-300 leading-relaxed">{content}</p>}
+      {content && <p className="text-ink-2 leading-relaxed">{content}</p>}
       {items && (
-        <ul className="space-y-2 text-gray-300">
+        <ul className="space-y-2 text-ink-2">
           {items.map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-cyan-400">•</span>
+              <span className="text-accent">•</span>
               {item}
             </li>
           ))}
@@ -110,11 +110,11 @@ function MetricsBlock({ metrics }: { metrics: CaseStudy["metrics"] }) {
       <div className="grid sm:grid-cols-3 gap-4">
         {metrics.map((metric) => (
           <GlassCard key={metric.label} className="p-4 text-center">
-            <p className="text-gray-500 text-xs mb-2">{metric.label}</p>
+            <p className="text-ink-2 text-xs mb-2">{metric.label}</p>
             {metric.before && (
-              <p className="text-gray-600 text-sm line-through">{metric.before}</p>
+              <p className="text-ink-2 text-sm line-through">{metric.before}</p>
             )}
-            <p className="text-cyan-400 font-semibold">{metric.after}</p>
+            <p className="text-accent font-semibold">{metric.after}</p>
           </GlassCard>
         ))}
       </div>

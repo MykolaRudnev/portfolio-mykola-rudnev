@@ -86,15 +86,15 @@ export function EmergencyForm() {
       <FormField label="Repo / admin access (optional)" error={errors.accessAvailable?.message}>
         {(field) => <input {...register("accessAvailable")} {...field} className={inputClassName} />}
       </FormField>
-      <label className="flex items-start gap-3 text-sm text-gray-400 cursor-pointer">
-        <input type="checkbox" {...register("consent")} className="mt-1 rounded border-white/20" />
+      <label className="flex items-start gap-3 text-sm text-ink-2 cursor-pointer">
+        <input type="checkbox" {...register("consent")} className="mt-1 rounded border-rule" />
         <span>I agree to be contacted about this inquiry.</span>
       </label>
       {errors.consent?.message && <p className="text-sm text-red-400">{errors.consent.message}</p>}
       <button
         type="submit"
         disabled={status === "loading"}
-        className="px-8 py-3 rounded-full bg-red-500/90 text-white font-semibold hover:bg-red-500 disabled:opacity-50"
+        className="px-8 py-3 rounded-full bg-red-500/90 text-ink font-semibold hover:bg-red-500 disabled:opacity-50"
         aria-busy={status === "loading"}
       >
         {status === "loading" ? "Sending…" : "Send urgent request"}
