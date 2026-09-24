@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { SITE_URL, PAGE_SEO, ROUTES } from "@/constants/routes"
 import { getCaseStudyBySlug } from "@/constants/case-studies"
 
-const DEFAULT_OG_IMAGE = "/images/og-image.png"
+const DEFAULT_OG_IMAGE = "/images/og-image-v2.png"
 
 export function buildPageMetadata({
   title,
